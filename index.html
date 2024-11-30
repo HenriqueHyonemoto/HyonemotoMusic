@@ -3,9 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hyonemoto Music</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="logo"><img src="images/logo-h.png" alt="HHH logo" width="70px"></div>
+        <div class="nav-center">
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre Mim</a></li>
+                <li><a href="#music">Sobre o Site</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </div>
+        <div class="nav-left"></div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Bem-vindo à <br><a style="color:rgb(0, 0, 0)">Hyonemoto Music</a></h1>
+            <p>Meu Acervo de Obras Músicais.</p>
+            <a href="#about" class="btn">Saiba Mais</a>
+        </div>
+    </section>
+
+    <section class="cards-section" id="about">
+        <div class="card">
+            <img src="images/card-cover.png" alt="Covers">
+            <div class="card-content">
+                <h2 style="color:brown">Covers</h2>
+                <h3>Videos, Tutoriais e Partituras</h3>
+                <p>
+                    Interpretações, Arranjos e Transcrições que valorizam a essência de cada composição, trazendo novas perspectivas e nuances únicas para cada obra. Estão disponíveis vídeos e partituras para explorar essas versões exclusivas.</p>
+                <a href="pages/covers.html" class="btn" style="background-color:brown">Ver Mais</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/card-autoral.jpg" alt="Autorais">
+            <div class="card-content">
+                <h2 style="color:blueviolet">Obras Autorais</h2>
+                <h3>Partituras, Manuscritos e Historias</h3>
+                <p>Composições originais, abrangendo peças para piano solo e músicas multi-instrumentais no estilo de trilhas sonoras, criadas para explorar e experimentar composição. Estão disponíveis partituras, gravações e manuscritos originais.</p>
+                <a href="pages/autorais.html" class="btn" style="background-color: blueviolet;">Ver Mais</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/card-fotos.jpg" alt="Fotos">
+            <div class="card-content">
+                <h2 style="color:rgb(194, 160, 25)">Fotografias</h2>
+                <h3>Imagens e Contextos</h3>
+                <p>Fotografias escolhidas como capa para os álbuns das obras autorais. Estão incluídas algumas versões originais sem edição, as histórias por trás das imagem e detalhes sobre o processo criativo e edição das capas.</p>
+                <a href="pages/fotografias.html" class="btn" style="background-color: rgb(194, 160, 25);">Ver Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Henrique H. Hyonemoto.</p>
+        <hr>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h3>Contato</h3>
+                <ul>
+                    <li><a href="mailto:email@example.com">ifhenriquehyonemoto@gmail.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/henrique-hyonemoto-689002221</a></li>
+                    <li><a href="https://github.com/yourprofile" target="_blank">https://github.com/HenriqueHyonemoto</a></li>
+                </ul>
+            </div>
+            <div class="footer-center">
+                <h3 class="hidden">Logos</h3>
+                <ul>
+                    <li><img src="images/logo-h.png" alt="Logo 1"></li>
+                    <li><img src="images/logo-if.png" alt="Logo 2"></li>
+                    <li><img src="images/logo3.png" alt="Logo 3"></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h3>Outros Projetos</h3>
+                <ul>
+                    <li><a href="https://github.com/HenriqueHyonemoto/PianoLeds" target="_blank">Piano Com Leds (Arduino)</a></li>
+                    <li><a href="https://github.com/HenriqueHyonemoto/gerenciador-de-fichas-op" target="_blank">Plataforma WEB para criação de Personagens (Laravel)</a></li>
+                    <li><a href="https://github.com/HenriqueHyonemoto/ALendaDoHeroi-UltrawideFix" target="_blank">Mod Renderização 21:9 em jogo eletrônico (C++)</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
 </body>
 </html>
