@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hyonemoto Music</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- https://fontawesome.com/search -->
+    <script src="https://kit.fontawesome.com/50812450f6.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -17,7 +19,13 @@
                 <li><a href="#contact">Contato</a></li>
             </ul>
         </div>
-        <div class="nav-left"></div>
+        <div class="nav-right">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="1" y="4" width="30" height="24" rx="4" ry="4" fill="#459a45"></rect><path d="M27,4H5c-2.209,0-4,1.791-4,4V24c0,2.209,1.791,4,4,4H27c2.209,0,4-1.791,4-4V8c0-2.209-1.791-4-4-4Zm3,20c0,1.654-1.346,3-3,3H5c-1.654,0-3-1.346-3-3V8c0-1.654,1.346-3,3-3H27c1.654,0,3,1.346,3,3V24Z" opacity=".15"></path><path d="M3.472,16l12.528,8,12.528-8-12.528-8L3.472,16Z" fill="#fedf00"></path><circle cx="16" cy="16" r="5" fill="#0a2172"></circle><path d="M14,14.5c-.997,0-1.958,.149-2.873,.409-.078,.35-.126,.71-.127,1.083,.944-.315,1.951-.493,2.999-.493,2.524,0,4.816,.996,6.519,2.608,.152-.326,.276-.666,.356-1.026-1.844-1.604-4.245-2.583-6.875-2.583Z" fill="#fff"></path><path d="M27,5H5c-1.657,0-3,1.343-3,3v1c0-1.657,1.343-3,3-3H27c1.657,0,3,1.343,3,3v-1c0-1.657-1.343-3-3-3Z" fill="#fff" opacity=".2"></path></svg>
+            <select id="language-switcher" onchange="trocaLingua()">
+                <option value="pt-BR">PT-BR</option>
+                <option value="en">ENG</option>
+            </select>
+        </div>
     </nav>
 
     <section class="hero" id="home">
@@ -43,7 +51,7 @@
             <img src="images/card-autoral.jpg" alt="Autorais">
             <div class="card-content">
                 <h2 style="color:blueviolet">Obras Autorais</h2>
-                <h3>Partituras, Manuscritos e Historias</h3>
+                <h3>Partituras, Manuscritos e Histórias</h3>
                 <p>Composições originais, abrangendo peças para piano solo e músicas multi-instrumentais no estilo de trilhas sonoras, criadas para explorar e experimentar composição. Estão disponíveis partituras, gravações e manuscritos originais.</p>
                 <a href="pages/autorais.html" class="btn" style="background-color: blueviolet;">Ver Mais</a>
             </div>
@@ -66,29 +74,30 @@
             <div class="footer-left">
                 <h3>Contato</h3>
                 <ul>
-                    <li><a href="mailto:email@example.com">ifhenriquehyonemoto@gmail.com</a></li>
-                    <li><a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/henrique-hyonemoto-689002221</a></li>
-                    <li><a href="https://github.com/yourprofile" target="_blank">https://github.com/HenriqueHyonemoto</a></li>
+                    <li><a href="mailto:ifhenriquehyonemoto@gmail.com"><i class="fa-solid fa-envelope" target="_blank"></i> ifhenriquehyonemoto@gmail.com</a></li>
+                    <li><a href="https://linkedin.com/in/henrique-hyonemoto-689002221" target="_blank"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/henrique-hyonemoto-689002221</a></li>
+                    <!-- https://fontawesome.com/search -->
+                    <li><a href="https://github.com/HenriqueHyonemoto" target="_blank"><i class="fa-brands fa-github"></i> https://github.com/HenriqueHyonemoto</a></li>
                 </ul>
             </div>
             <div class="footer-center">
-                <h3 class="hidden">Logos</h3>
+                <h3 class="hidden"></h3>
                 <ul>
-                    <li><img src="images/logo-h.png" alt="Logo 1"></li>
-                    <li><img src="images/logo-if.png" alt="Logo 2"></li>
-                    <li><img src="images/logo3.png" alt="Logo 3"></li>
+                    <li><img src="images/logo-h.png" alt="Logo HHH"></li>
+                    <li><img src="images/logo-if.png" alt="Logo do IFSP"></li>
                 </ul>
             </div>
             <div class="footer-right">
                 <h3>Outros Projetos</h3>
                 <ul>
-                    <li><a href="https://github.com/HenriqueHyonemoto/PianoLeds" target="_blank">Piano Com Leds (Arduino)</a></li>
-                    <li><a href="https://github.com/HenriqueHyonemoto/gerenciador-de-fichas-op" target="_blank">Plataforma WEB para criação de Personagens (Laravel)</a></li>
-                    <li><a href="https://github.com/HenriqueHyonemoto/ALendaDoHeroi-UltrawideFix" target="_blank">Mod Renderização 21:9 em jogo eletrônico (C++)</a></li>
+                    <li><a href="https://github.com/HenriqueHyonemoto/PianoLeds" target="_blank"><i class="fa-solid fa-gear"></i> Piano Com Leds (Arduino)</a></li>
+                    <li><a href="https://github.com/HenriqueHyonemoto/gerenciador-de-fichas-op" target="_blank"><i class="fa-brands fa-laravel"></i> Plataforma WEB para criação de Personagens (Laravel)</a></li>
+                    <li><a href="https://github.com/HenriqueHyonemoto/ALendaDoHeroi-UltrawideFix" target="_blank"><i class="fa-solid fa-panorama"></i> Mod Renderização 21:9 em jogo eletrônico (C++)</a></li>
                 </ul>
             </div>
         </div>
 
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
