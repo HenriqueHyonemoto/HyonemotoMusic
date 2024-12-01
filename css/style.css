@@ -37,9 +37,8 @@ hr {
     align-items: center; /* Vertically center the logo image */
 }
 
-.logo{
-    margin-bottom: 0px;
-    padding:0px;
+.navbar .logo img {
+    height: 40px; /* Adjust the height as needed */
 }
 
 .navbar .nav-links {
@@ -58,6 +57,23 @@ hr {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.navbar .nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s ease-out;
+}
+
+.navbar .nav-links li a:hover::after {
+    width: 100%;
 }
 
 .navbar .nav-right {
@@ -82,7 +98,6 @@ hr {
     align-items: center;
     text-align: center;
     color: #000000;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 }
 
 .hero .hero-content {
@@ -134,7 +149,15 @@ hr {
     display: flex;
     flex-direction: column;
     text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adiciona transição suave */
 }
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Aumenta a sombra do card */
+}
+
+
 
 .card img {
     width: 100%;
@@ -171,7 +194,6 @@ hr {
 }
 
 .card-content .btn {
-    background-color: #cc4503;
     color: #fff;
     padding: 1rem 1rem;
     text-decoration: none;
@@ -179,7 +201,13 @@ hr {
     border-radius: 20px;
     font-size: 1rem;
     margin-top: auto; /* Alinha o botão na parte inferior do card */
+    transition: transform 0.3s ease; /* Adiciona transição suave */
 }
+
+.card-content .btn:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do botão */
+}
+
 
 .footer {
     background-color: #cc4503;
@@ -231,10 +259,27 @@ hr {
 .footer-left ul li a, .footer-right ul li a {
     color: #fff;
     text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.footer-left ul li a::after, .footer-right ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s ease-out;
+}
+
+.footer-left ul li a:hover::after, .footer-right ul li a:hover::after {
+    width: 100%;
 }
 
 .footer-center ul li img {
-    width: 100px;
+    width: 150px;
     height: auto;
 }
 
@@ -243,3 +288,5 @@ hr {
     width: 100%;
     text-align: center;
 }
+
+
