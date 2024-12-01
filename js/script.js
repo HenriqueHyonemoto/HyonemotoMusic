@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Atualiza o idioma do site
     function updateSiteLanguage(language) {
         // Aqui você pode adicionar a lógica para atualizar o idioma do site
-        console.log(`Idioma selecionado: ${language}`);
+        alert(`A funcionalidade de alterar idiomas ainda está em desenvolvimento. \nPorém, o idioma selecionado foi: ${language}`);
     }
 
     // Evento de clique no botão para abrir/fechar o menu
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const language = item.getAttribute('data-lang');
             selectedLanguage = language;
             updateButtonText(language);
-            //updateSiteLanguage(language);
+            updateSiteLanguage(language);
             menu.style.animation = 'slideUp 0.3s forwards';
             arrow.classList.remove('up');
             arrow.classList.add('down');
