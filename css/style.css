@@ -289,4 +289,28 @@ hr {
     text-align: center;
 }
 
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-down {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-down.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+
+
 
