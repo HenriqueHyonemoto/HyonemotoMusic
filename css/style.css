@@ -1,20 +1,16 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #cc4503;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -4px 8px rgba(0, 0, 0, 0.2); /* Added box-shadow below the navbar */
-    padding: 1.2rem;
-    position: relative; /* Ensure the navbar is positioned relative to contain the absolute positioning */
 }
 
 hr {
@@ -25,6 +21,18 @@ hr {
     background-color: #ffffff;
     height: 1px;
 }
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #cc4503;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -4px 8px rgba(0, 0, 0, 0.2); /* Added box-shadow below the navbar */
+    padding: 1.2rem;
+    position: relative; /* Ensure the navbar is positioned relative to contain the absolute positioning */
+}
+
 
 .nav-center {
     position: absolute;
@@ -56,7 +64,7 @@ hr {
 .navbar .nav-links li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     position: relative;
     padding-bottom: 5px;
 }
@@ -89,6 +97,8 @@ hr {
     border-radius: 5px;
     cursor: pointer;
 }
+
+/* Hero Section */
 
 .hero {
     background: url('../images/hero-bg.jpg') no-repeat center center/cover;
@@ -130,6 +140,7 @@ hr {
     margin-bottom: 2rem;
 }
 
+/* Cards */
 .cards-section {
     display: flex;
     justify-content: center;
@@ -208,7 +219,7 @@ hr {
     transform: scale(1.05); /* Aumenta o tamanho do botão */
 }
 
-
+/* Footer */
 .footer {
     background-color: #cc4503;
     color: #fff;
@@ -289,6 +300,7 @@ hr {
     text-align: center;
 }
 
+/* Fade Elements */
 .fade-up {
     opacity: 0;
     transform: translateY(20px);
@@ -311,6 +323,100 @@ hr {
     transform: translateY(20px);
 }
 
+/* Language Switch */
+
+.language-selector {
+    position: relative;
+    display: inline-block;
+}
+
+#language-button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; 
+}
 
 
 
+#language-button:hover {
+    background-color: #ffffff20;
+}
+
+.language-menu {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 128, 0);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 150px;
+    animation: slideDown 0.3s forwards;
+}
+
+.language-menu a{
+    text-decoration: none;
+    color:#fff;
+}
+
+.language-menu li {
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.language-menu li:hover {
+    background-color: #00000025;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+.language-menu {
+    display: none;
+}
+
+
+
+#arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+#arrow.up {
+    transform: scaleY(-1);
+}
+
+#arrow.down {
+    transform: scaleY(1);
+}

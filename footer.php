@@ -1,0 +1,39 @@
+<footer class="footer">
+        <p>&copy; 2024 Henrique H. Hyonemoto.</p>
+        <hr>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h3 id="contact">Contato</h3>
+                <ul>
+                    <li><a href="mailto:ifhenriquehyonemoto@gmail.com"><i class="fa-solid fa-envelope"
+                                target="_blank"></i> ifhenriquehyonemoto@gmail.com</a></li>
+                    <li><a href="https://linkedin.com/in/henrique-hyonemoto-689002221" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i> linkedin.com/in/henrique-hyonemoto-689002221</a></li>
+                    <!-- https://fontawesome.com/search -->
+                    <li><a href="https://github.com/HenriqueHyonemoto" target="_blank"><i
+                                class="fa-brands fa-github"></i> https://github.com/HenriqueHyonemoto</a></li>
+                </ul>
+            </div>
+            <div class="footer-center">
+                <h3 class="hidden"></h3>
+                <ul>
+                    <li><img src="images/logo-h.png" alt="Logo HHH"></li>
+                    <li><img src="images/logo-if.png" alt="Logo do IFSP"></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h3>Outros Projetos</h3>
+                <ul>
+                    <li><a href="https://github.com/HenriqueHyonemoto/PianoLeds" target="_blank"><i
+                                class="fa-solid fa-gear"></i> Piano Com Leds (Arduino)</a></li>
+                    <li><a href="https://github.com/HenriqueHyonemoto/gerenciador-de-fichas-op" target="_blank"><i
+                                class="fa-brands fa-laravel"></i> Plataforma WEB para criação de Personagens
+                            (Laravel)</a></li>
+                    <li><a href="https://github.com/HenriqueHyonemoto/ALendaDoHeroi-UltrawideFix" target="_blank"><i
+                                class="fa-solid fa-panorama"></i> Mod Renderização 21:9 em jogo eletrônico (C++)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
