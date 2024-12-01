@@ -9,7 +9,7 @@ function trocaLingua() {
 document.addEventListener('DOMContentLoaded', function() {
     const elements = document.querySelectorAll('.fade-up, .fade-down');
     const thresholdUp = 300; // Ajuste este valor para fade-up do card
-    const thresholdDown = 400; // Ajuste este valor para fade-down do card
+    const thresholdDown = 500; // Ajuste este valor para fade-down do card
     function checkVisibility() {
         elements.forEach(element => {
             const rect = element.getBoundingClientRect();
