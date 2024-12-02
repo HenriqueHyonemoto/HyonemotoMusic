@@ -60,11 +60,11 @@
         <h1>O que foi utilizado na construção desse site?</h1>
         <hr>
         <div class = "image-line">
-        <img src="images/content-html.png" alt="Icones de HTML, CSS, JavaScript, PHP e Photoshop" width="100px" class="scale-transform15">
-        <img src="images/content-css.png" alt="Icones de HTML, CSS, JavaScript, PHP e Photoshop" width="100px" class="scale-transform15">
-        <img src="images/content-js.png" alt="Icones de HTML, CSS, JavaScript, PHP e Photoshop" width="100px" class="scale-transform15">
-        <img src="images/content-php.png" alt="Icones de HTML, CSS, JavaScript, PHP e Photoshop" width="100px" class="scale-transform15">
-        <img src="images/content-photoshop.png" alt="Icones de HTML, CSS, JavaScript, PHP e Photoshop" width="100px" class="scale-transform15">
+        <img src="images/content-html.png" alt="Icone do HTML5" width="100px" class="scale-transform15">
+        <img src="images/content-css.png" alt="Icone do CSS3" width="100px" class="scale-transform15">
+        <img src="images/content-js.png" alt="Icone do JavaScript" width="100px" class="scale-transform15">
+        <img src="images/content-php.png" alt="Icone do PHP" width="150px" class="scale-transform15">
+        <img src="images/content-photoshop.png" alt="Icone do Photoshop" width="100px" class="scale-transform15">
         </div>
         <p>Para a construção desse site foi utilizado <strong>HTML, CSS, JavaScript, PHP</strong> e <strong>Photoshop</strong> para edição e personalização de imagens. Também foram utilizados ícones da <a href="https://fontawesome.com/search">FontAwesome</a> e <a href="https://lucide.dev/icons/">Lucide Icons</a>.</p>
     </section>

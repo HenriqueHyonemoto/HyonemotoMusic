@@ -5,7 +5,7 @@
             <li><a href="index.php">Início</a></li>
             <li><a href="myinfo.php">Sobre Mim</a></li>
             <li><a href="siteinfo.php">Sobre o Site</a></li>
-            <li><a href="#contact">Contato</a></li>
+            <li><a href="contato.php">Contato</a></li>
         </ul>
     </div>
     <div class="nav-right">
