@@ -164,7 +164,7 @@ hr {
 }
 
 .card:hover {
-    transform: scale(1.05); /* Aumenta o tamanho do card */
+    transform: scale(1.05)!important; /* Aumenta o tamanho do card, important pra nao ser inferferido pelas classe de fade */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Aumenta a sombra do card */
 }
 

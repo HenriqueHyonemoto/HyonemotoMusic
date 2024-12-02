@@ -9,7 +9,6 @@
                                 target="_blank"></i> ifhenriquehyonemoto@gmail.com</a></li>
                     <li><a href="https://linkedin.com/in/henrique-hyonemoto-689002221" target="_blank"><i
                                 class="fa-brands fa-linkedin"></i> linkedin.com/in/henrique-hyonemoto-689002221</a></li>
-                    <!-- https://fontawesome.com/search -->
                     <li><a href="https://github.com/HenriqueHyonemoto" target="_blank"><i
                                 class="fa-brands fa-github"></i> https://github.com/HenriqueHyonemoto</a></li>
                 </ul>
