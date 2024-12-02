@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "public/**/*.php",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "public" }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/public/index.php"
+      }
+    ]
+  }
