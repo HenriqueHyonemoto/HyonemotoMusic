@@ -164,3 +164,26 @@ document.addEventListener('DOMContentLoaded', function () {
     showSlide(currentIndex);
     startAutoPlay();
 });
+
+//adicionar texto apra area de transferencia do usuario
+document.addEventListener('DOMContentLoaded', function () {
+    const emailLinks = document.querySelectorAll('.copy-email');
+
+    emailLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault(); // Previne o comportamento padrão do link
+            const email = link.getAttribute('data-email');
+
+            // Cria um elemento temporário para copiar o texto
+            const tempInput = document.createElement('input');
+            tempInput.value = email;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            // Exibe uma mensagem de confirmação
+            alert('Email copiado para a área de transferência: ' + email);
+        });
+    });
+});

@@ -37,7 +37,7 @@
                     Interpretações, Arranjos e Transcrições que valorizam a essência de cada composição, trazendo novas
                     perspectivas e nuances únicas para cada obra. Estão disponíveis vídeos e partituras para explorar
                     essas versões.</p>
-                <a href="pages/covers.html" class="btn" style="background-color:brown">Ver Mais</a>
+                <a href="covers/index.php" class="btn" style="background-color:brown">Ver Mais</a>
             </div>
         </div>
         <div class="card fade-up fade-down">
@@ -48,7 +48,7 @@
                 <hr>
                 <p>Composições originais, abrangendo peças para piano solo e músicas multi-instrumentais no estilo de
                     trilhas sonoras. Estão disponíveis partituras, gravações histórias e fotografias dos manuscritos originais.</p>
-                <a href="pages/autorais.html" class="btn" style="background-color: blueviolet;">Ver Mais</a>
+                <a href="autorais/index.php" class="btn" style="background-color: blueviolet;">Ver Mais</a>
             </div>
         </div>
         <div class="card fade-up fade-down">
@@ -60,7 +60,7 @@
                 <p>Fotografias escolhidas como capa para os álbuns das obras autorais. Estão incluídas algumas versões
                     originais sem edição, as histórias por trás das imagem e detalhes sobre o processo criativo e edição
                     das capas.</p>
-                <a href="pages/fotografias.html" class="btn" style="background-color: rgb(194, 160, 25);">Ver Mais</a>
+                <a href="fotografias/index.php" class="btn" style="background-color: rgb(194, 160, 25);">Ver Mais</a>
             </div>
         </div>
     </section>
