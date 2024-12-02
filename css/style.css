@@ -22,6 +22,33 @@ hr {
     height: 1px;
 }
 
+
+/* Alinhar sequencia de icones*/
+.image-line {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 3rem; /* Adiciona um espaçamento entre as imagens */
+    margin-bottom: 2rem;
+}
+
+/* Aumentar tamanho de imagens com hover*/
+.scale-transform15 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Duração da transição e propriedades a serem animadas */
+}
+
+.scale-transform15:hover {
+    transform: scale(1.5) !important; /* Aumenta o tamanho do card */
+}
+
+.scale-transform11 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Duração da transição e propriedades a serem animadas */
+}
+
+.scale-transform11:hover {
+    transform: scale(1.1) !important; /* Aumenta o tamanho do card */
+}
+
 /* Navbar */
 .navbar {
     display: flex;
@@ -167,8 +194,6 @@ hr {
     transform: scale(1.05)!important; /* Aumenta o tamanho do card, important pra nao ser inferferido pelas classe de fade */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Aumenta a sombra do card */
 }
-
-
 
 .card img {
     width: 100%;
@@ -495,7 +520,7 @@ hr {
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     margin: 20px auto;
     overflow: hidden;
     cursor: pointer; /* Muda o cursor para a aparência de clicável */
@@ -515,6 +540,7 @@ hr {
 .carousel-image {
     width: 100%;
     height: auto;
+    border: rgba(0, 0, 0, 0.439) solid 1px;
 }
 
 .carousel-button {
@@ -580,3 +606,4 @@ hr {
     background-color: rgba(0, 0, 0, 0); /* Fundo transparente para o texto */
     color: #fff; /* Cor do texto */
 }
+

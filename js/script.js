@@ -10,9 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const languageItems = document.querySelectorAll('.language-menu li');
     const langDisplay = document.getElementById('language-display');
     const languageFlag = document.getElementById('language-flag');
-    let selectedLanguage = 'pt-BR'; // Idioma padrão
+    let selectedLanguage = 'pt-BR';
     langDisplay.innerHTML = selectedLanguage;
-    // Atualiza o texto do botão com o idioma selecionado
     function updateButtonText(language) {
         const languageMap = {
             'pt-BR': 'Português',
@@ -101,12 +100,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const nextButton = document.querySelector('.carousel-button.next');
     let currentIndex = 0;
     let interval;
+    let isTransitioning = false;
 
     function showSlide(index) {
+        if (isTransitioning) return;
+        isTransitioning = true;
         currentIndex = index;
         const offset = -currentIndex * 100;
         carouselInner.style.transform = `translateX(${offset}%)`;
         updateInfo();
+        setTimeout(() => {
+            isTransitioning = false;
+        }, 500); // Tempo da transição
     }
 
     function updateInfo() {
@@ -118,11 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function startAutoPlay() {
         interval = setInterval(() => {
-            if (currentIndex < slides.length - 1) {
-                showSlide(currentIndex + 1);
-            } else {
-                showSlide(0);
-            }
+            showSlide((currentIndex + 1) % slides.length);
         }, 3000); // 3 segundos
     }
 
@@ -149,15 +150,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     prevButton.addEventListener('click', function () {
-        if (currentIndex > 0) {
-            showSlide(currentIndex - 1);
-        }
+        showSlide((currentIndex - 1 + slides.length) % slides.length);
     });
 
     nextButton.addEventListener('click', function () {
-        if (currentIndex < slides.length - 1) {
-            showSlide(currentIndex + 1);
-        }
+        showSlide((currentIndex + 1) % slides.length);
     });
 
     carousel.addEventListener('mouseover', handleMouseOver);
@@ -167,4 +164,3 @@ document.addEventListener('DOMContentLoaded', function () {
     showSlide(currentIndex);
     startAutoPlay();
 });
-

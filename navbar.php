@@ -3,7 +3,7 @@
     <div class="nav-center">
         <ul class="nav-links">
             <li><a href="index.php">Início</a></li>
-            <li><a href="#about">Sobre Mim</a></li>
+            <li><a href="myinfo.php">Sobre Mim</a></li>
             <li><a href="siteinfo.php">Sobre o Site</a></li>
             <li><a href="#contact">Contato</a></li>
         </ul>
