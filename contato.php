@@ -19,9 +19,9 @@
             <h1>Contato</h1>
             <hr>
             <ul class="contact-list">
-            <li><a href="#" data-email="ifhenriquehyonemoto@gmail.com" class="copy-email"><i class="fa-solid fa-envelope"></i> ifhenriquehyonemoto@gmail.com &nbsp; <i data-lucide="copy"></i></a></li>
-                <li><a href="https://linkedin.com/in/henrique-hyonemoto-689002221" target="_blank"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/henrique-hyonemoto-689002221</a></li>
-                <li><a href="https://github.com/HenriqueHyonemoto" target="_blank"><i class="fa-brands fa-github"></i> github.com/HenriqueHyonemoto</a></li>
+            <li><a href="#" data-email="ifhenriquehyonemoto@gmail.com" class="copy-email no-dec" ><i class="fa-solid fa-envelope"></i> ifhenriquehyonemoto@gmail.com &nbsp; <i data-lucide="copy"></i></a></li>
+                <li><a href="https://linkedin.com/in/henrique-hyonemoto-689002221" target="_blank" class="no-dec"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/henrique-hyonemoto-689002221</a></li>
+                <li><a href="https://github.com/HenriqueHyonemoto" target="_blank" class="no-dec"><i class="fa-brands fa-github"></i> github.com/HenriqueHyonemoto</a></li>
             </ul>
         </section>
     </div>

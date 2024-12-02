@@ -26,6 +26,11 @@ strong{
     color: #cc4503;
 }
 
+.no-dec a:hover{
+text-decoration: none !important;
+border-color: transparent !important;
+}
+
 
 /* Alinhar sequencia de icones*/
 .image-line {
@@ -640,11 +645,12 @@ text-align: left;
 
 .contact-list li a:hover {
     color: #cc4503;
-    text-decoration:none;
+    text-decoration: none;
 }
-
 
 .contact-list li a i {
     margin-right: 10px;
     font-size: 1.5rem;
 }
+
+/* Remover a linha abaixo do texto nos contatos */

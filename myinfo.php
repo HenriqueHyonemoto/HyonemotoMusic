@@ -55,7 +55,7 @@ $idade = $dif->y;
             </div>
             <p><strong>Descrição:</strong> Este projeto tem como propósito criar uma experiência imersiva e visual ao tocar piano, onde cada tecla pressionada acende LEDs correspondentes em uma fita RGB, sincronizando luz e som em uma performance única. Além disso, possibilita a produção de vídeos artísticos que combinam música e efeitos de iluminação, resultando em uma obra visual e sonora cativante!</p>
             <p><strong>Tecnologias:</strong> Arduino, C++, Edição de Video e Imagens</p>
-            <p><strong>Acesse o Projeto:</strong><a href="https://github.com/HenriqueHyonemoto/PianoLeds" target="_blank" class="project-link"> https://github.com/HenriqueHyonemoto/PianoLeds</a></p>
+            <p><strong>Acesse o Projeto:</strong><a href="https://github.com/HenriqueHyonemoto/PianoLeds" target="_blank" class="link"> https://github.com/HenriqueHyonemoto/PianoLeds</a></p>
         </section>
 
         <section class="content-section">
@@ -66,7 +66,7 @@ $idade = $dif->y;
             </div>
             <p><strong>Descrição:</strong> Plataforma web para criação e gerenciamento de personagens de RPG, projetada especialmente para jogadores de Ordem Paranormal. O sistema oferece funcionalidades robustas de autenticação de usuário e controle de acesso, garantindo segurança e privacidade. Com operações completas de CRUD (criação, leitura, atualização e exclusão), os jogadores podem criar personagens personalizados com todos os atributos e regras específicas do RPG Ordem Paranormal. Durante as partidas, é possível ajustar os atributos do personagem dinamicamente, proporcionando flexibilidade e uma experiência imersiva. Além disso, a plataforma conta com um sistema integrado de rolagem de dados, permitindo realizar rolagens variadas de forma prática e ágil, adaptadas às necessidades do jogo.</p>
             <p><strong>Tecnologias:</strong> Laravel, HTML, Bootstrap,  MySQL.</p>
-            <p><strong>Acesse o Projeto:</strong><a href="https://github.com/HenriqueHyonemoto/gerenciador-de-fichas-op" target="_blank" class="project-link"> https://github.com/HenriqueHyonemoto/gerenciador-de-fichas-op</a></p>
+            <p><strong>Acesse o Projeto:</strong><a href="https://github.com/HenriqueHyonemoto/gerenciador-de-fichas-op" target="_blank" class="link"> https://github.com/HenriqueHyonemoto/gerenciador-de-fichas-op</a></p>
         </section>
 
         <section class="content-section">
@@ -78,7 +78,7 @@ $idade = $dif->y;
             <p><strong>Descrição:</strong> A Lenda do Herói é um jogo que não oferece suporte nativo para monitores ultrawide, resultando em bordas pretas verticais caso você use um monitor com essas proporções.
 Esse projeto é uma modificação criada para permitir que o jogo seja renderizado em Ultrawide (21:9). Testado em resolução 2560x1080.</p>
             <p><strong>Tecnologias:</strong> Engenharia Reversa, Design Grafico,  C#.</p>
-            <p><strong>Acesse o Projeto:</strong><a href="https://github.com/HenriqueHyonemoto/ALendaDoHeroi-UltrawideFix" target="_blank" class="project-link"> https://github.com/HenriqueHyonemoto/ALendaDoHeroi-UltrawideFix</a></p>
+            <p><strong>Acesse o Projeto:</strong><a href="https://github.com/HenriqueHyonemoto/ALendaDoHeroi-UltrawideFix" target="_blank" class="link"> https://github.com/HenriqueHyonemoto/ALendaDoHeroi-UltrawideFix</a></p>
         </section>
 
     </div>
