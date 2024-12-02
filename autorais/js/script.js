@@ -197,6 +197,19 @@ document.addEventListener('DOMContentLoaded', function() {
             const submenu = document.getElementById(submenuId);
             const arrow = this.querySelector('.filter-arrow');
 
+            // Fechar todos os submenus e resetar os ícones
+            filterItems.forEach(otherItem => {
+                const otherSubmenuId = otherItem.getAttribute('data-submenu');
+                const otherSubmenu = document.getElementById(otherSubmenuId);
+                const otherArrow = otherItem.querySelector('.filter-arrow');
+
+                if (otherSubmenu && otherSubmenu !== submenu) {
+                    otherSubmenu.classList.remove('open');
+                    otherArrow.classList.remove('open');
+                }
+            });
+
+            // Abrir o submenu clicado e rotacionar o ícone
             if (submenu) {
                 submenu.classList.toggle('open');
                 arrow.classList.toggle('open');
