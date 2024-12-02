@@ -6,31 +6,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hyonemoto Music ♪</title>
     <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- https://fontawesome.com/search -->
     <script src="https://kit.fontawesome.com/50812450f6.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
-</head>
-<style>
-    body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-            font-size: 50px;
-        }
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300&display=swap"
+        rel="stylesheet">
 
-        h1, a {
-            color: blueviolet;
-        }
-</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300&family=Tangerine:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+<header>
+    <h1>Obras Autorais</h1>
+</header>
+<nav class="navbar">
+    <div class="nav-left">
+        <img src="../images/logo-h.png" alt="HHH logo">
+        <ul class="nav-links">
+            <li><a href="infos.html">Informações</a></li>
+            <li><a href="autorais.html">Obras</a></li>
+        </ul>
+    </div>
+
+    <div class="nav-center">
+
+    </div>
+    <div class="nav-right">
+        <!-- flag images by https://www.freepik.com -->
+        <div id="language-flag">
+            <img src="../images/fg-br.png" width="32">
+        </div>
+        <div class="language-selector">
+            <button id="language-button"><span id="language-display"><i class="fa-solid fa-caret-right"></i></span><span id="arrow"><img
+                        src="../images/chevron-down.png"></span></button>
+            <ul id="language-menu" class="language-menu">
+                <a href="#">
+                    <li data-lang="pt-BR"><img src="../images/fg-br.png" width="32">pt-BR</li>
+                </a>
+                <a href="#">
+                    <li data-lang="en"><img src="../images/fg-us.png" width="32">ENG</li>
+                </a>
+            </ul>
+        </div>
+
+    </div>
+</nav>
 <body>
-<h1>Esta Seção ainda está em Desenvolvimento!</h1>
-<a href="../index.html">Voltar</a>
+    <div class="content-container">
+        <!-- Seção de Menu de Pesquisa -->
+        <div class="content-section filter-menu">
+    <h1>Filtrar</h1>
+    <div class="filter-item" data-submenu="submenu-piano"><span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Piano</div>
+    <div id="submenu-piano" class="filter-submenu">
+        <div class="filter-item filter-category"><span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Prelúdios</div>
+        <div class="filter-item filter-category"><span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Valsas</div>
+    </div>
+    <div class="filter-item" data-submenu="submenu-soundtracks"><span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Orquestrações</div>
+    <div id="submenu-soundtracks" class="filter-submenu">
+        <div class="filter-item filter-category"><span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Soundtracks</div>
+    </div>
+    <div class="filter-item" data-submenu="submenu-violao"><span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Violão</div>
+    <div id="submenu-violao" class="filter-submenu">
+        <div class="filter-item filter-category" disabled><span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Ainda não fiz =(</div>
+    </div>
+</div>
+
+        <!-- Seção de Conteúdo Principal -->
+        <div class="content-section main-content">
+            <h1>Informações</h1>
+            <hr>
+            <div class="image-line">
+                <img src="images/logo-h-bk.png" alt="Foto do código do projeto" width="450px" class="scale-transform11">
+            </div>
+            <p>Me chamo <strong>Henrique Hyonemoto</strong>, tenho atualmente <span id="idade"></span> anos. Iniciei meus estudos em programação em 2021, aos 17 anos, no <strong>Instituto Federal de Educação, Ciência e Tecnologia de São Paulo, Campus Votuporanga</strong>, onde atualmente estou no 8º semestre.</p>
+
+            <p>Ao longo da minha trajetória, realizei projetos de estudo para aprimorar meus conhecimentos em desenvolvimento web, utilizando <strong>HTML, CSS, JavaScript e Bootstrap</strong> no front-end, e <strong>PHP, Laravel e MySQL</strong> no back-end. </p>
+
+            <p>Também explorei a integração de sistemas embarcados com <strong>Arduino</strong> e <strong>C++</strong>, abordando tanto interfaces quanto o controle de hardware, para o <strong>projeto do Piano com Leds</strong>. </p>
+
+            <p>Além disso, desenvolvi habilidades em <strong>engenharia reversa</strong> ao modificar o jogo <strong>A Lenda do Herói</strong>, cuja linguagem principal é <strong>C#</strong>. Nesse projeto, adaptei o jogo para <strong>renderizar em proporção de tela 21:9</strong>, proporcionando uma experiência mais imersiva para usuários com monitores ultrawide. O processo também envolveu <strong>design gráfico</strong> para alterar certos elementos visuais, garantindo uma integração harmônica com o novo formato. </p>
+
+            <p>Sou também um entusiasta da música, tendo <strong>iniciado meus estudos no piano em 2020</strong>, após ser apresentado às obras clássicas de Chopin e Beethoven. Desenvolvi-me rapidamente e, em pouco tempo, comecei a compor peças autorais. <strong>Em setembro de 2024, comecei a aprender violão</strong>, influenciado pela banda Nirvana.</p>
+
+            <p>Em todas essas áreas, <strong>iniciei sem nenhum conhecimento prévio</strong>, evidenciando meu grande <strong>interesse e facilidade em aprender</strong> coisas novas. Essa disposição me permitiu explorar diferentes disciplinas e superar desafios com muita <strong>dedicação</strong>.</p>
+        </div>
+
+        <!-- Seção de Índice de Conteúdo -->
+        <div class="content-section table-of-contents">
+            <h2>Índice de Conteúdo</h2>
+            <ol>
+                <li>Informações</li>
+                <li>Estudos em Programação</li>
+                <li>Projetos de Estudo</li>
+                <li>Engenharia Reversa</li>
+                <li>Música</li>
+                <li>Conclusão</li>
+            </ol>
+        </div>
+    </div>
+
+
+
+    <footer class="footer">
+        <div class="footer-top">
+            <p>&copy; 2024 Henrique H. Hyonemoto.</p>
+            <hr>
+        </div>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h3 id="contact">Contato</h3>
+                <ul>
+                    <li><a href="mailto:ifhenriquehyonemoto@gmail.com"><i class="fa-solid fa-envelope"
+                                target="_blank"></i> ifhenriquehyonemoto@gmail.com</a></li>
+                    <li><a href="https://linkedin.com/in/henrique-hyonemoto-689002221" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i> linkedin.com/in/henrique-hyonemoto-689002221</a></li>
+                    <li><a href="https://github.com/HenriqueHyonemoto" target="_blank"><i
+                                class="fa-brands fa-github"></i> https://github.com/HenriqueHyonemoto</a></li>
+                </ul>
+            </div>
+            <div class="footer-center">
+                <h3 class="hidden"></h3>
+                <ul>
+                    <li><img src="../images/logo-h.png" alt="Logo HHH"></li>
+                    <li><img src="../images/logo-if.png" alt="Logo do IFSP"></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h3>Outros Projetos</h3>
+                <ul>
+                    <li><a href="https://github.com/HenriqueHyonemoto/PianoLeds" target="_blank"><i
+                                class="fa-solid fa-gear"></i> Piano Com Leds (Arduino)</a></li>
+                    <li><a href="https://github.com/HenriqueHyonemoto/gerenciador-de-fichas-op" target="_blank"><i
+                                class="fa-brands fa-laravel"></i> Plataforma WEB para criação de Personagens
+                            (Laravel)</a></li>
+                    <li><a href="https://github.com/HenriqueHyonemoto/ALendaDoHeroi-UltrawideFix" target="_blank"><i
+                                class="fa-solid fa-panorama"></i> Mod Renderização 21:9 em jogo eletrônico (C++)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
