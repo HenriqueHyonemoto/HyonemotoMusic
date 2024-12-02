@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- https://fontawesome.com/search -->
     <script src="https://kit.fontawesome.com/50812450f6.js" crossorigin="anonymous"></script>
+    <?php require "font.php"?>
 </head>
 
 <body>
@@ -31,10 +32,11 @@
             <div class="card-content">
                 <h2 style="color:brown">Covers</h2>
                 <h3>Videos, Tutoriais e Partituras</h3>
+                <hr>
                 <p>
                     Interpretações, Arranjos e Transcrições que valorizam a essência de cada composição, trazendo novas
                     perspectivas e nuances únicas para cada obra. Estão disponíveis vídeos e partituras para explorar
-                    essas versões exclusivas.</p>
+                    essas versões.</p>
                 <a href="pages/covers.html" class="btn" style="background-color:brown">Ver Mais</a>
             </div>
         </div>
@@ -43,9 +45,9 @@
             <div class="card-content">
                 <h2 style="color:blueviolet">Obras Autorais</h2>
                 <h3>Partituras, Manuscritos e Histórias</h3>
+                <hr>
                 <p>Composições originais, abrangendo peças para piano solo e músicas multi-instrumentais no estilo de
-                    trilhas sonoras, criadas para explorar e experimentar composição. Estão disponíveis partituras,
-                    gravações e manuscritos originais.</p>
+                    trilhas sonoras. Estão disponíveis partituras, gravações histórias e fotografias dos manuscritos originais.</p>
                 <a href="pages/autorais.html" class="btn" style="background-color: blueviolet;">Ver Mais</a>
             </div>
         </div>
@@ -54,6 +56,7 @@
             <div class="card-content">
                 <h2 style="color:rgb(194, 160, 25)">Fotografias</h2>
                 <h3>Imagens e Contextos</h3>
+                <hr>
                 <p>Fotografias escolhidas como capa para os álbuns das obras autorais. Estão incluídas algumas versões
                     originais sem edição, as histórias por trás das imagem e detalhes sobre o processo criativo e edição
                     das capas.</p>

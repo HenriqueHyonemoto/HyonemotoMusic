@@ -1,6 +1,8 @@
 <footer class="footer">
+<div class="footer-top">
         <p>&copy; 2024 Henrique H. Hyonemoto.</p>
         <hr>
+    </div>
         <div class="footer-content">
             <div class="footer-left">
                 <h3 id="contact">Contato</h3>

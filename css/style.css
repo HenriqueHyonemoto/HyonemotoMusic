@@ -7,7 +7,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Poppins", sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -183,6 +183,15 @@ hr {
     justify-content: space-between;
 }
 
+.card-content hr{
+        border: 0;
+        clear: both;
+        display: block;
+        width: 20rem;
+        background-color:rgba(0, 0, 0, 0.4);
+        height: 1px;
+}
+
 .card-content h2 {
     font-size: 1.5rem;
     margin-bottom: 0rem;
@@ -190,7 +199,7 @@ hr {
 }
 
 .card-content h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 0.5rem;
     color: #555;
     text-align: center;
@@ -230,7 +239,24 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-top p {
+    margin: 0;
+}
+
+.footer-top hr {
+    width: 50%;
+    margin: 1rem 0;
 }
 
 .footer-content {
@@ -379,6 +405,8 @@ hr {
     background-color: #00000025;
 }
 
+
+
 @keyframes slideDown {
     from {
         opacity: 0;
@@ -405,8 +433,6 @@ hr {
     display: none;
 }
 
-
-
 #arrow {
     display: inline-block;
     transition: transform 0.3s ease;
@@ -419,4 +445,138 @@ hr {
 
 #arrow.down {
     transform: scaleY(1);
+}
+
+/* Paginas de Conteudo */
+
+.content-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 60px;
+    background-color: #ffffffdf;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.content-section hr{
+    width:100%;
+    background-color:rgba(0, 0, 0, 0.4);
+    margin: -10px 0 20px; 
+    border: 0;
+    border-top: 2px solid #ccc;
+}
+
+.content-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+.content-container p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #555;
+    text-align: justify;
+}
+
+.content-container a {
+    color: #cc4503;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.content-container a:hover {
+    border-color: #cc4503;
+}
+
+/* Carrosel de imagens deslizantes */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    cursor: pointer; /* Muda o cursor para a aparência de clicável */
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    position: relative;
+    min-width: 100%;
+    height: auto;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-button.visible {
+    opacity: 1;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* Carousel Info */
+.carousel-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo transparente */
+    color: #fff;
+    text-align: left; /* Alinha o texto à esquerda */
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    z-index: 1; /* Garantir que a informação apareça acima da imagem */
+}
+
+.carousel-info.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.carousel-info-icon {
+    width: 70px;
+    height: 70px;
+    border: 2px solid #fff;
+    margin-right: 10px;
+}
+
+.carousel-info-text {
+    font-size: 1.2rem;
+    flex: 1; /* Permite que o texto ocupe o espaço restante */
+    background-color: rgba(0, 0, 0, 0); /* Fundo transparente para o texto */
+    color: #fff; /* Cor do texto */
 }
