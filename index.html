@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyonemoto Music ♪</title>
+    <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- https://fontawesome.com/search -->
+    <script src="https://kit.fontawesome.com/50812450f6.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+<nav class="navbar">
+    <div class="logo"><img src="images/logo-h.png" alt="HHH logo"></div>
+    <div class="nav-center">
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="myinfo.html">Sobre Mim</a></li>
+            <li><a href="siteinfo.html">Sobre o Site</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </div>
+    <div class="nav-right">
+    <!-- flag images by https://www.freepik.com -->
+     <div id="language-flag">
+        <img src="images/fg-br.png" width="32">
+        </div>
+        <div class="language-selector">
+            <button id="language-button"><span id="language-display"></span><span id="arrow"><img src="images/chevron-down.png"></span></button>
+            <ul id="language-menu" class="language-menu">  
+                <a href="#">
+                    <li data-lang="pt-BR"><img src="images/fg-br.png" width="32">pt-BR</li>
+                </a>
+                <a href="#">
+                    <li data-lang="en"><img src="images/fg-us.png" width="32">ENG</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <section class="hero" id="home">
+        <div>
+            <div class="hero-content fade-up fade-down">
+                <h1>Bem-vindo à <br><a style="color:rgb(0, 0, 0)">Hyonemoto Music</a></h1>
+                <p>Meu Acervo de Obras Músicais.</p>
+                <a href="#about" class="btn">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards-section" id="about">
+        <div class="card fade-up fade-down">
+            <img src="images/card-cover.png" alt="Covers">
+            <div class="card-content">
+                <h2 style="color:brown">Covers</h2>
+                <h3>Videos, Tutoriais e Partituras</h3>
+                <hr>
+                <p>
+                    Interpretações, Arranjos e Transcrições que valorizam a essência de cada composição, trazendo novas
+                    perspectivas e nuances únicas para cada obra. Estão disponíveis vídeos e partituras para explorar
+                    essas versões.</p>
+                <a href="covers/index.html" class="btn" style="background-color:brown">Ver Mais</a>
+            </div>
+        </div>
+        <div class="card fade-up fade-down">
+            <img src="images/card-autoral.jpg" alt="Autorais">
+            <div class="card-content">
+                <h2 style="color:blueviolet">Obras Autorais</h2>
+                <h3>Partituras, Manuscritos e Histórias</h3>
+                <hr>
+                <p>Composições originais, abrangendo peças para piano solo e músicas multi-instrumentais no estilo de
+                    trilhas sonoras. Estão disponíveis partituras, gravações histórias e fotografias dos manuscritos originais.</p>
+                <a href="autorais/index.html" class="btn" style="background-color: blueviolet;">Ver Mais</a>
+            </div>
+        </div>
+        <div class="card fade-up fade-down">
+            <img src="images/card-fotos.jpg" alt="Fotos">
+            <div class="card-content">
+                <h2 style="color:rgb(194, 160, 25)">Fotografias</h2>
+                <h3>Imagens e Contextos</h3>
+                <hr>
+                <p>Fotografias escolhidas como capa para os álbuns das obras autorais. Estão incluídas algumas versões
+                    originais sem edição, as histórias por trás das imagem e detalhes sobre o processo criativo e edição
+                    das capas.</p>
+                <a href="fotografias/index.html" class="btn" style="background-color: rgb(194, 160, 25);">Ver Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+<div class="footer-top">
+        <p>&copy; 2024 Henrique H. Hyonemoto.</p>
+        <hr>
+    </div>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h3 id="contact">Contato</h3>
+                <ul>
+                    <li><a href="mailto:ifhenriquehyonemoto@gmail.com"><i class="fa-solid fa-envelope"
+                                target="_blank"></i> ifhenriquehyonemoto@gmail.com</a></li>
+                    <li><a href="https://linkedin.com/in/henrique-hyonemoto-689002221" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i> linkedin.com/in/henrique-hyonemoto-689002221</a></li>
+                    <li><a href="https://github.com/HenriqueHyonemoto" target="_blank"><i
+                                class="fa-brands fa-github"></i> https://github.com/HenriqueHyonemoto</a></li>
+                </ul>
+            </div>
+            <div class="footer-center">
+                <h3 class="hidden"></h3>
+                <ul>
+                    <li><img src="images/logo-h.png" alt="Logo HHH"></li>
+                    <li><img src="images/logo-if.png" alt="Logo do IFSP"></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h3>Outros Projetos</h3>
+                <ul>
+                    <li><a href="https://github.com/HenriqueHyonemoto/PianoLeds" target="_blank"><i
+                                class="fa-solid fa-gear"></i> Piano Com Leds (Arduino)</a></li>
+                    <li><a href="https://github.com/HenriqueHyonemoto/gerenciador-de-fichas-op" target="_blank"><i
+                                class="fa-brands fa-laravel"></i> Plataforma WEB para criação de Personagens
+                            (Laravel)</a></li>
+                    <li><a href="https://github.com/HenriqueHyonemoto/ALendaDoHeroi-UltrawideFix" target="_blank"><i
+                                class="fa-solid fa-panorama"></i> Mod Renderização 21:9 em jogo eletrônico (C++)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

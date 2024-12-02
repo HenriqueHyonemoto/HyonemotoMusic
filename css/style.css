@@ -1,0 +1,656 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+hr {
+    border: 0;
+    clear: both;
+    display: block;
+    width: 85rem;
+    background-color: #ffffff;
+    height: 1px;
+}
+
+strong{
+    color: #cc4503;
+}
+
+.no-dec a:hover{
+text-decoration: none !important;
+border-color: transparent !important;
+}
+
+
+/* Alinhar sequencia de icones*/
+.image-line {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 3rem; /* Adiciona um espaçamento entre as imagens */
+    margin-bottom: 2rem;
+}
+
+/* Aumentar tamanho de imagens com hover*/
+.scale-transform15 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Duração da transição e propriedades a serem animadas */
+}
+
+.scale-transform15:hover {
+    transform: scale(1.5) !important; /* Aumenta o tamanho do card */
+}
+
+.scale-transform11 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Duração da transição e propriedades a serem animadas */
+}
+
+.scale-transform11:hover {
+    transform: scale(1.1) !important; /* Aumenta o tamanho do card */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #cc4503;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -4px 8px rgba(0, 0, 0, 0.2); /* Added box-shadow below the navbar */
+    padding: 1.2rem;
+    position: relative; /* Ensure the navbar is positioned relative to contain the absolute positioning */
+}
+
+
+.nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center; /* Vertically center the logo image */
+}
+
+.navbar .logo img {
+    height: 40px; /* Adjust the height as needed */
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: auto;
+}
+
+.navbar .nav-links li {
+    margin: 0;
+}
+
+.navbar .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.navbar .nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s ease-out;
+}
+
+.navbar .nav-links li a:hover::after {
+    width: 100%;
+}
+
+.navbar .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-right select {
+    background-color: #cc4503;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+
+.hero {
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.hero .hero-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(255, 191, 0, 0.5); /* Sombra do texto */
+}
+
+.hero .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero .hero-content .btn {
+    background-color: #cc4503;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Cards */
+.cards-section {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin: 1rem 0;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    width: 350px;
+    height: 525px; /* Altura fixa para os cards */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adiciona transição suave */
+}
+
+.card:hover {
+    transform: scale(1.05)!important; /* Aumenta o tamanho do card, important pra nao ser inferferido pelas classe de fade */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Aumenta a sombra do card */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content hr{
+        border: 0;
+        clear: both;
+        display: block;
+        width: 20rem;
+        background-color:rgba(0, 0, 0, 0.4);
+        height: 1px;
+}
+
+.card-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0rem;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+    text-align: center;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+    flex: 1;
+    text-align: justify;
+}
+
+.card-content .btn {
+    color: #fff;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 1rem;
+    margin-top: auto; /* Alinha o botão na parte inferior do card */
+    transition: transform 0.3s ease; /* Adiciona transição suave */
+}
+
+.card-content .btn:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do botão */
+}
+
+/* Footer */
+.footer {
+    background-color: #cc4503;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.2); /* Added box-shadow above the footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-top p {
+    margin: 0;
+}
+
+.footer-top hr {
+    width: 50%;
+    margin: 1rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    gap: 2rem; /* Add space between columns */
+}
+
+.footer-left, .footer-right {
+    text-align: left;
+    flex: 1;
+}
+
+.footer-center {
+    text-align: center;
+    flex: 1;
+}
+
+.footer-left h3, .footer-center h3, .footer-right h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-left ul, .footer-center ul, .footer-right ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-left ul li, .footer-center ul li, .footer-right ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-left ul li a, .footer-right ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.footer-left ul li a::after, .footer-right ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s ease-out;
+}
+
+.footer-left ul li a:hover::after, .footer-right ul li a:hover::after {
+    width: 100%;
+}
+
+.footer-center ul li img {
+    width: 150px;
+    height: auto;
+}
+
+.footer p {
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+/* Fade Elements */
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-down {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-down.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Language Switch */
+
+.language-selector {
+    position: relative;
+    display: inline-block;
+}
+
+#language-button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; 
+}
+
+
+
+#language-button:hover {
+    background-color: #ffffff20;
+}
+
+.language-menu {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 128, 0);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 150px;
+    animation: slideDown 0.3s forwards;
+}
+
+.language-menu a{
+    text-decoration: none;
+    color:#fff;
+}
+
+.language-menu li {
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.language-menu li:hover {
+    background-color: #00000025;
+}
+
+
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+.language-menu {
+    display: none;
+}
+
+#arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+#arrow.up {
+    transform: scaleY(-1);
+}
+
+#arrow.down {
+    transform: scaleY(1);
+}
+
+/* Paginas de Conteudo */
+
+.content-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 60px;
+    background-color: #ffffffdf;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.content-section hr{
+    width:100%;
+    background-color:rgba(0, 0, 0, 0.4);
+    margin: -10px 0 20px; 
+    border: 0;
+    border-top: 2px solid #ccc;
+}
+
+.content-section a{
+text-align: left;
+}
+
+.content-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+.content-container p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #555;
+    text-align: justify;
+}
+
+.content-container a {
+    color: #cc4503;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.content-container a:hover {
+    border-color: #cc4503;
+}
+
+
+
+/* Carrosel de imagens deslizantes */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    overflow: hidden;
+    cursor: pointer; /* Muda o cursor para a aparência de clicável */
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    position: relative;
+    min-width: 100%;
+    height: auto;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+    border: rgba(0, 0, 0, 0.439) solid 1px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-button.visible {
+    opacity: 1;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* Carousel Info */
+.carousel-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo transparente */
+    color: #fff;
+    text-align: left; /* Alinha o texto à esquerda */
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    z-index: 1; /* Garantir que a informação apareça acima da imagem */
+}
+
+.carousel-info.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.carousel-info-icon {
+    width: 70px;
+    height: 70px;
+    border: 2px solid #fff;
+    margin-right: 10px;
+}
+
+.carousel-info-text {
+    font-size: 1.2rem;
+    flex: 1; /* Permite que o texto ocupe o espaço restante */
+    background-color: rgba(0, 0, 0, 0); /* Fundo transparente para o texto */
+    color: #fff; /* Cor do texto */
+}
+
+/* Lista de Contatos */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.contact-list li {
+    margin: 10px 0;
+}
+
+.contact-list li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.contact-list li a:hover {
+    color: #cc4503;
+    text-decoration: none;
+}
+
+.contact-list li a i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+/* Remover a linha abaixo do texto nos contatos */
