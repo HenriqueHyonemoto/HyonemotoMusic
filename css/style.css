@@ -22,6 +22,10 @@ hr {
     height: 1px;
 }
 
+strong{
+    color: #cc4503;
+}
+
 
 /* Alinhar sequencia de icones*/
 .image-line {
