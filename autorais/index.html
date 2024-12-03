@@ -25,7 +25,39 @@
     <h1>Obras Autorais</h1>
 </header>
 <body>
-    <div class="js-require" page="navbar.html"> </div>
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="../images/logo-h.png" alt="HHH logo">
+            <ul class="nav-links">
+                <li><a href="#" data-page="informacoes">Informações</a></li>
+                <li><a href="#" data-page="obras">Obras</a></li>
+                <li><a href="#" data-page="historia">Minha História no Piano</a></li>
+            </ul>
+        </div>
+    
+        <div class="nav-center">
+    
+        </div>
+        <div class="nav-right">
+            <!-- flag images by https://www.freepik.com -->
+            <div id="language-flag">
+                <img src="../images/fg-br.png" width="32">
+            </div>
+            <div class="language-selector">
+                <button id="language-button"><span id="language-display"><i class="fa-solid fa-caret-right"></i></span><span
+                        id="arrow"><img src="../images/chevron-down.png"></span></button>
+                <ul id="language-menu" class="language-menu">
+                    <a href="#">
+                        <li data-lang="pt-BR"><img src="../images/fg-br.png" width="32">pt-BR</li>
+                    </a>
+                    <a href="#">
+                        <li data-lang="en"><img src="../images/fg-us.png" width="32">ENG</li>
+                    </a>
+                </ul>
+            </div>
+    
+        </div>
+    </nav>
     <div class="content-container">
         <!-- Seção de Menu de Pesquisa -->
         <div class="content-section filter-menu">
@@ -55,17 +87,84 @@
         <!-- Seção de Conteúdo Principal -->
 
         <div class="content-section main-content">
-            <div class="js-require" page="informacoes.html"> </div>
+            <div class="js-require" page=""><h1 id="1">Informações</h1>
+                <hr>
+                <p>Nesta seção, você encontrará uma variedade de conteúdos relacionados às minhas composições e trajetória
+                    musical. O objetivo é apresentar informações organizadas e detalhadas sobre as obras e o processo
+                    criativo que as envolve.</p>
+                
+                <p><strong>1. Gravações:</strong> Arquivos de áudio ou vídeo das performances das minhas composições,
+                    permitindo a apreciação das obras em formato completo.</p>
+                
+                <p><strong>2. Minha História com a Música:</strong> Um relato sobre como comecei minha jornada musical,
+                    incluindo influências, experiências e eventos marcantes que moldaram minha relação com a música.</p>
+                
+                <p><strong>3. Partituras Manuscritas:</strong> Cópias das partituras escritas à mão durante o processo de
+                    composição, oferecendo uma visão sobre o desenvolvimento inicial das obras.</p>
+                
+                <p><strong>4. Partituras Originais:</strong> Versões finais revisadas das partituras, prontas para estudo,
+                    execução ou análise.</p>
+                
+                <p><strong>5.Fotografias:</strong> Registros visuais que para mim, representam algum aspecto da obra.</p>
+                
+                <p><strong>6. Histórias e Inspirações:</strong> Textos explicativos que descrevem o contexto, os
+                    sentimentos, motivações e inspirações por trás de cada obra, esclarecendo suas origens e intenções.</p>
+                
+                </div>
         </div>
 
         <!-- Seção de Índice de Conteúdo -->
         <div class="content-section table-of-contents">
-            <div class="js-require" page="informacoes_indice.html"></div>
+            <div class="js-require" page=""><h1>Índice</h1>
+                <div class="indice card">
+                    <ul>
+                        <li class="scale-transform11"><a href="#1">Informações</a></li>
+                    </ul>
+                </div>
+        </div>
         </div>
     </div>
 
-    <div class="js-require" page="footer.html"></div>
-    <script src="js/require.js"></script>
+    <footer class="footer">
+        <div class="footer-top">
+            <p>&copy; 2024 Henrique H. Hyonemoto.</p>
+            <hr>
+        </div>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h3 id="contact">Contato</h3>
+                <ul>
+                    <li><a href="mailto:ifhenriquehyonemoto@gmail.com"><i class="fa-solid fa-envelope"
+                                target="_blank"></i> ifhenriquehyonemoto@gmail.com</a></li>
+                    <li><a href="https://linkedin.com/in/henrique-hyonemoto-689002221" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i> linkedin.com/in/henrique-hyonemoto-689002221</a></li>
+                    <li><a href="https://github.com/HenriqueHyonemoto" target="_blank"><i
+                                class="fa-brands fa-github"></i> https://github.com/HenriqueHyonemoto</a></li>
+                </ul>
+            </div>
+            <div class="footer-center">
+                <h3 class="hidden"></h3>
+                <ul>
+                    <li><img src="../images/logo-h.png" alt="Logo HHH"></li>
+                    <li><img src="../images/logo-if.png" alt="Logo do IFSP"></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h3>Outros Projetos</h3>
+                <ul>
+                    <li><a href="https://github.com/HenriqueHyonemoto/PianoLeds" target="_blank"><i
+                                class="fa-solid fa-gear"></i> Piano Com Leds (Arduino)</a></li>
+                    <li><a href="https://github.com/HenriqueHyonemoto/gerenciador-de-fichas-op" target="_blank"><i
+                                class="fa-brands fa-laravel"></i> Plataforma WEB para criação de Personagens
+                            (Laravel)</a></li>
+                    <li><a href="https://github.com/HenriqueHyonemoto/ALendaDoHeroi-UltrawideFix" target="_blank"><i
+                                class="fa-solid fa-panorama"></i> Mod Renderização 21:9 em jogo eletrônico (C++)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+    </footer>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="js/script.js"></script>
 </body>
