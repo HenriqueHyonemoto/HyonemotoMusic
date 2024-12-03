@@ -21,6 +21,7 @@ strong{
     color:rgb(80, 20, 150);
 }
 
+
 /* Aumentar tamanho de imagens com hover*/
 .scale-transform15 {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Duração da transição e propriedades a serem animadas */
