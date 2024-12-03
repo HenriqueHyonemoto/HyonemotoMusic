@@ -1,6 +1,8 @@
 // https://lucide.dev/icons/
 lucide.createIcons();
 
+//require-js <div class="js-require" data-info="navbar.html"></div>
+
 //Calcula minha idade
 function calcularIdade() {
     // Data de nascimento
