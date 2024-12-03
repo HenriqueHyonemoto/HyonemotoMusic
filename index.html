@@ -14,7 +14,35 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="js-require" page="navbar.html"></div>
+    <nav class="navbar">
+        <div class="logo"><img src="images/logo-h.png" alt="HHH logo"></div>
+        <div class="nav-center">
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="myinfo.html">Sobre Mim</a></li>
+                <li><a href="siteinfo.html">Sobre o Site</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+        <!-- flag images by https://www.freepik.com -->
+         <div id="language-flag">
+            <img src="images/fg-br.png" width="32">
+            </div>
+            <div class="language-selector">
+                <button id="language-button"><span id="language-display"></span><span id="arrow"><img src="images/chevron-down.png"></span></button>
+                <ul id="language-menu" class="language-menu">  
+                    <a href="#">
+                        <li data-lang="pt-BR"><img src="images/fg-br.png" width="32">pt-BR</li>
+                    </a>
+                    <a href="#">
+                        <li data-lang="en"><img src="images/fg-us.png" width="32">ENG</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
 
     <section class="hero" id="home">
         <div>
@@ -67,7 +95,7 @@
 
     <div class="js-require" page="footer.html"></div>
 
-    <script src="js/require.js"></script>
+
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="js/script.js"></script>
 </body>

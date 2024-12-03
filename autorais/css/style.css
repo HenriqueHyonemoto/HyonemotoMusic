@@ -463,7 +463,7 @@ header {
     flex: 1;
     padding-right: 20px;
     padding-left: 20px;
-    max-width: 50em;
+    max-width: 100em;
 }
 /* Conteudo da direita */
 .table-of-contents ul {
