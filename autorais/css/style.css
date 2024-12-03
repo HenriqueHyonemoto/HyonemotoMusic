@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 body,
 html {
     margin: 0;
@@ -458,8 +460,10 @@ header {
 /* Conteudo Central */
 
 .main-content {
-    flex: 2;
-    padding: 20px;
+    flex: 1;
+    padding-right: 20px;
+    padding-left: 20px;
+    max-width: 50em;
 }
 /* Conteudo da direita */
 .table-of-contents ul {
@@ -573,16 +577,14 @@ header {
 
 /* video iframe */
 
-
-
 .video-container {
     position: relative;
-    width: 960px;
+    width: 720px;
     margin: 0 auto;
 }
 .video-container iframe {
     width: 100%;
-    height: 540px;
+    height: 405px;
 }
 .video-caption {
     text-align: center;
