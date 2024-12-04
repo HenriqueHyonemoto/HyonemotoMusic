@@ -17,10 +17,26 @@ html {
     background-color: rgb(255, 255, 255);
 }
 
-strong{
+strong, em{
     color:rgb(80, 20, 150);
 }
 
+.content-list {
+    text-align: left; /* Alinha o conteúdo à esquerda */
+}
+
+.content-list ul {
+    list-style-position: inside; /* Mantém os pontos alinhados ao texto */
+    list-style-type: disc; /* Define o estilo dos marcadores como círculo preenchido */
+    color: rgb(80, 20, 150); /* Define a cor dos marcadores */
+    padding: 0;
+    margin: 0;
+}
+
+.content-list ul li {
+    color: rgb(80, 20, 150); /* Define a cor do texto da lista */
+    font-size: 22px; /* Ajusta o tamanho da fonte */
+}
 
 /* Aumentar tamanho de imagens com hover*/
 .scale-transform15 {
@@ -598,6 +614,41 @@ header {
     font-size: 16px;
     color: #555;
     margin-bottom: 10px;
+}
+
+/* card de obras */
+.obras {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Espaço entre os cards */
+    margin-bottom: 20px;
+}
+
+.card-obras {
+    flex-basis: calc(20% - 16px); /* 5 cards por linha com espaço entre eles */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.card-obras:hover {
+    transform: scale(1.05);
+}
+
+.card-obras img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-obras h2 {
+    color: rgb(80, 20, 150);
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    background-color: #f8f8f8;
 }
 
 
