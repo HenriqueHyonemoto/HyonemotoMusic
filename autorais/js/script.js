@@ -256,3 +256,35 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+//modal obras
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('modal');
+    const modalContent = document.querySelector('.modal-content');
+    const closeBtn = document.querySelector('.close');
+
+    window.openModal = function(card) {
+        const obraId = card.getAttribute('data-obra');
+        const file = `${obraId}.html`;
+
+        fetch(file)
+            .then(response => response.text())
+            .then(data => {
+                modalContent.innerHTML = data;
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Desativa a rolagem da página de fundo
+            })
+            .catch(error => console.error(`Erro ao carregar o ${file}:`, error));
+    };
+
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+        document.body.style.overflow = ''; // Reativa a rolagem da página de fundo
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = ''; // Reativa a rolagem da página de fundo
+        }
+    });
+});

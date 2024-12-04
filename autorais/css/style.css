@@ -665,42 +665,32 @@ header {
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
+    background-color: #090010;
+    margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    height: 90%; /* Ocupa 90% da altura da tela */
     border-radius: 10px; /* Bordas arredondadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Adiciona barra de rolagem vertical se necessário */
+    position: relative;
+    top: 5%; /* Centraliza verticalmente */
 }
 
 .close {
     color: #aaa;
-    float: right;
+    position: absolute; /* Posiciona o botão de fechar de forma absoluta */
+    top: 10px; /* Ajusta a posição vertical */
+    right: 10px; /* Ajusta a posição horizontal */
     font-size: 28px;
     font-weight: bold;
+    cursor: pointer;
+    z-index: 2; /* Garante que o botão fique acima do conteúdo do modal */
 }
 
 .close:hover,
 .close:focus {
     color: black;
     text-decoration: none;
-    cursor: pointer;
 }
-
-.modal-content img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.modal-content h2 {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.modal-content p {
-    text-align: center;
-}
-
