@@ -1,5 +1,5 @@
 // https://lucide.dev/icons/
-lucide.createIcons();
+//lucide.createIcons();
 
 //Trocar Lingua
 document.addEventListener('DOMContentLoaded', function () {
