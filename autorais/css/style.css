@@ -118,6 +118,11 @@ header {
     height: 40px;
 }
 
+.navbar-nav {
+    display: flex;
+    gap: 2em; /* Mantém o gap entre os itens */
+}
+
 .navbar-nav .nav-link {
     color: #fff;
     text-decoration: none;
@@ -128,12 +133,28 @@ header {
     display: flex;
     align-items: center;
     transition: background-color 0.3s ease;
-
 }
 
-.navbar-nav .nav-link:hover {
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1em; /* Ajusta para cobrir metade do gap */
+    right: -1em; /* Ajusta para cobrir metade do gap */
+    bottom: 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    z-index: -1;
+}
+
+.navbar-nav .nav-link:hover::before {
     background-color: rgba(0, 0, 0, 0.3);
 }
+
+
+
+
+/* trocar lingua */
 
 .language-selector {
     position: relative;
