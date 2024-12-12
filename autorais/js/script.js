@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Evento de clique no botão para abrir/fechar o menu
     buttons.forEach((button, index) => {
-        button.addEventListener('click', function () {
+        button.addEventListener('click', function (event) {
+            event.stopPropagation(); // Impede que o evento de clique se propague
             const menu = menus[index];
             const arrow = arrows[index];
             if (menu.style.display === 'block') {
@@ -59,7 +60,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Evento de clique nos itens do menu para selecionar o idioma
     languageItems.forEach(item => {
-        item.addEventListener('click', function () {
+        item.addEventListener('click', function (event) {
+            event.stopPropagation(); // Impede que o evento de clique se propague
             const language = item.getAttribute('data-lang');
             selectedLanguage = language;
             updateButtonText(language);
@@ -78,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Inicializa o idioma padrão ao carregar a página
     updateButtonText(selectedLanguage);
 });
+
 
 
 // Fade Up e Fade Down de Elementos
