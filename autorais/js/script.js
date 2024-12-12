@@ -288,3 +288,53 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+//submenunavbar
+document.addEventListener('DOMContentLoaded', function() {
+    const togglerButton = document.querySelector('.navbar-toggler');
+    const navbarSubmenu = document.getElementById('navbarSubmenu');
+
+    togglerButton.addEventListener('click', function() {
+        if (navbarSubmenu.style.display === 'block') {
+            navbarSubmenu.style.display = 'none';
+        } else {
+            navbarSubmenu.style.display = 'block';
+        }
+    });
+
+    const navbarItems = document.querySelectorAll('.navbar-item');
+
+    navbarItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const page = this.getAttribute('data-page');
+            // Atualiza o conteúdo principal
+            const mainContent = document.querySelector('.main-content .js-require');
+            mainContent.setAttribute('page', `${page}.html`);
+
+            // Atualiza o índice de conteúdo
+            const tableOfContents = document.querySelector('.table-of-contents .js-require');
+            tableOfContents.setAttribute('page', `${page}_indice.html`);
+
+            // Carrega o novo conteúdo
+            loadContent(mainContent);
+            loadContent(tableOfContents);
+
+            // Fecha o submenu
+            navbarSubmenu.style.display = 'none';
+        });
+    });
+
+    function loadContent(element) {
+        const file = element.getAttribute('page');
+        if (file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    element.innerHTML = data;
+                })
+                .catch(error => console.error(`Erro ao carregar o ${file}:`, error));
+        } else {
+            console.error('Atributo page não encontrado no elemento:', element);
+        }
+    }
+});

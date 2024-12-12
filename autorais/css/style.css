@@ -80,13 +80,24 @@ header {
 }
 
 /* navbar */
-.navbar-toggler, .navbar-toggler-icon{
-    padding:0 !important;
-    margin:0 !important;
-    border:none !important;
+.navbar-toggler, .navbar-toggler-icon {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+
 }
 
+.navbar-toggler{
+    width:100%;
+    align-items: center;
+}
 
+.navbar-toggler .row{
+    margin-left:5%;
+    margin-right:5%;
+    align-items: center;
+    
+}
 
 .navbar {
     background-color: rgb(80, 20, 150);
@@ -97,13 +108,10 @@ header {
     z-index: 1000; /* Aumente o z-index do navbar */
 }
 
-
-
 .nav-left,
 .nav-right {
     display: flex;
     align-items: center;
-
 }
 
 .nav-left {
@@ -150,6 +158,38 @@ header {
 .navbar-nav .nav-link:hover::before {
     background-color: rgba(0, 0, 0, 0.3);
 }
+
+.navbar-submenu {
+    background-color: rgb(80, 20, 150);
+    width: 100%;
+    display: none; /* Inicialmente oculto */
+    padding: 1em;
+
+}
+
+.navbar-submenu .navbar-item {
+    height: 3em;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding:20px;
+    
+
+}
+
+.navbar-submenu .navbar-item:hover {
+    padding:20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer; /* Muda o cursor para um ícone de mão */
+}
+
+
+
+
+
+
+
+
 
 
 
