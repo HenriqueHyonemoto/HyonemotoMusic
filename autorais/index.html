@@ -24,8 +24,9 @@
         <h1>Obras Autorais</h1>
     </header>
     <nav class="navbar navbar-expand-lg ">
-        <div class="hcontainer">
+        
             <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="hcontainer">
                 <div class="row align-items-center w-100">
                     <div class="col-2 justify-content-start">
                         <a class="navbar-brand" href="../index.html" style="color:white;">
@@ -42,22 +43,27 @@
                         </ul>
 
                     </div>
-                    <div class="col-2 d-flex  align-items-center">
-
-                        <div id="language-flag">
+                    <div class="col-2 d-flex align-items-center">
+                        <div id="language-flag" class="language-flag">
                             <img src="../images/fg-br.png" width="32">
                         </div>
                         <div class="language-selector">
-                            <button id="language-button" class="btn btn-link text-white">
-                                <span id="language-display"><i class="fa-solid fa-caret-right"></i></span>
-                                <span id="arrow"><img src="../images/chevron-down.png"></span>
+                            <button class="language-button btn btn-link text-white">
+                                <span class="language-display"><i class="fa-solid fa-caret-right"></i></span>
+                                <span class="arrow"><img src="../images/chevron-down.png"></span>
                             </button>
-                            <ul id="language-menu" class="language-menu list-unstyled">
+                            <ul class="language-menu list-unstyled">
                                 <a href="#">
-                                    <li data-lang="pt-BR"><img src="../images/fg-br.png" width="32">pt-BR</li>
+                                    <li class="language-item" data-lang="pt-BR">
+                                        <img src="../images/fg-br.png" width="32">
+                                        <span>pt-BR</span>
+                                    </li>
                                 </a>
                                 <a href="#">
-                                    <li data-lang="en"><img src="../images/fg-us.png" width="32">ENG</li>
+                                    <li class="language-item" data-lang="en">
+                                        <img src="../images/fg-us.png" width="32">
+                                        <span>ENG</span>
+                                    </li>
                                 </a>
                             </ul>
                         </div>
@@ -79,7 +85,7 @@
                     <button class="navbar-toggler-btn" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                         aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <span><img src="images/navbar-toggler.png" alt="" width="70px"></span>
                     </button>
                 </div>
                 
@@ -88,15 +94,16 @@
                 <div class="navbar-item" data-page="informacoes"> Informações</div>
                 <div class="navbar-item" data-page="obras">Obras</div>
                 <div class="navbar-item" data-page="historia"> Minha História no Piano</div>
-                <div id="language-flag">
-                    <img src="../images/fg-br.png" width="32">
+                <div class="d-flex align-items-center" style="margin-left:20px">
+                <div id="language-flag" class="language-flag">
+                    <img src="../images/fg-br.png" width="32" >
                 </div>
                 <div class="language-selector">
-                    <button id="language-button" class="btn btn-link text-white">
-                        <span id="language-display"><i class="fa-solid fa-caret-right"></i></span>
-                        <span id="arrow"><img src="../images/chevron-down.png"></span>
+                    <button class="language-button btn btn-link text-white">
+                        <span class="language-display"><i class="fa-solid fa-caret-right"></i></span>
+                        <span class="arrow"><img src="../images/chevron-down.png"></span>
                     </button>
-                    <ul id="language-menu" class="language-menu list-unstyled">
+                    <ul class="language-menu list-unstyled">
                         <a href="#">
                             <li data-lang="pt-BR"><img src="../images/fg-br.png" width="32">pt-BR</li>
                         </a>
@@ -105,6 +112,7 @@
                         </a>
                     </ul>
                 </div>
+            </div>
             </div>
         </div>
     </nav>

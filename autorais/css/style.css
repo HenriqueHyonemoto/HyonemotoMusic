@@ -99,6 +99,12 @@ header {
     
 }
 
+.navbar-toggler-btn{
+    border:none;
+    background-color: transparent;
+}
+
+
 .navbar {
     background-color: rgb(80, 20, 150);
     padding: 1.2rem;
@@ -246,6 +252,16 @@ header {
 
 .language-menu li:hover {
     background-color: #00000025;
+}
+
+.language-item {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Ajuste o valor conforme necessário para o espaçamento entre a imagem e o texto */
+}
+
+.language-item img {
+    margin-right: 8px; /* Ajuste o valor conforme necessário para o espaçamento entre a imagem e o texto */
 }
 
 @keyframes slideDown {

@@ -3,24 +3,30 @@
 
 //Trocar Lingua
 document.addEventListener('DOMContentLoaded', function () {
-    const button = document.getElementById('language-button');
-    const menu = document.getElementById('language-menu');
-    const arrow = document.getElementById('arrow');
+    const buttons = document.querySelectorAll('.language-button');
+    const menus = document.querySelectorAll('.language-menu');
+    const arrows = document.querySelectorAll('.arrow');
     const languageItems = document.querySelectorAll('.language-menu li');
-    const langDisplay = document.getElementById('language-display');
-    const languageFlag = document.getElementById('language-flag');
+    const langDisplays = document.querySelectorAll('.language-display');
+    const languageFlags = document.querySelectorAll('.language-flag');
     let selectedLanguage = 'pt-BR';
-    langDisplay.innerHTML = selectedLanguage;
+
     function updateButtonText(language) {
         const languageMap = {
             'pt-BR': 'Português',
             'en': 'English'
         };
-        langDisplay.innerHTML = `${languageMap[language]}`;
+        langDisplays.forEach(display => {
+            display.innerHTML = `${languageMap[language]}`;
+        });
         if (language === 'pt-BR') {
-            languageFlag.innerHTML = `<img src="images/fg-br.png" width="32">`;
+            languageFlags.forEach(flag => {
+                flag.innerHTML = `<img src="../images/fg-br.png" width="32">`;
+            });
         } else if (language === 'en') {
-            languageFlag.innerHTML = `<img src="images/fg-us.png" width="32">`;
+            languageFlags.forEach(flag => {
+                flag.innerHTML = `<img src="../images/fg-us.png" width="32">`;
+            });
         }
     }
 
@@ -31,20 +37,24 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Evento de clique no botão para abrir/fechar o menu
-    button.addEventListener('click', function () {
-        if (menu.style.display === 'block') {
-            menu.style.animation = 'slideUp 0.3s forwards';
-            arrow.classList.remove('up');
-            arrow.classList.add('down');
-            setTimeout(() => {
-                menu.style.display = 'none';
-            }, 300);
-        } else {
-            menu.style.display = 'block';
-            menu.style.animation = 'slideDown 0.3s forwards';
-            arrow.classList.remove('down');
-            arrow.classList.add('up');
-        }
+    buttons.forEach((button, index) => {
+        button.addEventListener('click', function () {
+            const menu = menus[index];
+            const arrow = arrows[index];
+            if (menu.style.display === 'block') {
+                menu.style.animation = 'slideUp 0.3s forwards';
+                arrow.classList.remove('up');
+                arrow.classList.add('down');
+                setTimeout(() => {
+                    menu.style.display = 'none';
+                }, 300);
+            } else {
+                menu.style.display = 'block';
+                menu.style.animation = 'slideDown 0.3s forwards';
+                arrow.classList.remove('down');
+                arrow.classList.add('up');
+            }
+        });
     });
 
     // Evento de clique nos itens do menu para selecionar o idioma
@@ -54,15 +64,21 @@ document.addEventListener('DOMContentLoaded', function () {
             selectedLanguage = language;
             updateButtonText(language);
             updateSiteLanguage(language);
-            menu.style.animation = 'slideUp 0.3s forwards';
-            arrow.classList.remove('up');
-            arrow.classList.add('down');
-            setTimeout(() => {
+            menus.forEach(menu => {
+                menu.style.animation = 'slideUp 0.3s forwards';
                 menu.style.display = 'none';
-            }, 300);
+            });
+            arrows.forEach(arrow => {
+                arrow.classList.remove('up');
+                arrow.classList.add('down');
+            });
         });
     });
+
+    // Inicializa o idioma padrão ao carregar a página
+    updateButtonText(selectedLanguage);
 });
+
 
 // Fade Up e Fade Down de Elementos
 document.addEventListener('DOMContentLoaded', function () {
