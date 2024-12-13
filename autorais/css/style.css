@@ -120,6 +120,8 @@ header {
     align-items: center;
 }
 
+
+
 .nav-left {
     margin-left: 10em;
 }
@@ -165,13 +167,47 @@ header {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
 .navbar-submenu {
     background-color: rgb(80, 20, 150);
     width: 100%;
     display: none; /* Inicialmente oculto */
-    padding: 1em;
-
+    padding: 0; /* Remove o padding quando oculto */
 }
+
+.navbar-submenu.show {
+    display: block; /* Torna visível */
+    animation: slideDown 0.5s ease forwards;
+    padding: 1em;
+}
+
+.navbar-submenu.hide {
+    animation: slideUp 0.5s ease forwards;
+    display: block; /* Necessário para a animação */
+    padding: 1em;
+}
+
 
 .navbar-submenu .navbar-item {
     height: 3em;
@@ -254,15 +290,7 @@ header {
     background-color: #00000025;
 }
 
-.language-item {
-    display: flex;
-    align-items: center;
-    gap: 8px; /* Ajuste o valor conforme necessário para o espaçamento entre a imagem e o texto */
-}
 
-.language-item img {
-    margin-right: 8px; /* Ajuste o valor conforme necessário para o espaçamento entre a imagem e o texto */
-}
 
 @keyframes slideDown {
     from {

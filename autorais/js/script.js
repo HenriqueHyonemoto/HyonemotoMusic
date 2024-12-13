@@ -309,37 +309,48 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 //submenunavbar
-document.addEventListener('DOMContentLoaded', function() {
-    const togglerButton = document.querySelector('.navbar-toggler');
+document.addEventListener('DOMContentLoaded', function () {
+    const togglerButton = document.querySelector('.navbar-toggler-btn');
     const navbarSubmenu = document.getElementById('navbarSubmenu');
 
-    togglerButton.addEventListener('click', function() {
-        if (navbarSubmenu.style.display === 'block') {
-            navbarSubmenu.style.display = 'none';
+    togglerButton.addEventListener('click', function () {
+        if (navbarSubmenu.classList.contains('show')) {
+            navbarSubmenu.classList.remove('show');
+            navbarSubmenu.classList.add('hide');
+            
+            // Após a animação de recolher, remove `hide` e oculta completamente
+            setTimeout(() => {
+                navbarSubmenu.classList.remove('hide');
+                navbarSubmenu.style.display = 'none';
+            }, 500); // Duração da animação (0.5s)
         } else {
             navbarSubmenu.style.display = 'block';
+            navbarSubmenu.classList.remove('hide');
+            navbarSubmenu.classList.add('show');
         }
     });
 
     const navbarItems = document.querySelectorAll('.navbar-item');
 
     navbarItems.forEach(item => {
-        item.addEventListener('click', function() {
+        item.addEventListener('click', function () {
             const page = this.getAttribute('data-page');
-            // Atualiza o conteúdo principal
             const mainContent = document.querySelector('.main-content .js-require');
-            mainContent.setAttribute('page', `${page}.html`);
-
-            // Atualiza o índice de conteúdo
             const tableOfContents = document.querySelector('.table-of-contents .js-require');
-            tableOfContents.setAttribute('page', `${page}_indice.html`);
 
-            // Carrega o novo conteúdo
+            // Atualiza os conteúdos
+            mainContent.setAttribute('page', `${page}.html`);
+            tableOfContents.setAttribute('page', `${page}_indice.html`);
             loadContent(mainContent);
             loadContent(tableOfContents);
 
             // Fecha o submenu
-            navbarSubmenu.style.display = 'none';
+            navbarSubmenu.classList.remove('show');
+            navbarSubmenu.classList.add('hide');
+            setTimeout(() => {
+                navbarSubmenu.classList.remove('hide');
+                navbarSubmenu.style.display = 'none';
+            }, 500);
         });
     });
 
