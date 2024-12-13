@@ -598,6 +598,9 @@ figcaption {
 .table-of-contents{
     margin-bottom: 20px;
 }
+.table-of-contents li{
+    margin-bottom: 5px;
+}
 
 .table-of-contents ul {
     list-style-type: disc;
