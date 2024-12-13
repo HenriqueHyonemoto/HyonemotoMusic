@@ -598,20 +598,22 @@ figcaption {
 
 .table-of-contents{
     margin-bottom: 20px;
+    
 }
 .table-of-contents li{
     margin-bottom: 5px;
+
 }
 
 .table-of-contents ul {
     list-style-type: disc;
-    padding-left: 20px;
+    padding-left: 0px;
     color: rgb(80, 20, 150);
     text-align: left;
     font-weight: bold;
     text-decoration: none;
     align-items: center;
-    padding: 0;
+    padding:0;
     margin: 0;
     font-size: 18px;
 }
