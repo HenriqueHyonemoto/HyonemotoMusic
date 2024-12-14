@@ -24,68 +24,7 @@ function calcularIdade() {
 
 
 
-//Trocar Lingua
-document.addEventListener('DOMContentLoaded', function () {
-    const button = document.getElementById('language-button');
-    const menu = document.getElementById('language-menu');
-    const arrow = document.getElementById('arrow');
-    const languageItems = document.querySelectorAll('.language-menu li');
-    const langDisplay = document.getElementById('language-display');
-    const languageFlag = document.getElementById('language-flag');
-    let selectedLanguage = 'pt-BR';
-    langDisplay.innerHTML = selectedLanguage;
-    function updateButtonText(language) {
-        const languageMap = {
-            'pt-BR': 'Português',
-            'en': 'English'
-        };
-        langDisplay.innerHTML = `${languageMap[language]}`;
-        if (language === 'pt-BR') {
-            languageFlag.innerHTML = `<img src="images/fg-br.png" width="32">`;
-        } else if (language === 'en') {
-            languageFlag.innerHTML = `<img src="images/fg-us.png" width="32">`;
-        }
-    }
 
-    // Atualiza o idioma do site
-    function updateSiteLanguage(language) {
-        // Aqui você pode adicionar a lógica para atualizar o idioma do site
-        alert(`A funcionalidade de alterar idiomas ainda está em desenvolvimento. \nPorém, o idioma selecionado foi: ${language}`);
-    }
-
-    // Evento de clique no botão para abrir/fechar o menu
-    button.addEventListener('click', function () {
-        if (menu.style.display === 'block') {
-            menu.style.animation = 'slideUp 0.3s forwards';
-            arrow.classList.remove('up');
-            arrow.classList.add('down');
-            setTimeout(() => {
-                menu.style.display = 'none';
-            }, 300);
-        } else {
-            menu.style.display = 'block';
-            menu.style.animation = 'slideDown 0.3s forwards';
-            arrow.classList.remove('down');
-            arrow.classList.add('up');
-        }
-    });
-
-    // Evento de clique nos itens do menu para selecionar o idioma
-    languageItems.forEach(item => {
-        item.addEventListener('click', function () {
-            const language = item.getAttribute('data-lang');
-            selectedLanguage = language;
-            updateButtonText(language);
-            updateSiteLanguage(language);
-            menu.style.animation = 'slideUp 0.3s forwards';
-            arrow.classList.remove('up');
-            arrow.classList.add('down');
-            setTimeout(() => {
-                menu.style.display = 'none';
-            }, 300);
-        });
-    });
-});
 
 // Fade Up e Fade Down de Elementos
 document.addEventListener('DOMContentLoaded', function () {
@@ -208,4 +147,146 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Email copiado para a área de transferência: ' + email);
         });
     });
+});
+
+//submenunavbar
+document.addEventListener('DOMContentLoaded', function () {
+    const togglerButton = document.querySelector('.navbar-toggler-btn');
+    const navbarSubmenu = document.getElementById('navbarSubmenu');
+
+    togglerButton.addEventListener('click', function () {
+        if (navbarSubmenu.classList.contains('show')) {
+            navbarSubmenu.classList.remove('show');
+            navbarSubmenu.classList.add('hide');
+            
+            // Após a animação de recolher, remove `hide` e oculta completamente
+            setTimeout(() => {
+                navbarSubmenu.classList.remove('hide');
+                navbarSubmenu.style.display = 'none';
+            }, 500); // Duração da animação (0.5s)
+        } else {
+            navbarSubmenu.style.display = 'block';
+            navbarSubmenu.classList.remove('hide');
+            navbarSubmenu.classList.add('show');
+        }
+    });
+
+    const navbarItems = document.querySelectorAll('.navbar-item');
+
+    navbarItems.forEach(item => {
+        item.addEventListener('click', function () {
+            const page = this.getAttribute('data-page');
+            const mainContent = document.querySelector('.main-content .js-require');
+            const tableOfContents = document.querySelector('.table-of-contents .js-require');
+
+            // Atualiza os conteúdos
+            mainContent.setAttribute('page', `${page}.html`);
+            tableOfContents.setAttribute('page', `${page}_indice.html`);
+            loadContent(mainContent);
+            loadContent(tableOfContents);
+
+            // Fecha o submenu
+            navbarSubmenu.classList.remove('show');
+            navbarSubmenu.classList.add('hide');
+            setTimeout(() => {
+                navbarSubmenu.classList.remove('hide');
+                navbarSubmenu.style.display = 'none';
+            }, 500);
+        });
+    });
+
+    function loadContent(element) {
+        const file = element.getAttribute('page');
+        if (file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    element.innerHTML = data;
+                })
+                .catch(error => console.error(`Erro ao carregar o ${file}:`, error));
+        } else {
+            console.error('Atributo page não encontrado no elemento:', element);
+        }
+    }
+});
+
+//troca lingua
+//Trocar Lingua
+document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.language-button');
+    const menus = document.querySelectorAll('.language-menu');
+    const arrows = document.querySelectorAll('.arrow');
+    const languageItems = document.querySelectorAll('.language-menu li');
+    const langDisplays = document.querySelectorAll('.language-display');
+    const languageFlags = document.querySelectorAll('.language-flag');
+    let selectedLanguage = 'pt-BR';
+
+    function updateButtonText(language) {
+        const languageMap = {
+            'pt-BR': 'Português',
+            'en': 'English'
+        };
+        langDisplays.forEach(display => {
+            display.innerHTML = `${languageMap[language]}`;
+        });
+        if (language === 'pt-BR') {
+            languageFlags.forEach(flag => {
+                flag.innerHTML = `<img src="../images/fg-br.png" width="32">`;
+            });
+        } else if (language === 'en') {
+            languageFlags.forEach(flag => {
+                flag.innerHTML = `<img src="../images/fg-us.png" width="32">`;
+            });
+        }
+    }
+
+    // Atualiza o idioma do site
+    function updateSiteLanguage(language) {
+        // Aqui você pode adicionar a lógica para atualizar o idioma do site
+        alert(`A funcionalidade de alterar idiomas ainda está em desenvolvimento. \nPorém, o idioma selecionado foi: ${language}`);
+    }
+
+    // Evento de clique no botão para abrir/fechar o menu
+    buttons.forEach((button, index) => {
+        button.addEventListener('click', function (event) {
+            event.stopPropagation(); // Impede que o evento de clique se propague
+            const menu = menus[index];
+            const arrow = arrows[index];
+            if (menu.style.display === 'block') {
+                menu.style.animation = 'slideUp 0.3s forwards';
+                arrow.classList.remove('up');
+                arrow.classList.add('down');
+                setTimeout(() => {
+                    menu.style.display = 'none';
+                }, 300);
+            } else {
+                menu.style.display = 'block';
+                menu.style.animation = 'slideDown 0.3s forwards';
+                arrow.classList.remove('down');
+                arrow.classList.add('up');
+            }
+        });
+    });
+
+    // Evento de clique nos itens do menu para selecionar o idioma
+    languageItems.forEach(item => {
+        item.addEventListener('click', function (event) {
+            event.stopPropagation(); // Impede que o evento de clique se propague
+            const language = item.getAttribute('data-lang');
+            selectedLanguage = language;
+            updateButtonText(language);
+            updateSiteLanguage(language);
+            menus.forEach(menu => {
+                menu.style.animation = 'slideUp 0.3s forwards';
+                menu.style.display = 'none';
+            });
+            arrows.forEach(arrow => {
+                arrow.classList.remove('up');
+                arrow.classList.add('down');
+            });
+        });
+    });
+
+    // Inicializa o idioma padrão ao carregar a página
+    updateButtonText(selectedLanguage);
 });
