@@ -149,25 +149,36 @@ header {
     display: flex;
     align-items: center;
     transition: background-color 0.3s ease;
-
 }
 
 .navbar-nav .nav-link:focus {
     color: #ffffff;
-
 }
+
+.navbar-nav .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #fff;
+    transition: width .3s;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.navbar-nav .nav-link:focus::after {
+    width: calc(100% - 20px); /* Ajusta a largura da barra considerando as margens */
+}
+
 
 .navbar-nav .nav-link:focus::before {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
 
-
-
-
-.navbar-nav .nav-link:focus::after {
-    width: 100%;
-}
 
 
 .navbar-nav .nav-link::before {
