@@ -150,7 +150,7 @@ header {
     align-items: center;
     transition: background-color 0.3s ease;
 }
-
+/* foi colocado um js que adiciona a classe acteve em um elementoclicado */
 .navbar-nav .nav-link.active::after {
     width: calc(100% - 20px); /* Ajusta a largura da barra considerando as margens */
     color:white;
