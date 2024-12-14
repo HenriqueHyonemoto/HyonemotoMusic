@@ -151,9 +151,23 @@ header {
     transition: background-color 0.3s ease;
 }
 
-.navbar-nav .nav-link:focus {
-    color: #ffffff;
+.navbar-nav .nav-link.active::after {
+    width: calc(100% - 20px); /* Ajusta a largura da barra considerando as margens */
+    color:white;
+    
 }
+
+.active{
+    color:white !important;
+}
+
+
+.navbar-nav .nav-link.active::before {
+    background-color: rgba(0, 0, 0, 0.1);
+    color:white;
+}
+
+
 
 .navbar-nav .nav-link::after {
     content: '';
@@ -166,6 +180,7 @@ header {
     bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
+    
 }
 
 
@@ -174,9 +189,12 @@ header {
 }
 
 
+
 .navbar-nav .nav-link:focus::before {
     background-color: rgba(0, 0, 0, 0.1);
 }
+
+
 
 
 
@@ -260,6 +278,11 @@ header {
     cursor: pointer; /* Muda o cursor para um ícone de mão */
 }
 
+@media (max-width: 1200px) {
+    .language-flag {
+        display: none;
+    }
+}
 
 
 

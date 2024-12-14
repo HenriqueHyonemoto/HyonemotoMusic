@@ -308,6 +308,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+//navbar
+const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Remove "active" de todos os links
+            navLinks.forEach(nav => nav.classList.remove('active'));
+
+            // Adiciona "active" no link clicado
+            link.classList.add('active');
+        });
+    });
+
 //submenunavbar
 document.addEventListener('DOMContentLoaded', function () {
     const togglerButton = document.querySelector('.navbar-toggler-btn');

@@ -263,15 +263,11 @@ border-color: transparent !important;
     text-decoration: none;
 }
 
-
-
-
-
-
-
-
-
-
+@media (max-width: 1200px) {
+    .language-flag {
+        display: none;
+    }
+}
 
 
 /* trocar lingua */

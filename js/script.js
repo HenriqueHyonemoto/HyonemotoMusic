@@ -149,6 +149,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+
 //submenunavbar
 document.addEventListener('DOMContentLoaded', function () {
     const togglerButton = document.querySelector('.navbar-toggler-btn');
@@ -290,3 +292,5 @@ document.addEventListener('DOMContentLoaded', function () {
     // Inicializa o idioma padrão ao carregar a página
     updateButtonText(selectedLanguage);
 });
+
+
