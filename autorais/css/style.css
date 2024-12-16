@@ -832,7 +832,7 @@ figure{
     margin: 0;
     width: 90%;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 .video-container {
     position: relative;
@@ -866,6 +866,7 @@ figure{
     overflow: hidden;
     transition: transform 0.3s ease;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .card-obras:hover {
@@ -880,7 +881,7 @@ figure{
 
 .card-obras h2 {
     color: rgb(80, 20, 150);
-    text-align: center;
+    text-align: left;
     padding: 10px;
     margin: 0;
     background-color: #f8f8f8;
