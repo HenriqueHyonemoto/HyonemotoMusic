@@ -44,7 +44,7 @@ h6 {
 
 @media (max-width: 1400px) {
     .hcontainer {
-        width: 100%;
+        width: 95%;
     }
 }
 
@@ -56,13 +56,14 @@ h6 {
         font-size: 18px !important;
         text-align: justify;
     }
-
-
 }
 
 @media (max-width: 800px) {
     .main-content img {
         width: 95% !important;
+    }
+    .hcontainer {
+        width: 95%;
     }
 }
 
