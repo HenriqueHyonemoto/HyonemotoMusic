@@ -1,3 +1,9 @@
+:root{
+    --main-orange:#cc4503;
+    --bright-orange:#ff8a50;
+    --main-purple:rgb(80, 20, 150);
+}
+
 *{
     margin:0;
     padding:0;
@@ -73,7 +79,7 @@ h6 {
 
 strong,
 em {
-    color: rgb(80, 20, 150);
+    color: var(--main-purple);
 }
 
 .content-list {
@@ -83,13 +89,13 @@ em {
 .content-list ul {
     list-style-position: inside;
     list-style-type: disc;
-    color: rgb(80, 20, 150);
+    color: var(--main-purple);
     padding: 0;
     margin: 0;
 }
 
 .content-list ul li {
-    color: rgb(80, 20, 150);
+    color: var(--main-purple);
     font-size: 22px;
 }
 
@@ -112,7 +118,7 @@ em {
 header {
     font-size: 50px;
     font-family: "Tangerine", cursive;
-    color: rgb(80, 20, 150);
+    color: var(--main-purple);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,7 +154,7 @@ header {
 
 
 .navbar {
-    background-color: rgb(80, 20, 150);
+    background-color: var(--main-purple);
     padding: 1.2rem;
     position: relative;
     height: 5em;
@@ -285,7 +291,7 @@ header {
 }
 
 .navbar-submenu {
-    background-color: rgb(80, 20, 150);
+    background-color: var(--main-purple);
     width: 100%;
     display: none; /* Inicialmente oculto */
     padding: 0; /* Remove o padding quando oculto */
@@ -358,7 +364,7 @@ header {
 .language-menu {
     display: none;
     position: absolute;
-    background-color: rgb(80, 20, 150);
+    background-color: var(--main-purple);
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
     z-index: 1;
     list-style: none;
@@ -426,7 +432,7 @@ header {
 }
 
 .footer {
-    background-color: rgb(80, 20, 150);
+    background-color: var(--main-purple);
     color: #fff;
     text-align: center;
     padding: 1rem 0;
@@ -575,14 +581,14 @@ header {
 }
 
 .content-container a {
-    color: rgb(80, 20, 150);
+    color: var(--main-purple);
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-color 0.3s;
 }
 
 .content-container a:hover {
-    border-color: rgb(80, 20, 150);
+    border-color: var(--main-purple);
 }
 
 .filter-menu {
@@ -594,7 +600,7 @@ header {
 .filter-item {
     background-color: #f8f5ff;
     border: 1px solid rgb(227, 227, 227);
-    color: rgb(80, 20, 150);
+    color: var(--main-purple);
     height: 50px;
     padding: 10px;
     margin-top: 10px;
@@ -608,7 +614,7 @@ header {
 .filter-category {
     background-color: #f8f5ff;
     border: 1px solid rgb(227, 227, 227);
-    color: rgb(80, 20, 150);
+    color: var(--main-purple);
     height: 50px;
     padding: 10px;
     margin: 0px 0;
@@ -676,7 +682,7 @@ header {
 }
 
 .main-content a {
-    color: rgb(80, 20, 150);
+    color: var(--main-purple);
 }
 
 figcaption {
@@ -700,7 +706,7 @@ figure{
 .table-of-contents ul {
     list-style-type: disc;
     padding-left: 0px;
-    color: rgb(80, 20, 150);
+    color: var(--main-purple);
     text-align: left;
     font-weight: bold;
     text-decoration: none;
@@ -721,7 +727,7 @@ figure{
 }
 
 .table-of-contents a {
-    color: rgb(80, 20, 150);
+    color: var(--main-purple);
 }
 
 .indice-card {
@@ -859,34 +865,104 @@ figure{
     margin-bottom: 20px;
 }
 
+/* card obras */
+.container-obras{
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
 .card-obras {
     flex-basis: calc(20% - 16px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.3s ease;
+ 
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease,box-shadow 0.3s ease;
     cursor: pointer;
+    position: relative;
     margin-bottom: 20px;
+
+
 }
 
 .card-obras:hover {
     transform: scale(1.05);
+    background-color: #000000; /* Cor de fundo final (preto) */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-obras:hover .date{
+    color:rgb(97, 32, 172);
+    font-weight: bold;
+}.card-obras:hover .title{
+    color:rgb(97, 32, 172);
+    font-weight: bold;
 }
 
 .card-obras img {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 10px;
 }
 
-.card-obras h2 {
-    color: rgb(80, 20, 150);
+.card-obras .card-icon img {
+    width: 50% !important;
+    height: auto;
+    display: block;
+
+}
+
+
+.title {
+    color: black;
     text-align: left;
-    padding: 10px;
+    font-size: 24px;
     margin: 0;
-    background-color: #f8f8f8;
+    font-weight: bold;
+    margin: 0;
 }
 
+.date{
+    font-size: 18px;
+    color: rgb(85, 85, 85);
+    font-weight: bold;
+}
+
+
+.image-container {
+    position: relative;
+}
+
+.card-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: var(--main-purple);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-obras:hover .card-icon {
+    opacity: 1;
+}
+
+
+
+.number {
+    margin-left: 5px;
+}
+
+
+/* modal */
 .modal {
     display: none;
     position: fixed;
