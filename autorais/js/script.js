@@ -382,3 +382,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
+// Mudar cor dos cards de acordo com a card-obras-color
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.card-obras');
+
+    cards.forEach(card => {
+        const color = card.getAttribute('card-obras-color');
+        if (color) {
+            card.style.setProperty('--main-purple', color);
+        }
+    });
+});

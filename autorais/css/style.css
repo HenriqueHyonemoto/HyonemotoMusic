@@ -1,7 +1,14 @@
 :root{
     --main-orange:#cc4503;
-    --bright-orange:#ff8a50;
+    --main-red: rgb(246, 46, 6);
+    --main-sand: #c4b075;
+    --main-green:#00d237;
+    --main-blue:#1200d2;
+    --main-lime:#b1f700;
     --main-purple:rgb(80, 20, 150);
+    --bright-orange:#ff8a50;
+    
+    
 }
 
 *{
@@ -598,7 +605,7 @@ header {
 }
 
 .filter-item {
-    background-color: #f8f5ff;
+    background-color: #fafafa;
     border: 1px solid rgb(227, 227, 227);
     color: var(--main-purple);
     height: 50px;
@@ -612,7 +619,7 @@ header {
 }
 
 .filter-category {
-    background-color: #f8f5ff;
+    background-color: #fafafa;
     border: 1px solid rgb(227, 227, 227);
     color: var(--main-purple);
     height: 50px;
@@ -867,8 +874,10 @@ figure{
 
 /* card obras */
 .container-obras{
-    background-color: #f5f5f5;
+    padding-top: 10px;
+    background-color: #fafafa;
     border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card-obras {
@@ -881,23 +890,147 @@ figure{
     cursor: pointer;
     position: relative;
     margin-bottom: 20px;
-
-
 }
 
 .card-obras:hover {
     transform: scale(1.05);
     background-color: #000000; /* Cor de fundo final (preto) */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.card-obras:hover .date{
-    color:rgb(97, 32, 172);
-    font-weight: bold;
-}.card-obras:hover .title{
-    color:rgb(97, 32, 172);
+.card-obras:hover .date {
     font-weight: bold;
 }
+
+.card-obras:hover .title {
+    font-weight: bold;
+}
+
+.card-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: var(--main-purple);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* cores dos cards */
+.prelude1.card-obras:hover {
+    box-shadow: 0 1px 24px var(--main-orange);
+}
+.prelude1.card-obras:hover .date {
+    color: var(--main-orange);
+
+}
+.prelude1.card-obras:hover .title {
+    color: var(--main-orange);
+}
+.prelude1 .card-icon {
+    background-color: var(--main-orange);
+    box-shadow: 0 1px 16px var(--main-orange);
+}
+
+.prelude2.card-obras:hover {
+    box-shadow: 0 1px 24px var(--main-purple);
+}
+.prelude2.card-obras:hover .date {
+    color: var(--main-purple);
+
+}
+.prelude2.card-obras:hover .title {
+    color: var(--main-purple);
+}
+.prelude2 .card-icon {
+    background-color: var(--main-purple);
+    box-shadow: 0 1px 16px var(--main-purple);
+}
+
+.prelude3.card-obras:hover {
+    box-shadow: 0 1px 24px var(--main-green);
+}
+.prelude3.card-obras:hover .date {
+    color: var(--main-green);
+
+}
+.prelude3.card-obras:hover .title {
+    color: var(--main-green);
+}
+.prelude3 .card-icon {
+    background-color: var(--main-green);
+    box-shadow: 0 1px 16px var(--main-green);
+}
+
+.prelude4.card-obras:hover {
+    box-shadow: 0 1px 24px var(--main-blue);
+}
+.prelude4.card-obras:hover .date {
+    color: var(--main-blue);
+
+}
+.prelude4.card-obras:hover .title {
+    color: var(--main-blue);
+}
+.prelude4 .card-icon {
+    background-color: var(--main-blue);
+    box-shadow: 0 1px 16px var(--main-blue);
+}
+
+.prelude5.card-obras:hover {
+    box-shadow: 0 1px 24px var(--main-lime);
+}
+.prelude5.card-obras:hover .date {
+    color: var(--main-lime);
+
+}
+.prelude5.card-obras:hover .title {
+    color: var(--main-lime);
+}
+.prelude5 .card-icon {
+    background-color: var(--main-lime);
+    box-shadow: 0 1px 16px black;
+}
+
+.prelude6.card-obras:hover {
+    box-shadow: 0 1px 24px var(--main-red);
+}
+.prelude6.card-obras:hover .date {
+    color: var(--main-red);
+
+}
+.prelude6.card-obras:hover .title {
+    color: var(--main-red);
+}
+.prelude6 .card-icon {
+    background-color: var(--main-red);
+    box-shadow: 0 1px 16px black;
+}
+
+.prelude7.card-obras:hover {
+    box-shadow: 0 1px 24px var(--main-sand);
+}
+.prelude7.card-obras:hover .date {
+    color: var(--main-sand);
+
+}
+.prelude7.card-obras:hover .title {
+    color: var(--main-sand);
+}
+.prelude7 .card-icon {
+    background-color: var(--main-sand);
+    box-shadow: 0 1px 16px var(--main-sand);
+}
+
+
+
+/* sla */
 
 .card-obras img {
     width: 100%;
@@ -910,7 +1043,6 @@ figure{
     width: 50% !important;
     height: auto;
     display: block;
-
 }
 
 
@@ -934,22 +1066,7 @@ figure{
     position: relative;
 }
 
-.card-icon {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background-color: var(--main-purple);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+
 
 .card-obras:hover .card-icon {
     opacity: 1;
