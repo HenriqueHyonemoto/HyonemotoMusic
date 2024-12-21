@@ -601,6 +601,8 @@ header {
     border-color: var(--main-purple);
 }
 
+/* Filtro obras */
+
 .filter-menu {
     width: 300px;
     margin-bottom: 20px;
@@ -669,6 +671,10 @@ header {
 .filter-arrow.open i {
     transform: rotate(90deg);
 }
+
+
+
+/* conteudo do meio, principal */
 
 .main-content {
     flex: 1;

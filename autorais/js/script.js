@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //selecionar conteudo central e indice da navbar
 document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.nav-links a, .filter-item');
+    const navLinks = document.querySelectorAll('.nav-links a, .filter-item, .card-obras');
     const mainContent = document.querySelector('.main-content .js-require');
     const tableOfContents = document.querySelector('.table-of-contents .js-require');
 
@@ -468,3 +468,4 @@ document.addEventListener('DOMContentLoaded', function () {
     showSlide(currentIndex);
     startAutoPlay();
 });
+
