@@ -902,6 +902,10 @@ figure{
     font-weight: bold;
 }
 
+.card-obras .title{
+    line-height: 1.2; 
+}
+
 .card-obras:hover .title {
     font-weight: bold;
 }
