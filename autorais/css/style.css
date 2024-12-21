@@ -3,7 +3,7 @@
     --main-red: rgb(246, 46, 6);
     --main-sand: #c4b075;
     --main-green:#00d237;
-    --main-blue:#1200d2;
+    --main-blue:#080cff;
     --main-lime:#b1f700;
     --main-pink: #ec0cff;
     --main-purple:rgb(80, 20, 150);
@@ -17,6 +17,8 @@
     padding:0;
     box-sizing: border-box;
 }
+
+
 
 body,
 html {
@@ -709,6 +711,10 @@ figure{
 .table-of-contents li{
     margin-bottom: 5px;
 
+}
+
+.table-of-contents a{
+    text-decoration: none;
 }
 
 .table-of-contents ul {
