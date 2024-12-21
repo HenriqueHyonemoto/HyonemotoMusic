@@ -5,6 +5,7 @@
     --main-green:#00d237;
     --main-blue:#1200d2;
     --main-lime:#b1f700;
+    --main-pink: #ec0cff;
     --main-purple:rgb(80, 20, 150);
     --bright-orange:#ff8a50;
     
@@ -939,18 +940,18 @@ figure{
 }
 
 .prelude2.card-obras:hover {
-    box-shadow: 0 1px 24px var(--main-purple);
+    box-shadow: 0 1px 24px var(--main-pink);
 }
 .prelude2.card-obras:hover .date {
-    color: var(--main-purple);
+    color: var(--main-pink);
 
 }
 .prelude2.card-obras:hover .title {
-    color: var(--main-purple);
+    color: var(--main-pink);
 }
 .prelude2 .card-icon {
-    background-color: var(--main-purple);
-    box-shadow: 0 1px 16px var(--main-purple);
+    background-color: var(--main-pink);
+    box-shadow: 0 1px 16px var(--main-pink);
 }
 
 .prelude3.card-obras:hover {
