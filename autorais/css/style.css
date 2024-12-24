@@ -12,6 +12,17 @@
     
 }
 
+@font-face {
+    font-family: 'HyonemotoFont';
+    src: url('../fonts/HyonemotoHandwritting-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.hfont{
+    font-family:'HyonemotoFont', sans-serif !important;
+}
+
 *{
     margin:0;
     padding:0;
