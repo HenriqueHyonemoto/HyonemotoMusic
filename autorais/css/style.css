@@ -37,8 +37,13 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+figcaption {
     font-family: "Poppins", sans-serif;
+}
+
+a{
+    text-decoration: none !important;
 }
 
 .hcontainer {
@@ -46,6 +51,8 @@ h6 {
     margin: 0 auto;
     padding: 1em;
 }
+
+
 
 @media (max-width: 1700px) {
     .hcontainer {
@@ -939,6 +946,44 @@ figure{
     transition: opacity 0.3s ease;
 }
 
+/* sla */
+
+.card-obras img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.card-obras .card-icon img {
+    width: 50% !important;
+    height: auto;
+    display: block;
+}
+
+
+.card-obras .title {
+    color: black;
+    text-align: left;
+    font-size: 24px;
+    margin: 0;
+    font-weight: bold;
+    margin: 0;
+
+}
+
+.date{
+    font-size: 18px;
+    color: rgb(85, 85, 85);
+    font-weight: bold;
+}
+
+
+.image-container {
+    position: relative;
+}
+
+
 /* cores dos cards */
 .prelude1.card-obras:hover {
     box-shadow: 0 1px 24px var(--main-orange);
@@ -1047,49 +1092,87 @@ figure{
 
 
 
-/* sla */
+/* imagem pagina de obra */
 
-.card-obras img {
+
+.card-foto {
+    flex-basis: calc(20% - 16px);
+    padding: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease,box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 20px;
+    
+}
+
+.card-foto img {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 10px;
+
 }
 
-.card-obras .card-icon img {
+.card-foto .card-icon img {
     width: 50% !important;
     height: auto;
     display: block;
 }
 
 
-.title {
+
+.card-foto:hover {
+    transform: scale(1.05);
+
+}
+
+.card-foto:hover .date {
+    font-weight: bold;
+}
+
+
+
+.card-foto p{
+    margin-top:20px !important;
     color: black;
-    text-align: left;
-    font-size: 24px;
-    margin: 0;
+    text-align: center;
+    font-size: 32px !important;
     font-weight: bold;
-    margin: 0;
+    margin:0;
 }
 
-.date{
-    font-size: 18px;
-    color: rgb(85, 85, 85);
+.card-foto:hover .title {
     font-weight: bold;
 }
 
-
-.image-container {
-    position: relative;
+.card-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: var(--main-purple);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-
-
-.card-obras:hover .card-icon {
+.card-foto:hover .card-icon {
     opacity: 1;
 }
 
 
+/* Pagina selecioanr obra */
+
+.card-obras:hover .card-icon {
+    opacity: 1;
+}
 
 .number {
     margin-left: 5px;
