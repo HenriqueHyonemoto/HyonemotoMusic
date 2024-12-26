@@ -895,6 +895,7 @@ figure{
 .caption {
     font-size: 1em;
     color: #000000;
+    margin-bottom:20px;
 }
 .obras {
     display: flex;
@@ -1233,5 +1234,43 @@ figure{
 .close:focus {
     color: black;
     text-decoration: none;
+}
+
+/* Card Plataformas */
+.card-container-plataformas {
+    display: flex;
+    justify-content: center; /* Centraliza os cards no contêiner */
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Adicionado margem inferior */
+    flex-wrap: wrap;
+}
+.card-plataforma {
+    background-color: #ffffff;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: flex;
+    align-items: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    height: 50px;
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda dentro dos cards */
+}
+.card-plataforma:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+.card-plataforma img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.card-plataforma p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.card-container-plataformas a{
+    color:black;
 }
 
