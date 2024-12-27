@@ -1245,32 +1245,39 @@ figure{
     margin-bottom: 20px; /* Adicionado margem inferior */
     flex-wrap: wrap;
 }
+
 .card-plataforma {
     background-color: #ffffff;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
     display: flex;
-    align-items: left;
+    align-items: center; /* Alinha os itens verticalmente no centro */
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
-    height: 50px;
     justify-content: flex-start; /* Alinha o conteúdo à esquerda dentro dos cards */
 }
+
 .card-plataforma:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
+
 .card-plataforma img {
     width: 30px;
     height: 30px;
     margin-right: 10px;
+    object-fit: contain; /* Garante que a imagem mantenha suas proporções */
 }
+
 .card-plataforma p {
     margin: 0;
     font-size: 16px;
+    white-space: nowrap; /* Impede que o texto quebre para baixo */
 }
 
-.card-container-plataformas a{
-    color:black;
+.card-container-plataformas a {
+    color: black;
 }
+
+
 
