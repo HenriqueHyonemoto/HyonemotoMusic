@@ -1279,5 +1279,11 @@ figure{
     color: black;
 }
 
+.not-available {
+    pointer-events: none; /* Desabilita a interação do usuário */
+    opacity: 0.5; /* Deixa o card com uma aparência mais apagada */
+    cursor: default; /* Remove o cursor de ponteiro */
+}
+
 
 
