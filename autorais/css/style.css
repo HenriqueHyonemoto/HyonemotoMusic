@@ -1285,5 +1285,55 @@ figure{
     cursor: default; /* Remove o cursor de ponteiro */
 }
 
+.responsive-iframe {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%; /* Ajuste este valor conforme necessário */
+}
+.responsive-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
+
+/* Lista de Contatos */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.contact-list li {
+    margin: 10px 0;
+}
+
+.contact-list li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.contact-list li a:hover {
+    color: var(--main-orange);
+    text-decoration: none;
+}
+
+.contact-list li a i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+
+.pdf {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+}
 

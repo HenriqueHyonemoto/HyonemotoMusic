@@ -109,7 +109,6 @@ document.addEventListener('DOMContentLoaded', function () {
     checkVisibility(); // Verifica a visibilidade inicial
 });
 
-//carrossel
 document.addEventListener('DOMContentLoaded', function () {
     const carousel = document.querySelector('.carousel');
     const carouselInner = document.querySelector('.carousel-inner');
@@ -395,77 +394,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-//carrosel de imagens
-document.addEventListener('DOMContentLoaded', function () {
-    const carousel = document.querySelector('.carousel');
-    const carouselInner = document.querySelector('.carousel-inner');
-    const slides = document.querySelectorAll('.carousel-slide');
-    const prevButton = document.querySelector('.carousel-button.prev');
-    const nextButton = document.querySelector('.carousel-button.next');
-    let currentIndex = 0;
-    let interval;
-    let isTransitioning = false;
 
-    function showSlide(index) {
-        if (isTransitioning) return;
-        isTransitioning = true;
-        currentIndex = index;
-        const offset = -currentIndex * 100;
-        carouselInner.style.transform = `translateX(${offset}%)`;
-        updateInfo();
-        setTimeout(() => {
-            isTransitioning = false;
-        }, 500); // Tempo da transição
-    }
-
-    function updateInfo() {
-        const currentSlide = slides[currentIndex];
-        const info = currentSlide.querySelector('.carousel-info');
-        const textElement = info.querySelector('.carousel-info-text');
-        textElement.textContent = info.getAttribute('data-info');
-    }
-
-    function startAutoPlay() {
-        interval = setInterval(() => {
-            showSlide((currentIndex + 1) % slides.length);
-        }, 3000); // 3 segundos
-    }
-
-    function stopAutoPlay() {
-        clearInterval(interval);
-    }
-
-    function handleMouseOver() {
-        stopAutoPlay();
-        const currentSlide = slides[currentIndex];
-        const info = currentSlide.querySelector('.carousel-info');
-        info.classList.add('visible');
-        prevButton.classList.add('visible');
-        nextButton.classList.add('visible');
-    }
-
-    function handleMouseOut() {
-        startAutoPlay();
-        const currentSlide = slides[currentIndex];
-        const info = currentSlide.querySelector('.carousel-info');
-        info.classList.remove('visible');
-        prevButton.classList.remove('visible');
-        nextButton.classList.remove('visible');
-    }
-
-    prevButton.addEventListener('click', function () {
-        showSlide((currentIndex - 1 + slides.length) % slides.length);
-    });
-
-    nextButton.addEventListener('click', function () {
-        showSlide((currentIndex + 1) % slides.length);
-    });
-
-    carousel.addEventListener('mouseover', handleMouseOver);
-    carousel.addEventListener('mouseout', handleMouseOut);
-
-    // Inicializa o carrossel e o autoplay
-    showSlide(currentIndex);
-    startAutoPlay();
-});
 
