@@ -912,6 +912,8 @@ figure{
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+
+
 .card-obras {
     flex-basis: calc(20% - 16px);
     padding: 10px;
@@ -1002,7 +1004,6 @@ figure{
 }
 .prelude1.card-obras:hover .date {
     color: var(--main-orange);
-
 }
 .prelude1.card-obras:hover .title {
     color: var(--main-orange);
@@ -1100,6 +1101,48 @@ figure{
 .prelude7 .card-icon {
     background-color: var(--main-sand);
     box-shadow: 0 1px 16px var(--main-sand);
+}
+
+.waltz1.card-obras:hover {
+    box-shadow: 0 1px 24px rgb(132, 53, 33);
+}
+.waltz1.card-obras:hover .date {
+    color: rgb(132, 53, 33);
+}
+.waltz1.card-obras:hover .title {
+    color: rgb(132, 53, 33);
+}
+.waltz1 .card-icon {
+    background-color: rgb(132, 53, 33);
+    box-shadow: 0 1px 16px rgb(132, 53, 33);
+}
+
+.waltz2.card-obras:hover {
+    box-shadow: 0 1px 24px #b3a739;
+}
+.waltz2.card-obras:hover .date {
+    color: #b3a739;
+}
+.waltz2.card-obras:hover .title {
+    color: #b3a739;
+}
+.waltz2 .card-icon {
+    background-color: #b3a739;
+    box-shadow: 0 1px 16px #b3a739;
+}
+
+.nostalgicera.card-obras:hover {
+    box-shadow: 0 1px 24px #d054d4;
+}
+.nostalgicera.card-obras:hover .date {
+    color: #d054d4;
+}
+.nostalgicera.card-obras:hover .title {
+    color: #d054d4;
+}
+.nostalgicera .card-icon {
+    background-color: #d054d4;
+    box-shadow: 0 1px 16px #d054d4;
 }
 
 
