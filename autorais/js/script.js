@@ -239,39 +239,18 @@ document.addEventListener('DOMContentLoaded', function() {
 //selecionar conteudo central e indice da navbar
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-links a, .filter-item, .card-obras');
-    const mainContent = document.querySelector('.main-content .js-require');
-    const tableOfContents = document.querySelector('.table-of-contents .js-require');
 
     navLinks.forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault();
             const page = this.getAttribute('data-page');
 
-            // Atualiza o conteúdo principal
-            mainContent.setAttribute('page', `${page}.html`);
-
-            // Atualiza o índice de conteúdo
-            tableOfContents.setAttribute('page', `${page}_indice.html`);
-
-            // Carrega o novo conteúdo
-            loadContent(mainContent);
-            loadContent(tableOfContents);
+            // Redireciona para a página correspondente
+            if (page) {
+                window.location.href = `${page}.html`;
+            }
         });
     });
-
-    function loadContent(element) {
-        const file = element.getAttribute('page');
-        if (file) {
-            fetch(file)
-                .then(response => response.text())
-                .then(data => {
-                    element.innerHTML = data;
-                })
-                .catch(error => console.error(`Erro ao carregar o ${file}:`, error));
-        } else {
-            console.error('Atributo page não encontrado no elemento:', element);
-        }
-    }
 });
 
 //modal obras
