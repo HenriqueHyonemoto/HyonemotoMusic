@@ -1382,8 +1382,7 @@ figure{
 }
 
 
+
 .imagens-notpron {
-    width: 100%;
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Remove espaços extras ao redor da imagem */
+    margin-bottom: 15px; /* Adiciona um espaço entre as linhas de imagens */
 }
