@@ -1,93 +1,295 @@
-<h1 id="1">Minha Trajetória no Piano</h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obras Autorais</title>
+    <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/50812450f6.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="text-center py-5 ">
+        <h1 class="hfont"><strong>Obras Autorais</strong></h1>
+    </header>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="hcontainer">
+                <div class="row align-items-center w-100">
+                    <div class="col-2 justify-content-start">
+                        <a class="navbar-brand" href="../index.html" style="color:white;">
+                            <img src="../images/logo-h.png" alt="HHH logo" width="80">
+                        </a>
+                    </div>
+                    <div class="col-8 justify-content-center">
+                        <ul class="navbar-nav nav-links ">
+                            <li class="nav-item"><a class="nav-link" href="#" data-page="informacoes">Informações</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#" data-page="fotografias">Fotografias</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#" data-page="historia">Minha História com a
+                                    Fotografia</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="col-2 d-flex align-items-center">
+                        <div id="language-flag" class="language-flag">
+                            <img src="../images/fg-br.png" width="32">
+                        </div>
+                        <div class="language-selector">
+                            <button class="language-button btn btn-link text-white">
+                                <span class="language-display"><i class="fa-solid fa-caret-right"></i></span>
+                                <span class="arrow"><img src="../images/chevron-down.png"></span>
+                            </button>
+                            <ul class="language-menu list-unstyled">
+                                <a href="#">
+                                    <li class="language-item" data-lang="pt-BR">
+                                        <img src="../images/fg-br.png" width="32">
+                                        <span>pt-BR</span>
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li class="language-item" data-lang="en">
+                                        <img src="../images/fg-us.png" width="32">
+                                        <span>ENG</span>
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="navbar-toggler">
+            <div class="row justify-content-start">
+                <div class="col-2 justify-content-start p-0 m-0">
+                    <a class="navbar-brand" href="../index.html" style="color:white;">
+                        <img src="../images/logo-h.png" alt="HHH logo" width="80">
+                    </a>
+                </div>
+                <div class="col-8 justify-content-center">
+                </div>
+                <div class="col-2 d-flex justify-content-end p-0">
+                    <button class="navbar-toggler-btn" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span><img src="images/navbar-toggler.png" alt="" width="60px"></span>
+                    </button>
+                </div>
+
+            </div>
+            <div id="navbarSubmenu" class="navbar-submenu">
+                <div class="navbar-item" data-page="informacoes"> Informações</div>
+                <div class="navbar-item" data-page="fotografias">Fotografias</div>
+                <div class="navbar-item" data-page="historia"> Minha História com a Fotografia</div>
+                <div class="d-flex align-items-center" style="margin-left:20px">
+                    <div id="language-flag" class="language-flag">
+                        <img src="../images/fg-br.png" width="32">
+                    </div>
+                    <div class="language-selector">
+                        <button class="language-button btn btn-link text-white">
+                            <span class="language-display"><i class="fa-solid fa-caret-right"></i></span>
+                            <span class="arrow"><img src="../images/chevron-down.png"></span>
+                        </button>
+                        <ul class="language-menu list-unstyled">
+                            <a href="#">
+                                <li data-lang="pt-BR"><img src="../images/fg-br.png" width="32">pt-BR</li>
+                            </a>
+                            <a href="#">
+                                <li data-lang="en"><img src="../images/fg-us.png" width="32">ENG</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hcontainer mt-2">
+        <div class="row ">
+            <!-- Seção de Menu de Pesquisa -->
+            <div class="col-xl-2 filter-menu  order-xl-1 order-1">
+                <h1>Filtrar</h1>
+                <div class="filter-item" data-submenu="submenu-piano" data-page="piano"><span class="filter-arrow"><i
+                            class="fa-solid fa-caret-right"></i></span> Piano</div>
+                <div id="submenu-piano" class="filter-submenu">
+                    <div class="filter-item filter-category" data-page="preludes"><span class="filter-arrow"><i
+                                class="fa-solid fa-caret-right"></i></span> Prelúdios</div>
+                    <div class="filter-item filter-category" data-page="waltzes"><span class="filter-arrow"><i
+                                class="fa-solid fa-caret-right"></i></span> Valsas</div>
+                </div>
+                <div class="filter-item" data-submenu="submenu-soundtracks" data-page="orquestracoes"><span
+                        class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Orquestrações</div>
+                <div id="submenu-soundtracks" class="filter-submenu">
+                    <div class="filter-item filter-category" data-page="soundtracks"><span class="filter-arrow"><i
+                                class="fa-solid fa-caret-right"></i></span> Soundtracks</div>
+                </div>
+                <div class="filter-item" data-submenu="submenu-violao" data-page="violao"><span class="filter-arrow"><i
+                            class="fa-solid fa-caret-right"></i></span> Violão</div>
+                <div id="submenu-violao" class="filter-submenu">
+                    <div class="filter-item filter-category" data-page="obrasviolao"><span class="filter-arrow"><i
+                                class="fa-solid fa-caret-right"></i></span> Ainda não fiz =(</div>
+                </div>
+            </div>
+
+            <!-- Seção de Conteúdo Principal -->
+            <div class="col-xl-8 main-content order-xl-2 order-3">
+                <h1 id="1">Minha História com a fotografia</h1>
 <hr>
-<p>Entre os <strong>12 e 14 anos</strong>, desenvolvi interesse em aprender piano motivado pelo desejo de tocar
-    aberturas de animações, filmes, séries e trilhas de jogos que admirava. Convenci meus pais a comprarem um
-    <strong>teclado simples</strong>, mas, sem professores de piano na minha cidade, tentei aprender sozinho. Por achar
-    muito difícil e estar envolvido em outros interesses, <strong>desisti</strong> na época.</p>
-<p>Com <strong>16 anos</strong>, o interesse pela música voltou. Peguei aquele mesmo teclado e, aos poucos, comecei a
-    progredir. Durante essa fase, aprendi a tocar músicas de <strong>ouvido</strong> e assistindo a
-    <strong>tutoriais</strong>, sem nenhuma noção de leitura de partituras, reproduzindo apenas o que via e ouvia. Em
-    <strong>2019</strong>, assistindo a vídeos de piano no YouTube, me deparei com o pianista <a href="">Rousseau</a>
-    tocando <a href="">Fantaisie-Impromptu</a> de Chopin. Aquela peça, de uma <strong>complexidade</strong> e
-    <strong>beleza impressionantes</strong>, despertou em mim um profundo interesse pela música clássica. Logo depois,
-    ouvi o terceiro movimento da <a href="">Moonlight Sonata</a> de Beethoven e decidi que <strong>aprenderia essas
-        obras</strong>.</p>
-        <div class="outer-container">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/Gus4dnQuiGk?si=Mh_iIv-WN4xeSo26"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="caption"><strong>Primeiro vídeo</strong> do Pianista Rousseau, que me inspirou no Piano</div>
-        </div>
+<p>Por volta dos meus 12 anos, influenciado pelos youtubers da época, que faziam daily vlogs e diversos tipos de vídeos, adquiri uma câmera <em>(Canon Powershot ELPH 135)</em> para gravar meus próprios vídeos e postar no meu canal. Meu sonho era ter um grande canal no YouTube. No entanto, as coisas não saíram como planejado. O canal acabou sendo deletado, e a câmera que eu usava para gravar esses vídeos foi deixada de lado por alguns anos.</p>
 
-        <div class="outer-container">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/BV7RkEL6oRc?si=e7dztZVQgX0HnpsZ"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="caption"><strong>Segundo vídeo</strong> do Pianista Rousseau, que me inspirou no Piano</div>
-        </div>
+<p>Foi então que, no ano de 2017, quando eu tinha 14 anos, o youtuber <em>Cellbit</em> começou a lançar vídeos sobre enigmas. Esses vídeos despertaram em mim um enorme interesse, em particular o enigma chamado <strong>Notpron</strong>. Conhecido como o "enigma mais difícil da internet", o Notpron é um desafio em que apenas cerca de 100 pessoas em todo o mundo possuem o certificado de completá-lo.</p>
 
-<p>Enquanto progredia nos estudos, percebi que o teclado <strong>não atendia mais às minhas necessidades</strong>.
-    Convenci meus pais a investirem em um <strong>piano digital</strong>, o <strong>Casio CDP 230R</strong>. Com ele,
-    alcancei uma <strong>evolução técnica muito rápida</strong>, aprendendo os primeiros trechos da <a
-        href="">Fantaisie-Impromptu</a> e do <a href="">Noturno No.20</a> de Chopin.</p>
-        <div class="outer-container">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/9Kohn1cKejg?si=FmYiKwZwgJEPDTZ4"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="caption">Gravação de <strong>19/11/19</strong> da parte que aprendi de
-                <strong>Fantaisie-Impromptu</strong>, no meu Casio CDP230</div>
-        </div>
+<div class="outer-container">
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/D0C2tVa4flU"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="caption">Video sobre o Notpron do Youtuber <em>Cellbit</em></div>
+</div>
 
-<p>Apesar disso, nunca dediquei tempo suficiente para praticar a <strong>leitura de partituras</strong> de forma
-    consistente, sempre aprendendo as obras mais por <strong>ouvido</strong> e <strong>imitação</strong>. Pensando em
-    mudar essa situação, decidi tentar aprender a <strong>compor</strong>. Dessa forma, eu escreveria as partituras e
-    adquiriria conhecimento ao mesmo tempo.</p>
-<h1 id="2">Meu Início na Composição</h1>
-<hr>
-<p>Antes de criar uma música do zero, considerei mais adequado começar com um <strong>arranjo</strong>. Escolhi uma
-    música de um dos meus <strong>jogos favoritos</strong>, <strong>Banjo-Tooie</strong>, e decidi arranjar a trilha
-    <strong>Hailfire Peaks</strong>. No início, foi muito <strong>desafiador</strong> criar esse arranjo, já que
-    precisei ouvir repetidamente a música original e adaptá-la ao piano de maneira <strong>fiel</strong>, mas também
-    imprimindo minha <strong>própria interpretação</strong>.</p>
-<p>Para isso, busquei inspiração em <strong>diversas fontes</strong>, tentando equilibrar <strong>fidelidade ao
-        original</strong> e <strong>criatividade</strong>. O resultado foi uma peça <strong>complexa</strong> e,
-    provavelmente, <strong>impossível de ser tocada</strong>. Eu mesmo não conseguia executá-la e, por isso, utilizei o
-    programa <a href="https://musescore.org">MuseScore</a> para produzir e finalizar o arranjo.</p>
-    <div class="outer-container">
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/jsrMwvTMTvM?si=rd53P2KSo6YbZadG"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p>Mais dois anos se passaram, e em 2019, quando eu tinha 16 anos, meu interesse por mídias de mistério e investigação, como a série <em>Sherlock</em> da BBC (assim como os filmes) e <em>Prison Break</em>, havia crescido bastante. Foi então que me lembrei do Notpron. Como já havia esquecido completamente a resolução dos níveis mostrados pelo <em>Cellbit</em>, decidi tentar resolver os enigmas por conta própria. Na época, apenas cerca de 50 pessoas haviam solucionado o enigma.</p>
+
+<figure>
+    <img src="images/screen1.jpg" class="img-fluid">
+    <figcaption>Fotografia do Level 1 no Notpron (Aparentemente era uma casa em que o criador morava)</figcaption>
+</figure>
+
+<p>O enigma Notpron é bastante simples em sua estrutura: cada página contém geralmente apenas uma imagem com o número da fase, que nem sempre está diretamente relacionado à solução do enigma, mas dá a "cara" para o nível. Cada imagem foi criada ou fotografada pelo criador do enigma, <em>David Munnich</em>. Isso despertou em mim um certo interesse por fotografia, pois sempre me intrigava pensar: "Que lugar é esse? Como ele tirou essa foto?"</p>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-3">
+            <img src="images/nopron2.jpg" class="img-fluid imagens-notpron">
         </div>
-        <div class="caption"><strong>Arranjo de Hailfire-Peaks</strong> feito em <strong>Março de 2020</strong></div>
+        <div class="col-md-3">
+            <img src="images/nopron3.jpg" class="img-fluid imagens-notpron">
+        </div>
+        <div class="col-md-3">
+            <img src="images/nopron4.jpg" class="img-fluid imagens-notpron">
+        </div>
+        <div class="col-md-3">
+            <img src="images/nopron6.jpg" class="img-fluid imagens-notpron">
+        </div>
+    </div>
+    <div class="row justify-content-center mt-2">
+        <div class="col-md-3">
+            <img src="images/nopron7.jpg" class="img-fluid imagens-notpron">
+        </div>
+        <div class="col-md-3">
+            <img src="images/nopron8.jpg" class="img-fluid imagens-notpron">
+        </div>
+        <div class="col-md-3">
+            <img src="images/nopron9.jpg" class="img-fluid magens-notpron">
+        </div>
+        <div class="col-md-3">
+            <img src="images/nopron10.jpg" class="img-fluid imagens-notpron">
+        </div>
+    </div>
+</div>
+<br>
+<figcaption>Algumas Fotografias interessantes do Notpron</figcaption>
+<br>
+
+<p>Foi aí que me lembrei daquela câmera antiga. Apesar de já possuir celulares com câmeras de maior qualidade e resolução, a câmera digital ainda possuía uma estética única. Dessa forma, comecei a criar ambientes com iluminação e cenários dentro da minha própria casa, tentando reproduzir o estilo das fotografias do Notpron. Assim, mergulhei no mundo da fotografia, inspirado por essas imagens cheias de mistério e criatividade.</p>
+
+
+
+
+
+
+
+
+</div>
+            <!-- Seção de Índice de Conteúdo -->
+            <div class="col-xl-2 table-of-contents order-xl-3 order-2">
+                
+<h1>Índice</h1>
+<div class="indice-card">
+    <ul>
+        <li class="scale-transform11"><a href="#1">História na Fotografia</a></li>
+        <ul>
+
+
+        </ul>
+        </li>
+    </ul>
+</div>
+            </div>
+        </div>
     </div>
 
-<p>Após essa minha primeira experiência, comecei a me aprofundar no universo da <strong>composição musical</strong>,
-    pesquisando <strong>vídeos</strong> e conteúdos educativos que pudessem me orientar. Foi nesse processo que me
-    deparei com materiais inspiradores de criadores como <a href="">Felipe Scagliusi</a> e <a href="">Franz Ventura</a>,
-    que abordavam técnicas de composição e estruturação musical de forma <strong>acessível</strong>.</p>
-<p>Dentro de alguns meses, comecei a trabalhar na <strong>criação da minha primeira obra original</strong>, que, embora
-    tenha sido meu <strong>segundo trabalho publicado</strong>, representou meu verdadeiro início como
-    <strong>compositor</strong>. Esse esforço resultou no <a href="">Prelude Op.2 No.2</a>, uma peça que marcou minha
-    <strong>jornada criativa</strong> e meu <strong>desenvolvimento artístico</strong>.</p>
-<h1 id="3">Como é o meu processo criativo de compor?</h1>
-<hr>
-<p>Bom, como eu <strong>não entendo muito de teoria musical</strong>, acordes ou progressão de acordes, minhas
-    tentativas de composição geralmente resultam em algo <strong>curto</strong>, com cerca de <strong>cinco
-        compassos</strong>, e varias ideias que nem saíram do papel. Apesar disso, o processo é bastante
-    <strong>interessante</strong>.</p>
-<p>Eu costumo começar com uma <strong>ideia inicial</strong>, inspirada por algum acontecimento, sentimento ou referência, e a partir
-    disso, é como se as <strong>próximas notas da melodia</strong> fossem surgindo automaticamente na minha mente. O
-    maior <strong>desafio</strong> para mim é criar um <strong>acompanhamento</strong> que complemente essas melodias, isso
-    que faz com que minhas composições sejam, em sua maioria, <strong>simples</strong> e <strong>curtas</strong>, mas
-    ainda assim com certo <strong>valor</strong>.</p>
+    <footer class="footer text-white mt-2 py-4 ">
+        <div class="container">
+            <div class="row">
+                <div class="footer-top">
+                    <p>&copy; 2024 Henrique H. Hyonemoto.</p>
+                    <hr>
+                </div>
+                <div class="col-xl-4 col-12 col-md-6 footer-left order-2 order-xl-1">
+                    <h3 id="contact">Contato</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="mailto:ifhenriquehyonemoto@gmail.com"><i class="fa-solid fa-envelope"></i>
+                                ifhenriquehyonemoto@gmail.com</a></li>
+                        <li><a href="https://linkedin.com/in/henrique-hyonemoto-689002221" target="_blank"><i
+                                    class="fa-brands fa-linkedin"></i> linkedin.com/in/henrique-hyonemoto-689002221</a>
+                        </li>
+                        <li><a href="https://github.com/HenriqueHyonemoto" target="_blank"><i
+                                    class="fa-brands fa-github"></i> https://github.com/HenriqueHyonemoto</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-4 col-12 footer-center order-1 order-xl-2 align-items-center">
+                    <div class="row align-items-center m-2">
+                        <div class="col-6 col-xl-12 mb-2">
+                            <img src="../images/logo-h.png" alt="Logo HHH" class="img-fluid" width="200px">
+                        </div>
+                        <div class="col-6 col-xl-12">
+                            <img src="../images/logo-if.png" alt="Logo do IFSP" class="img-fluid" width="200px">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-12 col-md-6  footer-right order-3 order-xl-3">
+                    <h3>Outros Projetos</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="https://github.com/HenriqueHyonemoto/PianoLeds" target="_blank"><i
+                                    class="fa-solid fa-gear"></i> Piano Com Leds (Arduino)</a></li>
+                        <li><a href="https://github.com/HenriqueHyonemoto/gerenciador-de-fichas-op" target="_blank"><i
+                                    class="fa-brands fa-laravel"></i> Plataforma WEB para criação de Personagens
+                                (Laravel)</a></li>
+                        <li><a href="https://github.com/HenriqueHyonemoto/ALendaDoHeroi-UltrawideFix" target="_blank"><i
+                                    class="fa-solid fa-panorama"></i> Mod Renderização 21:9 em jogo eletrônico (C++)</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <!-- O conteúdo do modal será carregado dinamicamente aqui -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

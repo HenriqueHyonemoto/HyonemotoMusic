@@ -1,5 +1,5 @@
 :root{
-    --main-yellow:#a58816;
+    --main-color: #a7880b;
     --main-orange:#cc4503;
     --main-red: rgb(246, 46, 6);
     --main-sand: #c4b075;
@@ -110,7 +110,7 @@ a{
 
 strong,
 em {
-    color: var(--main-yellow);
+    color: var(--main-color);
 }
 
 .content-list {
@@ -120,13 +120,11 @@ em {
 .content-list ul {
     list-style-position: inside;
     list-style-type: disc;
-    color: var(--main-yellow);
     padding: 0;
     margin: 0;
 }
 
 .content-list ul li {
-    color: var(--main-yellow);
     font-size: 22px;
 }
 
@@ -149,7 +147,7 @@ em {
 header {
     font-size: 50px;
     font-family: "Tangerine", cursive;
-    color: var(--main-yellow);
+    color: var(--main-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,7 +183,7 @@ header {
 
 
 .navbar {
-    background-color: var(--main-yellow);
+    background-color: var(--main-color);
     padding: 1.2rem;
     position: relative;
     height: 5em;
@@ -322,7 +320,7 @@ header {
 }
 
 .navbar-submenu {
-    background-color: var(--main-yellow);
+    background-color: var(--main-color);
     width: 100%;
     display: none; /* Inicialmente oculto */
     padding: 0; /* Remove o padding quando oculto */
@@ -395,7 +393,7 @@ header {
 .language-menu {
     display: none;
     position: absolute;
-    background-color: var(--main-yellow);
+    background-color: var(--main-color);
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
     z-index: 1;
     list-style: none;
@@ -463,7 +461,7 @@ header {
 }
 
 .footer {
-    background-color: var(--main-yellow);
+    background-color: var(--main-color);
     color: #fff;
     text-align: center;
     padding: 1rem 0;
@@ -612,14 +610,14 @@ header {
 }
 
 .content-container a {
-    color: var(--main-yellow);
+    color: var(--main-color);
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-color 0.3s;
 }
 
 .content-container a:hover {
-    border-color: var(--main-yellow);
+    border-color: var(--main-color);
 }
 
 /* Filtro obras */
@@ -633,7 +631,7 @@ header {
 .filter-item {
     background-color: #fafafa;
     border: 1px solid rgb(227, 227, 227);
-    color: var(--main-yellow);
+    color: var(--main-color);
     height: 50px;
     padding: 10px;
     margin-top: 10px;
@@ -647,7 +645,7 @@ header {
 .filter-category {
     background-color: #fafafa;
     border: 1px solid rgb(227, 227, 227);
-    color: var(--main-yellow);
+    color: var(--main-color);
     height: 50px;
     padding: 10px;
     margin: 0px 0;
@@ -719,7 +717,7 @@ header {
 }
 
 .main-content a {
-    color: var(--main-yellow);
+    color: var(--main-color);
 }
 
 figcaption {
@@ -747,7 +745,7 @@ figure{
 .table-of-contents ul {
     list-style-type: disc;
     padding-left: 0px;
-    color: var(--main-yellow);
+    color: var(--main-color);
     text-align: left;
     font-weight: bold;
     text-decoration: none;
@@ -768,7 +766,7 @@ figure{
 }
 
 .table-of-contents a {
-    color: var(--main-yellow);
+    color: var(--main-color);
 }
 
 .indice-card {
@@ -950,7 +948,7 @@ figure{
     position: absolute;
     bottom: 10px;
     right: 10px;
-    background-color: var(--main-yellow);
+    background-color: var(--main-color);
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -1208,7 +1206,7 @@ figure{
     position: absolute;
     bottom: 10px;
     right: 10px;
-    background-color: var(--main-yellow);
+    background-color: var(--main-color);
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -1383,3 +1381,9 @@ figure{
     aspect-ratio: 4 / 3;
 }
 
+
+.imagens-notpron {
+    width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaços extras ao redor da imagem */
+}
