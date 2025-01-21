@@ -119,13 +119,11 @@ em {
 .content-list ul {
     list-style-position: inside;
     list-style-type: disc;
-    color: var(--main-purple);
     padding: 0;
     margin: 0;
 }
 
 .content-list ul li {
-    color: var(--main-purple);
     font-size: 22px;
 }
 
