@@ -373,5 +373,44 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+//Modal imagem
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the modal
+    var modal = document.getElementById("imageModal");
 
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // Get all images with the class 'imagens-notpron'
+    var images = document.getElementsByClassName("imagens-notpron");
+
+    // When the user clicks on an image, open the modal
+    for (var i = 0; i < images.length; i++) {
+        images[i].onclick = function() {
+            var modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            modalImg.classList.add("show"); // Add the show class
+            document.body.classList.add("no-scroll"); // Disable scrolling
+        }
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+        var modalImg = document.getElementById("modalImage");
+        modalImg.classList.remove("show"); // Remove the show class
+        document.body.classList.remove("no-scroll"); // Enable scrolling
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            var modalImg = document.getElementById("modalImage");
+            modalImg.classList.remove("show"); // Remove the show class
+            document.body.classList.remove("no-scroll"); // Enable scrolling
+        }
+    }
+});
 

@@ -1236,48 +1236,70 @@ figure{
 
 
 /* modal */
+/* The Modal (background) */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 60px; /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
+/* Modal Content (image) */
 .modal-content {
-    background-color: #ffffff;
     margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
+    display: block;
     width: 80%;
-    height: 90%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-    position: relative;
-    top: 5%;
-    color: black;
+    max-width: 800px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(100px); /* Initially moved down */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Animation */
 }
 
+/* Show the modal content */
+.modal-content.show {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Moved to original position */
+}
+
+/* The Close Button */
 .close {
-    color: #aaa;
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 28px;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
     font-weight: bold;
-    cursor: pointer;
-    z-index: 2;
+    transition: 0.3s;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: #bbb;
     text-decoration: none;
+    cursor: pointer;
+}
+
+/* Add some padding and style to the caption text */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+body.no-scroll {
+    overflow: hidden;
 }
 
 /* Card Plataformas */
@@ -1386,3 +1408,60 @@ figure{
 .imagens-notpron {
     margin-bottom: 15px; /* Adiciona um espaço entre as linhas de imagens */
 }
+
+.card-obras-images {
+    flex-basis: calc(20% - 16px);
+    padding: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+ 
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease,box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.card-obras-images:hover {
+    transform: scale(1.05);
+}
+
+.card-obras-images:hover .date {
+    font-weight: bold;
+}
+
+.card-obras-images .title{
+    line-height: 1.2; 
+}
+
+.card-obras-images:hover .title {
+    font-weight: bold;
+}
+
+
+
+/* sla */
+
+.card-obras-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.card-obras-images .card-icon img {
+    width: 50% !important;
+    height: auto;
+    display: block;
+}
+
+
+.card-obras-images .title {
+    color: black;
+    text-align: left;
+    font-size: 24px;
+    margin: 0;
+    font-weight: bold;
+    margin: 0;
+
+}
+
