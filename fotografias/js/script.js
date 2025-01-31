@@ -382,7 +382,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var span = document.getElementsByClassName("close")[0];
 
     // Get all images with the class 'imagens-notpron'
-    var images = document.getElementsByClassName("imagens-notpron");
+    var images = document.getElementsByClassName("imagem-modal");
 
     // When the user clicks on an image, open the modal
     for (var i = 0; i < images.length; i++) {
@@ -413,4 +413,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+
 

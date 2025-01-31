@@ -36,9 +36,9 @@
                         <ul class="navbar-nav nav-links ">
                             <li class="nav-item"><a class="nav-link" href="#" data-page="informacoes">Informações</a>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="#" data-page="obras">Obras</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#" data-page="historia">Minha História no
-                                    Piano</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" data-page="fotografias">Fotografias</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" data-page="historia">Minha História com a Fotografia
+                                    </a></li>
                         </ul>
 
                     </div>
@@ -91,8 +91,9 @@
             </div>
             <div id="navbarSubmenu" class="navbar-submenu">
                 <div class="navbar-item" data-page="informacoes"> Informações</div>
-                <div class="navbar-item" data-page="obras">Obras</div>
-                <div class="navbar-item" data-page="historia"> Minha História no Piano</div>
+                <div class="navbar-item" data-page="fotografias">fotografias</div>
+                <div class="navbar-item" data-page="historia"> Minha História com a
+                    Fotografia</div>
                 <div class="d-flex align-items-center" style="margin-left:20px">
                     <div id="language-flag" class="language-flag">
                         <img src="../images/fg-br.png" width="32">
@@ -147,159 +148,103 @@
             <div class="col-xl-8 main-content order-xl-2 order-3">
                 <div class="js-require" page="">
                     <div class="row">
-                        <div class="col-md-5 obra-image-container p-0">
-                            <h1 id="1">Prelude No.1</h1>
-                            <a href="../fotografias/prelude1.html" style="text-decoration: none;">
-                                <div class="card-foto prelude1">
-                                    <div class="image-container">
-                                        <img src="images/preludesvol1.png" alt="Foto de um Abajur" class="img-fluid">
-                                        <div class="card-icon">
-                                            <img src="images/search.png" width="5px !important;">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 obra-image-container p-0" style="margin-bottom:40px">
+                                <h1 id="0">Fotografia do Preludes Vol.1</h1>
+                                <a style="text-decoration: none;">
+                                    <div class="card-foto prelude1" style="margin: 0 auto;">
+                                        <div class="image-container">
+                                            <img src="images/preludesvol1.png" alt="Foto de um Abajur" class="imagem-modal">
+                                            <div class="card-icon">
+                                                <img src="images/expand.png" width="5px !important;">
+                                            </div>
                                         </div>
+                                        <p class="title hfont">14/05/2019 - 19:31 </p>
                                     </div>
-                                    <p class="title hfont">Capa do Preludes, Vol.1 </p>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
-                        <div class="col-md-7">
+
+                        <div id="imageModal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="modalImage">
+                            <div id="caption"></div>
+                        </div>
+                        
+                        <div class="col-md-12">
                             <h1 id="1">Informações</h1>
                             <div class="obras-info-container">
-
-                                <p>Uma música tranquila e serena, que transmite conforto e segurança. No final, ganha um
-                                    ritmo mais intenso, com um toque de mistério e magia.</p>
-                                <p><strong>Album:</strong> Preludes, Vol.1</p>
-                                <p><strong>Duração:</strong> 01:11</p>
-                                <p><strong>Divisão de compasso:</strong> 4/4</p>
-                                <p><strong>Tonalidade:</strong> Mi♭ Maior</p>
-                                <p><strong>Início de composição:</strong> Agosto de 2020</p>
-                                <p><strong>Fim de composição:</strong> Agosto de 2020</p>
-                                <p><strong>Data de publicação:</strong> 14/05/2022</p>
-                                <p><strong>Distribuidora:</strong> OneRPM</p>
+                                <p><strong>Descrição: </strong>Fotografia de um Abajur com luz da Cor Amarela.</p>
+                                <p><strong>Album: </strong>Preludes, Vol.1</p>
+                                <p><strong>Data da Fotografia: </strong>14/05/2019 - 19:31</p>
+                                <p><strong>Local: </strong>Minha casa antiga</p>
+                                <p><strong>Editada: </strong>Sim</p>
                             </div>
                         </div>
 
                     </div>
                     <hr>
-                    <h1>Escute a Obra</h1>
-                    <div class="card-container-plataformas">
-                        <a href="https://open.spotify.com/track/2FhuMPzHdqy91auNItR53d?si=9b6822a234444592"
-                            class="card-plataforma" target="_blank">
-                            <img src="images/spotify.png" alt="Spotify">
-                            <p>Spotify</p>
-                        </a>
-                        <a href="https://www.deezer.com/en/artist/244834772?host=0&deferredFl=1"
-                            class="card-plataforma not-available" target="_blank">
-                            <img src="images/deezer.png" alt="Deezer">
-                            <p>Deezer</p>
-                        </a>
-                        <a href="https://www.youtube.com/watch?v=o5k89vYzwrI&list=OLAK5uy_mld9qUShAah1-2TgLD_0imQEeumhJNzdA"
-                            class="card-plataforma" target="_blank">
-                            <img src="images/ytmusic.png" alt="Youtube Music">
-                            <p>Youtube</p>
-                        </a>
-                        <a href="https://music.amazon.com.br/albums/B09YRYZQQ1?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=BR&ref=dm_sh_qQduJl31WAe7atiZ31xzm2ebn&trackAsin=B09YS1LRK2"
-                            class="card-plataforma" target="_blank">
-                            <img src="images/amazonmusic.png" alt="Amazon Music">
-                            <p>Amazon</p>
-                        </a>
-                        <a href="https://music.apple.com/br/album/prelude-no-1/1620893477?i=1620893478"
-                            class="card-plataforma" target="_blank">
-                            <img src="images/applemusic.png" alt="Apple Music">
-                            <p>Apple</p>
-                        </a>
-                        <!-- <a href="https://tidal.com" class="card-plataforma">
-                            <img src="images/tidal.png" alt="Tidal">
-                            <p>Tidal</p>
-                        </a>
-                        <a href="https://tidal.com" class="card-plataforma">
-                            <img src="images/pandora.png" alt="Tidal">
-                            <p>Pandora</p>
-                        </a> -->
-                    </div>
-                    <iframe style="border-radius:12px"
-                        src="https://open.spotify.com/embed/track/2FhuMPzHdqy91auNItR53d?utm_source=generator"
-                        width="100%" height="152" frameBorder="0" allowfullscreen=""
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"></iframe>
-                        <br>
-                    <hr>
-                    <br>
-                    <h1 id="2">Sobre a Obra </h1>
+                                   
+                    <h1 id="2">Sobre a Fotografia</h1>
                     <br>
                     <div class="col-md-12">
-                        <p>Esta música foi minha primeira composição a ser finalizada e publicada. No entanto, minha primeira composição começou com o <a href="prelude2.html">Prelude No. 2 </a></p>
-                        <p>Após realizar alguns arranjos para me habituar ao processo de criação e escrita musical, comecei a produzir pequenas obras no gênero prelude, pois são mais livres e curtas. Essa experiência me permitiu explorar e experimentar ideias com mais flexibilidade.</p>
-                        <p>Minha principal inspiração para a criação desta obra foi a música "Home", composta por Toby Fox, do jogo Undertale. A ideia central era transmitir a sensação de conforto, como estar tranquilo em sua própria casa ou em um lugar que traz paz e segurança.</p>
+                        <p>Esta foi a primeira fotografia tirada após minha ideia inicial, explicada na <a href="historia.html">Página da História</a>.
+                            Trata-se de uma imagem de um abajur, capturada de um ângulo baixo, semelhante à forma como eu o via quando era criança, enquanto dormia. Essa foto representa o nascimento de uma nova ideia: meu projeto de lançar músicas.</p>
+                            
+                           <p>Sendo a primeira imagem que capturei, ela foi escolhida como capa do meu primeiro lançamento, que reúne meus <a href="../autorais/preludes.html">quatro prelúdios.</a> Além disso, tornou-se a representação visual da minha identidade artística: <strong>Hyonemoto</strong>.</p>
+                       
                         <br>
-                        <div class="outer-container">
-                            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5L9MJsGqzTRD09rSzHkCDy?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                            <div class="caption">Música "Home" do Jogo Undertale por Toby Fox</div>
-                        </div>
                         <br>
-                        <p>A música possui duas seções: a primeira é mais calma e introspectiva, enquanto a segunda, antes da finalização, apresenta um contraste. Como fui inspirado a tocar piano pela música Fantaisie-Impromptu, de Chopin, procurei criar algo marcado pela polirritmia. Tentei compor uma passagem em que as notas das mãos direita e esquerda não se encontrassem, gerando um efeito similar ao da polirritmia, embora sem utilizá-la de forma literal.</p>
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <figure>
-                                        <img src="images/fantaisie-impromptu-edt.jpg" class="img-fluid">
-                                        <figcaption>Fantaisie-Impromptu de Chopin</figcaption>
-                                    </figure>
-                                </div>
-                                <div class="col-md-6">
-                                    <figure>
-                                        <img src="images/prelude1sheetEDT.jpg" class="img-fluid">
-                                        <figcaption>Meu Prelude No.1</figcaption>
+                                        <img src="images/abajur.jpg" class="img-fluid">
+                                        <figcaption>Fotografia de outro angulo do Abajur (31/05/2024 - 17:53)</figcaption>
                                     </figure>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <hr>
                     
+                    <h1 id="4">Versões</h1>
+                    <div class="container">
+                        <div class="row">
+                            <div class="container-obras row mb-4" >
+                                <div class="col-lg-6 col-md-6 col-6">
+                                    <a style="text-decoration: none;">
+                                        <div class="card-obras-images ">
+                                            <div class="image-container">
+                                                <figure>
+                                                    <img src="images/preludesvol1-sem-edicao.jpg" class="imagem-modal">
+                                                    <figcaption>Sem Edições</figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-6">
+                                    <a style="text-decoration: none;">
+                                        <div class="card-obras-images ">
+                                            <div class="image-container">
+                                                <figure>
+                                                    <img src="images/preludesvol1.png" class="imagem-modal">
+                                                    <figcaption>Versão final</figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>                             
+                            </div>
+                        </div>
+                    </div>
+                    <p style="text-align: center;">A imagem original possuia informações escritas na lampada, o texto foi removido na versão final.</p>
                     <hr>
-                    <h1 id="3">Partitura</h1>
+                    
+                    <h1 id="3">Curiosidades </h1>
                     <!-- botão download -->
-                    <div class="card-container-plataformas">
-                        <a href="documents/Partituras/Hyonemoto - Prelude Op.1 No.1.pdf" class="card-plataforma"
-                            style="background-color: rgb(0, 102, 255); color:white">
-                            <img src="images/pdf-file.png" alt="Spotify">
-                            <p>Visualizar</p>
-                        </a>
-                        <a href="documents/Partituras/Hyonemoto - Prelude Op.1 No.1.pdf" class="card-plataforma"
-                            download style="background-color: blueviolet; color:white">
-                            <img src="images/download.png" alt="Spotify">
-                            <p>Download</p>
-                        </a>
-                    </div>
-                    <div class="col-md-12">
-                        
-                        <iframe src="documents/Partituras/Hyonemoto - Prelude Op.1 No.1.pdf" width="100%"
-                            height="600px"></iframe>
-
-                    </div>
-                    <hr>
-                    <h1 id="4">Manuscrito</h1>
-                    <!-- botão download -->
-                    <div class="card-container-plataformas">
-                        <a href="documents/Manuscritos/M_PreludeNo1.pdf" class="card-plataforma"
-                            style="background-color: rgb(0, 102, 255); color:white">
-                            <img src="images/pdf-file.png" alt="Spotify">
-                            <p>Visualizar</p>
-                        </a>
-                        <a href="documents/Manuscritos/M_PreludeNo1.pdf" class="card-plataforma"
-                            download style="background-color: blueviolet; color:white">
-                            <img src="images/download.png" alt="Spotify">
-                            <p>Download</p>
-                        </a>                 
-                    </div>
-                    <div class="col-md-12">
-                        <iframe src="documents/Manuscritos/M_PreludeNo1.pdf" width="100%"
-                        height="600px"></iframe>
-                       
-                    </div>
-                    <hr>
-                    <h1 id="5">Curiosidades </h1>
-                    <!-- botão download -->
-                    <p style="text-align: center;">Esse é o Prelúdio Op.1, No.1 e possui 1 minuto e 11 segundos de duração. </p>
+                    <p style="text-align: center;">1. Esse abajur tem mais de 20 Anos e a Lampada ainda é a mesma.</p>
                 </div>
             </div>
 
@@ -309,11 +254,11 @@
                     <h1>Índice</h1>
                     <div class="indice-card">
                         <ul class="align-middle">
+                            <li class="scale-transform11"><a href="#0">Fotografia</a></li>
                             <li class="scale-transform11"><a href="#1">Informações</a></li>
-                            <li class="scale-transform11"><a href="#2">Sobre a Obra</a></li>                           
-                            <li class="scale-transform11"><a href="#3">Partitura</a></li>
-                            <li class="scale-transform11"><a href="#4">Manuscritos</a></li>
-                            <li class="scale-transform11"><a href="#5">Curiosidades</a></li>
+                            <li class="scale-transform11"><a href="#2">Sobre a Fotografia</a></li>       
+                            <li class="scale-transform11"><a href="#4">Versões</a></li>  
+                            <li class="scale-transform11"><a href="#3">Curiosidades</a></li>                       
                         </ul>
                     </div>
                 </div>
