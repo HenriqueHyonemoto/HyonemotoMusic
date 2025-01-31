@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Waltz No.1</title>
+    <title>Preludes, Vol.1</title>
     <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <!-- Bootstrap CSS -->
@@ -36,9 +36,9 @@
                         <ul class="navbar-nav nav-links ">
                             <li class="nav-item"><a class="nav-link" href="#" data-page="informacoes">Informações</a>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="#" data-page="obras">Obras</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#" data-page="historia">Minha História no
-                                    Piano</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" data-page="fotografias">Fotografias</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" data-page="historia">Minha História com a Fotografia
+                                    </a></li>
                         </ul>
 
                     </div>
@@ -91,8 +91,9 @@
             </div>
             <div id="navbarSubmenu" class="navbar-submenu">
                 <div class="navbar-item" data-page="informacoes"> Informações</div>
-                <div class="navbar-item" data-page="obras">Obras</div>
-                <div class="navbar-item" data-page="historia"> Minha História no Piano</div>
+                <div class="navbar-item" data-page="fotografias">fotografias</div>
+                <div class="navbar-item" data-page="historia"> Minha História com a
+                    Fotografia</div>
                 <div class="d-flex align-items-center" style="margin-left:20px">
                     <div id="language-flag" class="language-flag">
                         <img src="../images/fg-br.png" width="32">
@@ -147,132 +148,56 @@
             <div class="col-xl-8 main-content order-xl-2 order-3">
                 <div class="js-require" page="">
                     <div class="row">
-                        <div class="col-md-5 obra-image-container p-0">
-                            <h1 id="1">Waltz No.1</h1>
-                            <a href="../fotografias/waltz1.html" style="text-decoration: none;">
-                                <div class="card-foto waltz1">
-                                    <div class="image-container">
-                                        <img src="images/waltz1.png" alt="Foto de um Abajur" class="img-fluid">
-                                        <div class="card-icon">
-                                            <img src="images/search.png" width="5px !important;">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 obra-image-container p-0" style="margin-bottom:40px">
+                                <h1 id="0">Fotografia do Waltz Op.3 No.1</h1>
+                                <a style="text-decoration: none;">
+                                    <div class="card-foto waltz1" style="margin: 0 auto;">
+                                        <div class="image-container">
+                                            <img src="images/waltz1.png" alt="Foto de um Abajur" class="imagem-modal">
+                                            <div class="card-icon">
+                                                <img src="images/expand.png" width="5px !important;">
+                                            </div>
                                         </div>
+                                        <p class="title hfont">14/05/2019 - 19:39 </p>
                                     </div>
-                                    <p class="title hfont">Capa da Waltz No.1 </p>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
-                        <div class="col-md-7">
+
+                        <div id="imageModal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="modalImage">
+                            <div id="caption"></div>
+                        </div>
+                        
+                        <div class="col-md-12">
                             <h1 id="1">Informações</h1>
                             <div class="obras-info-container">
-
-                                <p>Valsa noturna que captura a essência e os mistérios da noite</p>
-                                <p><strong>Album:</strong> Waltz No.1 (Single)</p>
-                                <p><strong>Duração:</strong> 01:00</p>
-                                <p><strong>Divisão de compasso:</strong> 3/4</p>
-                                <p><strong>Tonalidade:</strong> Sol Menor</p>
-                                <p><strong>Início de composição:</strong> Janeiro de 2021</p>
-                                <p><strong>Fim de composição:</strong> Fevereiro de 2021</p>
-                                <p><strong>Data de publicação:</strong> 22/05/2022</p>
-                                <p><strong>Distribuidora:</strong> OneRPM</p>
+                                <p><strong>Descrição: </strong>Fotografia de uma janela a noite.</p>
+                                <p><strong>Album: </strong>Waltz Op.3 No.1</p>
+                                <p><strong>Data da Fotografia: </strong>14/05/2019 - 19:39</p>
+                                <p><strong>Local: </strong>Minha casa antiga</p>
+                                <p><strong>Editada: </strong>Não</p>
                             </div>
                         </div>
 
                     </div>
                     <hr>
-                    <h1>Escute a Obra</h1>
-                    <div class="card-container-plataformas">
-                        <a href=""
-                            class="card-plataforma" target="_blank">
-                            <img src="images/spotify.png" alt="Spotify">
-                            <p>Spotify</p>
-                        </a>
-                        <a href="https://www.deezer.com/en/artist/244834772?host=0&deferredFl=1"
-                            class="card-plataforma not-available" target="_blank">
-                            <img src="images/deezer.png" alt="Deezer">
-                            <p>Deezer</p>
-                        </a>
-                        <a href="https://www.youtube.com/watch?v=QxHgfbHDpHw&list=OLAK5uy_kjrb9pEiHPpsuN61ZHYafH8m3bA6kfQow"
-                            class="card-plataforma" target="_blank">
-                            <img src="images/ytmusic.png" alt="Youtube Music">
-                            <p>Youtube</p>
-                        </a>
-                        <a href="https://music.amazon.com.br/albums/B09YRYZQQ1?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=BR&ref=dm_sh_qQduJl31WAe7atiZ31xzm2ebn&trackAsin=B09YS1LRK2"
-                            class="card-plataforma" target="_blank">
-                            <img src="images/amazonmusic.png" alt="Amazon Music">
-                            <p>Amazon</p>
-                        </a>
-                        <a href="https://music.apple.com/br/album/waltz-no-1/1620893477?i=1620893478"
-                            class="card-plataforma" target="_blank">
-                            <img src="images/applemusic.png" alt="Apple Music">
-                            <p>Apple</p>
-                        </a>
-                        <!-- <a href="https://tidal.com" class="card-plataforma">
-                            <img src="images/tidal.png" alt="Tidal">
-                            <p>Tidal</p>
-                        </a>
-                        <a href="https://tidal.com" class="card-plataforma">
-                            <img src="images/pandora.png" alt="Tidal">
-                            <p>Pandora</p>
-                        </a> -->
-                    </div>
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5UX8fbyIctv3DhqWZthat9?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                                   
+                    <h1 id="2">Sobre a Fotografia</h1>
+                    <br>
+                    <div class="col-md-12">
+                        <p>Esta fotografia da janela da sala da minha antiga casa foi tirada à noite, utilizando a luz do abajur, fotografada como capa do <a href="prelude1.html">Preludes, Vol. 1</a>.</p>
+                            
                         <br>
                     <hr>
-                    <br>
-                    <h1 id="2">Sobre a Obra </h1>
-                    <br>
-                    <div class="col-md-12">
-                        <p>Essa valsa é fortemente inspirada pelas valsas mais sombrias de Chopin. Curiosamente, ela surgiu da minha intenção inicial de compor um noturno, o que explica seu caráter evocativo da noite. </p>
-                        
-                        <p>Apesar de estar escrita no tradicional compasso ternário (3/4), seu acompanhamento apresenta uma característica peculiar: os acordes superiores não são executados de maneira uniforme. Em vez disso, um acorde mais grave é tocado acima, seguido diminuição de um tom da nota mais aguda, ou inversão dela para o baixo.</p> 
-                        
-                    </div>
-                    
-                    <hr>
-                    <h1 id="3">Partitura</h1>
+                              
+                    <h1 id="3">Curiosidades </h1>
                     <!-- botão download -->
-                    <div class="card-container-plataformas">
-                        <a href="documents/Partituras/Hyonemoto - Waltz Op.3 No.1.pdf" class="card-plataforma"
-                            style="background-color: rgb(0, 102, 255); color:white">
-                            <img src="images/pdf-file.png" alt="Spotify">
-                            <p>Visualizar</p>
-                        </a>
-                        <a href="documents/Partituras/Hyonemoto - Waltz Op.3 No.1.pdf" class="card-plataforma"
-                            download style="background-color: blueviolet; color:white">
-                            <img src="images/download.png" alt="Spotify">
-                            <p>Download</p>
-                        </a>
-                    </div>
-                    <div class="col-md-12">
-                        
-                        <iframe src="documents/Partituras/Hyonemoto - Waltz Op.3 No.1.pdf" width="100%"
-                            height="600px"></iframe>
-
-                    </div>
-                    <hr>
-                    <h1 id="4">Manuscrito</h1>
-                    <!-- botão download -->
-                    <div class="card-container-plataformas">
-                        <a href="documents/Manuscritos/M_WaltzNo1.pdf" class="card-plataforma"
-                            style="background-color: rgb(0, 102, 255); color:white">
-                            <img src="images/pdf-file.png" alt="Spotify">
-                            <p>Visualizar</p>
-                        </a>
-                        <a href="documents/Manuscritos/M_WaltzNo1.pdf" class="card-plataforma"
-                            download style="background-color: blueviolet; color:white">
-                            <img src="images/download.png" alt="Spotify">
-                            <p>Download</p>
-                        </a>                 
-                    </div>
-                    <div class="col-md-12">
-                        <iframe src="documents/Manuscritos/M_WaltzNo1.pdf" width="100%"
-                        height="600px"></iframe>
-                       
-                    </div>
-                    <hr>
-                    <h1 id="5">Curiosidades </h1>
-                    <!-- botão download -->
-                    <p style="text-align: center;">Chopin possui uma valsa chamada de "Valsa do Minuto" (Que não possui um minuto de duração), essa valsa possui 1 minuto exato =) </p>
+                    <p >1. Hoje percebo que teria sido melhor escolher outra foto, pois esta não possui tanta visibilidade. Na época, optei por usá-la como capa da Valsa porque tinha apenas quatro fotos do momento. A primeira foi utilizada na capa do <a href="prelude1.html">Preludes, Vol. 1</a>, e as demais não se adequavam ao tom da obra.</p>
+                    <p >2. Está foto foi tirada 8 Minutos após a foto do <a href="prelude1.html">Preludes, Vol. 1</a></p>
+                </div>
                 </div>
             </div>
 
@@ -282,11 +207,11 @@
                     <h1>Índice</h1>
                     <div class="indice-card">
                         <ul class="align-middle">
+                            <li class="scale-transform11"><a href="#0">Fotografia</a></li>
                             <li class="scale-transform11"><a href="#1">Informações</a></li>
-                            <li class="scale-transform11"><a href="#2">Sobre a Obra</a></li>                           
-                            <li class="scale-transform11"><a href="#3">Partitura</a></li>
-                            <li class="scale-transform11"><a href="#4">Manuscritos</a></li>
-                            <li class="scale-transform11"><a href="#5">Curiosidades</a></li>
+                            <li class="scale-transform11"><a href="#2">Sobre a Fotografia</a></li>       
+                            <li class="scale-transform11"><a href="#4">Versões</a></li>  
+                            <li class="scale-transform11"><a href="#3">Curiosidades</a></li>                       
                         </ul>
                     </div>
                 </div>
