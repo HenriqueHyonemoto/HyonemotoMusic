@@ -20,8 +20,8 @@
 </head>
 
 <body>
-    <header class="text-center py-5">
-        <h1>Nostalgic Era</h1>
+    <header class="text-center py-5 ">
+        <h1 class="hfont"><strong>Fotografias</strong></h1>
     </header>
     <nav class="navbar navbar-expand-lg ">
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -36,9 +36,9 @@
                         <ul class="navbar-nav nav-links ">
                             <li class="nav-item"><a class="nav-link" href="#" data-page="informacoes">Informações</a>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="#" data-page="obras">Obras</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#" data-page="historia">Minha História no
-                                    Piano</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" data-page="fotografias">Fotografias</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" data-page="historia">Minha História com a Fotografia
+                                    </a></li>
                         </ul>
 
                     </div>
@@ -91,8 +91,9 @@
             </div>
             <div id="navbarSubmenu" class="navbar-submenu">
                 <div class="navbar-item" data-page="informacoes"> Informações</div>
-                <div class="navbar-item" data-page="obras">Obras</div>
-                <div class="navbar-item" data-page="historia"> Minha História no Piano</div>
+                <div class="navbar-item" data-page="fotografias">fotografias</div>
+                <div class="navbar-item" data-page="historia"> Minha História com a
+                    Fotografia</div>
                 <div class="d-flex align-items-center" style="margin-left:20px">
                     <div id="language-flag" class="language-flag">
                         <img src="../images/fg-br.png" width="32">
@@ -147,96 +148,100 @@
             <div class="col-xl-8 main-content order-xl-2 order-3">
                 <div class="js-require" page="">
                     <div class="row">
-                        <div class="col-md-5 obra-image-container p-0">
-                            <h1 id="1">Nostalgic Era</h1>
-                            <a href="../fotografias/nostalgicera.html" style="text-decoration: none;">
-                                <div class="card-foto nostalgicera">
-                                    <div class="image-container">
-                                        <img src="images/NostalgicEra.png" alt="Foto com filtro rosa de uma criança distante na neve" class="img-fluid">
-                                        <div class="card-icon">
-                                            <img src="images/search.png" width="5px !important;">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 obra-image-container p-0" style="margin-bottom:40px">
+                                <h1 id="0">Fotografia do Nostalgic Era</h1>
+                                <a style="text-decoration: none;">
+                                    <div class="card-foto nostalgicera" style="margin: 0 auto;">
+                                        <div class="image-container">
+                                            <img src="images/NostalgicEra.png" alt="Foto de um Abajur" class="imagem-modal">
+                                            <div class="card-icon">
+                                                <img src="images/expand.png" width="5px !important;">
+                                            </div>
                                         </div>
+                                        <p class="title hfont">31/12/2007</p>
                                     </div>
-                                    <p class="title hfont">Capa da Nostalgic Era </p>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
-                        <div class="col-md-7">
+
+                        <div id="imageModal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="modalImage">
+                            <div id="caption"></div>
+                        </div>
+                        
+                        <div class="col-md-12">
                             <h1 id="1">Informações</h1>
                             <div class="obras-info-container">
-
-                                <p>Música que evoca um sentimento de nostalgia, combinando uma melodia alegre com nuances sutis de tristeza e saudade.</p>
-                                <p><strong>Duração:</strong> 02:23</p>
-                                <!-- <p><strong>Divisão de compasso:</strong> 3/4</p>
-                                <p><strong>Tonalidade:</strong> [Tonalidade]</p> -->
-                                <p><strong>Início de composição:</strong> Maio de 2024</p>
-                                <p><strong>Fim de composição:</strong> Maio de 2024</p>
-                                <p><strong>Data de publicação:</strong> 13/06/2024</p>
-                                <p><strong>Distribuidora:</strong> OneRPM</p>
+                                <p><strong>Descrição: </strong>Fotografia de mim, aos 4 anos, na neve.</p>
+                                <p><strong>Album: </strong>Nostalgic Era</p>
+                                <p><strong>Data da Fotografia: </strong>14/05/2019 - 19:31</p>
+                                <p><strong>Local: </strong>Frente da minha Quitinete, quando Morava no Japão</p>
+                                <p><strong>Editada: </strong>Sim</p>
                             </div>
                         </div>
 
                     </div>
                     <hr>
-                    <h1>Escute a Obra</h1>
-                    <div class="card-container-plataformas">
-                        <a href="https://open.spotify.com/track/09EzsLVfSAb0FwjC2mWzCM?si=9c89aa66a4a24063"
-                            class="card-plataforma" target="_blank">
-                            <img src="images/spotify.png" alt="Spotify">
-                            <p>Spotify</p>
-                        </a>
-                        <a href="https://deezer.page.link/W3jJjC5PuVeFEKQBA"
-                            class="card-plataforma" target="_blank">
-                            <img src="images/deezer.png" alt="Deezer">
-                            <p>Deezer</p>
-                        </a>
-                        <a href="https://www.youtube.com/watch?v=6nL6Qy0KjFQ&list=OLAK5uy_mynmPxwx5pTOe7NbLZKdIWFPVcUjjxSTU"
-                            class="card-plataforma" target="_blank">
-                            <img src="images/ytmusic.png" alt="Youtube Music">
-                            <p>Youtube</p>
-                        </a>
-                        <a href="https://music.amazon.com.br/albums/B0D4FG9DX2?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=BR&ref=dm_sh_cJUq3yMVH0Lh9hLwyzAC6nLos"
-                            class="card-plataforma" target="_blank">
-                            <img src="images/amazonmusic.png" alt="Amazon Music">
-                            <p>Amazon</p>
-                        </a>
-                        <a href=""
-                            class="card-plataforma not-available" target="_blank">
-                            <img src="images/applemusic.png" alt="Apple Music">
-                            <p>Apple</p>
-                        </a>
-                        <!-- <a href="https://tidal.com" class="card-plataforma">
-                            <img src="images/tidal.png" alt="Tidal">
-                            <p>Tidal</p>
-                        </a>
-                        <a href="https://tidal.com" class="card-plataforma">
-                            <img src="images/pandora.png" alt="Tidal">
-                            <p>Pandora</p>
-                        </a> -->
-                    </div>
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/09EzsLVfSAb0FwjC2mWzCM?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                        <br>
-                    <hr>
-                    <br>
-                    <h1 id="2">Sobre a Obra </h1>
+                                   
+                    <h1 id="2">Sobre a Fotografia</h1>
                     <br>
                     <div class="col-md-12">
-                        <p>Essa foi minha primeira peça com múltiplos instrumentos publicada. Foi em um período em que eu estava assistindo aos documentários de <em>Yun Li</em>, dos álbuns <em>Validation</em> e <em>Bittersweet Memories</em> e também incentivado pela vontade de compor trilhas sonoras para games. Me senti motivado a estudar produção musical e comecei a mexer no <em>FL Studio</em>, simplesmente pegando vários instrumentos aleatoriamente. Após escolher alguns que achei interessantes, produzi essa música, inspirada no sentimento de nostalgia, boas memórias, e saudade.</p>
-
-
-                   
+                        <p>Esta fotografia foi tirada pelos meus pais quando eu tinha 4 anos, em frente à nossa quitinete, enquanto morávamos no Japão, durante um período de neve. Escolhi esta foto pelo forte sentimento de nostalgia que quis expressar nesta obra, relembrando minha infância e as boas memórias que ela me traz.</p> <p>A imagem foi editada para ter cores semelhantes às Ruínas de *Undertale*, onde o magenta predomina. Essa tonalidade foi escolhida para transmitir uma atmosfera similar à que quis passar com a música.</p>
+                       
+                        <br>
+                        <br>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <figure>
+                                        <img src="images/Home_location.webp" class="img-fluid">
+                                        <figcaption>"Ruinas" de Undertale</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
                     <hr>
                     
-                    <h1 id="5">Curiosidades </h1>
+                    <h1 id="4">Versões</h1>
+                    <div class="container">
+                        <div class="row">
+                            <div class="container-obras row mb-4" >
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <a style="text-decoration: none;">
+                                        <div class="card-obras-images ">
+                                            <div class="image-container">
+                                                <figure>
+                                                    <img src="images/NostalgicEraUNDT.jpg" class="imagem-modal">
+                                                    <figcaption>Sem Edições</figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <a style="text-decoration: none;">
+                                        <div class="card-obras-images ">
+                                            <div class="image-container">
+                                                <figure>
+                                                    <img src="images/NostalgicEra.png" class="imagem-modal">
+                                                    <figcaption>Versão Final</figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>                             
+                            </div>
+                        </div>
+                    </div>
+                    <p style="text-align: center;">Foi adicionado uma Tonalidade Magenta na Versão Final.</p>
+                    <hr>
+                    
+                    <h1 id="3">Curiosidades </h1>
                     <!-- botão download -->
-                    <p style="font-size:18px; text-align: center;">Os instrumentos utilizados foram: </p>
-                    <ul style="font-size:18px; text-align: center; list-style-position: inside;">
-                        <li><strong>Spitifire: Glass Piano: Athem</strong></li>
-                        <li><strong>Spitifire: Hannah Peel's Music Box</strong></li>                 
-                        <li><strong>BBC Symphony Orchestra: Harp</strong></li>
-                    </ul>
+                    <p style="text-align: center;">1. Essa fotografia foi tirada na Cidade de Echizen, Japão.</p>
                 </div>
             </div>
 
@@ -246,9 +251,11 @@
                     <h1>Índice</h1>
                     <div class="indice-card">
                         <ul class="align-middle">
+                            <li class="scale-transform11"><a href="#0">Fotografia</a></li>
                             <li class="scale-transform11"><a href="#1">Informações</a></li>
-                            <li class="scale-transform11"><a href="#2">Sobre a Obra</a></li>                           
-                            <li class="scale-transform11"><a href="#5">Curiosidades</a></li>
+                            <li class="scale-transform11"><a href="#2">Sobre a Fotografia</a></li>       
+                            <li class="scale-transform11"><a href="#4">Versões</a></li>  
+                            <li class="scale-transform11"><a href="#3">Curiosidades</a></li>                       
                         </ul>
                     </div>
                 </div>
