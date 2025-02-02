@@ -215,15 +215,27 @@ document.addEventListener('DOMContentLoaded', function() {
             const submenu = document.getElementById(submenuId);
             const arrow = this.querySelector('.filter-arrow');
 
-            // Fechar todos os submenus com a classe 'submenu-neto' e resetar os ícones
+            // Verificar se o submenu clicado é um submenu-neto
+            const isSubmenuNeto = submenu.classList.contains('submenu-neto');
+
+            // Fechar todos os submenus e resetar os ícones
             filterItems.forEach(otherItem => {
                 const otherSubmenuId = otherItem.getAttribute('data-submenu');
                 const otherSubmenu = document.getElementById(otherSubmenuId);
                 const otherArrow = otherItem.querySelector('.filter-arrow');
 
-                if (otherSubmenu && otherSubmenu !== submenu && otherSubmenu.classList.contains('submenu-neto')) {
-                    otherSubmenu.classList.remove('open');
-                    otherArrow.classList.remove('open');
+                if (otherSubmenu && otherSubmenu !== submenu) {
+                    if (isSubmenuNeto) {
+                        // Se o submenu clicado é um submenu-neto, fechar apenas outros submenu-neto
+                        if (otherSubmenu.classList.contains('submenu-neto')) {
+                            otherSubmenu.classList.remove('open');
+                            otherArrow.classList.remove('open');
+                        }
+                    } else {
+                        // Se o submenu clicado não é um submenu-neto, fechar todos os outros submenus
+                        otherSubmenu.classList.remove('open');
+                        otherArrow.classList.remove('open');
+                    }
                 }
             });
 
@@ -235,6 +247,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 
 //selecionar conteudo central e indice da navbar
 document.addEventListener('DOMContentLoaded', function() {
