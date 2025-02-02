@@ -215,13 +215,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const submenu = document.getElementById(submenuId);
             const arrow = this.querySelector('.filter-arrow');
 
-            // Fechar todos os submenus e resetar os ícones
+            // Fechar todos os submenus com a classe 'submenu-neto' e resetar os ícones
             filterItems.forEach(otherItem => {
                 const otherSubmenuId = otherItem.getAttribute('data-submenu');
                 const otherSubmenu = document.getElementById(otherSubmenuId);
                 const otherArrow = otherItem.querySelector('.filter-arrow');
 
-                if (otherSubmenu && otherSubmenu !== submenu && !submenu.classList.contains('submenu-neto')) {
+                if (otherSubmenu && otherSubmenu !== submenu && otherSubmenu.classList.contains('submenu-neto')) {
                     otherSubmenu.classList.remove('open');
                     otherArrow.classList.remove('open');
                 }

@@ -641,6 +641,10 @@ header {
     transition: background-color 0.3s, border-color 0.3s;
 }
 
+.submenu-neto {
+    margin-left: 20px; /* Ajuste o valor conforme necessário */
+}
+
 .filter-category {
     background-color: #fafafa;
     border: 1px solid rgb(227, 227, 227);
@@ -681,6 +685,7 @@ header {
 .filter-submenu.open {
     max-height: 400px;
 }
+
 
 .filter-arrow i {
     transition: transform 0.3s ease;
