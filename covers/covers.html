@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covers</title>
+    <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/50812450f6.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="text-center py-5 ">
+        <h1 class="hfont"><strong>Covers</strong></h1>
+    </header>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="hcontainer">
+                <div class="row align-items-center w-100">
+                    <div class="col-2 justify-content-start">
+                        <a class="navbar-brand" href="../index.html" style="color:white;">
+                            <img src="../images/logo-h.png" alt="HHH logo" width="80">
+                        </a>
+                    </div>
+                    <div class="col-8 justify-content-center">
+                        <ul class="navbar-nav nav-links ">
+                            <li class="nav-item"><a class="nav-link" href="#" data-page="informacoes">Informações</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#" data-page="covers">Covers</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" data-page="historia">Minha História com
+                                    Covers</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="col-2 d-flex align-items-center">
+                        <div id="language-flag" class="language-flag">
+                            <img src="../images/fg-br.png" width="32">
+                        </div>
+                        <div class="language-selector">
+                            <button class="language-button btn btn-link text-white">
+                                <span class="language-display"><i class="fa-solid fa-caret-right"></i></span>
+                                <span class="arrow"><img src="../images/chevron-down.png"></span>
+                            </button>
+                            <ul class="language-menu list-unstyled">
+                                <a href="#">
+                                    <li class="language-item" data-lang="pt-BR">
+                                        <img src="../images/fg-br.png" width="32">
+                                        <span>pt-BR</span>
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li class="language-item" data-lang="en">
+                                        <img src="../images/fg-us.png" width="32">
+                                        <span>ENG</span>
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="navbar-toggler">
+            <div class="row justify-content-start">
+                <div class="col-2 justify-content-start p-0 m-0">
+                    <a class="navbar-brand" href="../index.html" style="color:white;">
+                        <img src="../images/logo-h.png" alt="HHH logo" width="80">
+                    </a>
+                </div>
+                <div class="col-8 justify-content-center">
+                </div>
+                <div class="col-2 d-flex justify-content-end p-0">
+                    <button class="navbar-toggler-btn" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span><img src="images/navbar-toggler.png" alt="" width="60px"></span>
+                    </button>
+                </div>
+
+            </div>
+            <div id="navbarSubmenu" class="navbar-submenu">
+                <div class="navbar-item" data-page="informacoes"> Informações</div>
+                <div class="navbar-item" data-page="covers">Covers</div>
+                <div class="navbar-item" data-page="historia"> Minha História com Covers</div>
+                <div class="d-flex align-items-center" style="margin-left:20px">
+                    <div id="language-flag" class="language-flag">
+                        <img src="../images/fg-br.png" width="32">
+                    </div>
+                    <div class="language-selector">
+                        <button class="language-button btn btn-link text-white">
+                            <span class="language-display"><i class="fa-solid fa-caret-right"></i></span>
+                            <span class="arrow"><img src="../images/chevron-down.png"></span>
+                        </button>
+                        <ul class="language-menu list-unstyled">
+                            <a href="#">
+                                <li data-lang="pt-BR"><img src="../images/fg-br.png" width="32">pt-BR</li>
+                            </a>
+                            <a href="#">
+                                <li data-lang="en"><img src="../images/fg-us.png" width="32">ENG</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hcontainer mt-2">
+        <div class="row ">
+            <!-- Seção de Menu de Pesquisa -->
+            <div class="col-xl-2 filter-menu  order-xl-1 order-1">
+                <h1>Filtrar</h1>
+                <div class="filter-item" data-submenu="submenu-instrumentos"><span class="filter-arrow"><i
+                            class="fa-solid fa-caret-right"></i></span> Por Instrumento</div>
+                <div id="submenu-instrumentos" class="filter-submenu">
+                    <div class="filter-item filter-category" ><span class="filter-arrow"><i
+                                class="fa-solid fa-caret-right"></i></span> Piano</div>
+                    <div class="filter-item filter-category"><span class="filter-arrow"><i
+                                class="fa-solid fa-caret-right"></i></span> Duetos</div>
+                    <div class="filter-item filter-category"><span class="filter-arrow"><i
+                                class="fa-solid fa-caret-right"></i></span> Violão</div>
+                    <div class="filter-item filter-category"><span class="filter-arrow"><i
+                                class="fa-solid fa-caret-right"></i></span> Violino</div>
+
+                </div>
+                
+            
+                <div class="filter-item" data-submenu="submenu-categorias"><span class="filter-arrow"><i
+                            class="fa-solid fa-caret-right"></i></span> Por Categoria</div>
+                <div id="submenu-categorias" class="filter-submenu">
+                    <div class="filter-item filter-category"><span class="filter-arrow"><i
+                                class="fa-solid fa-caret-right"></i></span> Interpretações</div>
+                    <div class="filter-item filter-category"><span class="filter-arrow"><i
+                                class="fa-solid fa-caret-right"></i></span> Transcrições</div>
+                    <div class="filter-item filter-category"><span class="filter-arrow"><i
+                                class="fa-solid fa-caret-right"></i></span> Arranjos</div>
+                </div>
+
+                <div class="filter-item" data-submenu="submenu-temas"><span class="filter-arrow"><i
+                            class="fa-solid fa-caret-right"></i></span> Por Tema</div>
+                <div id="submenu-temas" class="filter-submenu">
+                    <div class="filter-item filter-category" data-submenu="submenu-classicas"><span class="filter-arrow"><i
+                                class="fa-solid fa-caret-right"></i></span> Classicas</div>
+                                <div id="submenu-classicas" class="filter-submenu submenu-neto">
+                                    <div class="filter-item filter-category"><span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Chopin</div>
+                                    <div class="filter-item filter-category"><span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Mozart</div>
+                                    <div class="filter-item filter-category"><span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Vivaldi</div>
+                                </div>
+                    <div class="filter-item filter-category" data-submenu="submenu-rock"><span class="filter-arrow"><i
+                                class="fa-solid fa-caret-right"></i></span> Rock</div>
+                                <div id="submenu-rock" class="filter-submenu submenu-neto">
+                                    <div class="filter-item filter-category"><span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Queen</div>
+                                    <div class="filter-item filter-category"><span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Nirvana</div>
+                                </div>
+                    <div class="filter-item filter-category"><span class="filter-arrow"><i
+                                class="fa-solid fa-caret-right"></i></span> Series</div>
+                    <div class="filter-item filter-category"><span class="filter-arrow"><i
+                                class="fa-solid fa-caret-right"></i></span> Games</div>
+                    <div class="filter-item filter-category"><span class="filter-arrow"><i
+                                class="fa-solid fa-caret-right"></i></span> Animações</div>
+                </div>
+            </div>
+
+            <!-- Seção de Conteúdo Principal -->
+            <div class="col-xl-8 main-content order-xl-2 order-3">
+                <h1>Covers</h1>
+                <div class="container-obras row">
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white"
+                                categoria="rock piano">
+                                <div class="image-container">
+                                    <img src="images/bohemian.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Queen - Bohemian Rhapsody</span><br>
+                                <span class="date">Arranjo p/Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white"
+                                categoria="animacao piano">
+                                <div class="image-container">
+                                    <img src="images/mywar.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Attack On Titan - Season 4 Op.6 "My War"</span><br>
+                                <span class="date">Arranjo p/Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white"
+                                categoria="animacao classica dueto piano violino">
+                                <div class="image-container">
+                                    <img src="images/ballade1violin.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Your Lie in April // Chopin - Ballade No.1</span><br>
+                                <span class="date">Transcrição - Piano & Violino</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/anfitrias.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Ordem Paranormal: Calamidade - O Anfitrião</span><br>
+                                <span class="date">Arranjo p/Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/osniop.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">O Segredo Na Ilha - Abertura</span><br>
+                                <span class="date">Arranjo p/Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/osni-inter.jpg" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">O Segredo Na Ilha - Intervalo</span><br>
+                                <span class="date">Arranjo p/Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/equipe-e.jpg" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">O Segredo Na Floresta - Equipe E</span><br>
+                                <span class="date">Arranjo p/Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/perditionem.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">O Segredo Na Floresta - Musica Perditionem</span><br>
+                                <span class="date">Transcrição (Piano)</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/sdol.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Sinais do Outro Lado - Abertura</span><br>
+                                <span class="date">Arranjo p/Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/ddtank.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">DDTank - Antiga Música do Menu Principal </span><br>
+                                <span class="date">Arranjo p/Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/spring.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Vivaldi - Primavera, 1º Mvt.</span><br>
+                                <span class="date">Arranjo p/Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/summer.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Vivaldi - Verão, 3º Mvt.</span><br>
+                                <span class="date">Arranjo p/Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/autumn.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Vivaldi - Outono, 3º Mvt.</span><br>
+                                <span class="date">Arranjo p/Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/winter.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Vivaldi - Inverno, 3º Mvt.</span><br>
+                                <span class="date">Arranjo p/Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/verissimo.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Desconjuração - Veríssimo</span><br>
+                                <span class="date">Arranjo p/Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/osnfop.jpg" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">O Segredo Na Floresta - Abertura</span><br>
+                                <span class="date">Arranjo p/Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/172duet.jpg" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Omori - 172 Duet</span><br>
+                                <span class="date">Transcrição - Piano & Violino</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/fantaisie-impromptu.webp" alt="Foto de um Abajur"
+                                        class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Chopin - Fantaisie Impromptu</span><br>
+                                <span class="date">Interpretação - Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/kira-yoshikage.jpg" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Jojo's - Yoshikage Kira's Theme</span><br>
+                                <span class="date">Arranjo p/Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/hollowknight.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Hollow Knight - Tema Principal</span><br>
+                                <span class="date">Transcrição - Piano & Violoncelo</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/weather-report.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Jojo's - Wather Report's Prelude</span><br>
+                                <span class="date">Transcrição - Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/outer-wilds.jpg" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Outer Wilds - Tema</span><br>
+                                <span class="date">Arranjo p/Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/undertale.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Undertale - Once Upon a Time</span><br>
+                                <span class="date">Arranjo p/Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/sdv.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Stardew Valley - Overture</span><br>
+                                <span class="date">Arranjo p/Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/turkish-march.jpg" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Mozart - Rondo Alla Turca</span><br>
+                                <span class="date">Interpretação - Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/op10no1.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Chopin - Etude Op. 10 No. 1 "Waterfall"</span><br>
+                                <span class="date">Interpretação - Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/op10no2.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Chopin - Etude Op. 10 No. 2 "Chromatique"</span><br>
+                                <span class="date">Interpretação - Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/op10no3.jpg" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Chopin - Etude Op. 10 No. 3 "Tristesse"</span><br>
+                                <span class="date">Interpretação - Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/op10no4.jpg" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Chopin - Etude Op. 10 No. 4 "Torrent"</span><br>
+                                <span class="date">Interpretação - Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/op10no5.jpg" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Chopin - Etude Op. 10 No. 5 "Black Keys"</span><br>
+                                <span class="date">Interpretação - Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/op10no6.jpg" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Chopin - Etude Op. 10 No. 6 "Lament"</span><br>
+                                <span class="date">Interpretação - Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/op10no7.jpg" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Chopin - Etude Op. 10 No. 7 "Toccata"</span><br>
+                                <span class="date">Interpretação - Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/op10no8.jpg" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Chopin - Etude Op. 10 No. 8 "Sunshine"</span><br>
+                                <span class="date">Interpretação - Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/op10no9.jpg" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Chopin - Etude Op. 10 No. 9 "Torment"</span><br>
+                                <span class="date">Interpretação - Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/op10no10.jpg" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Chopin - Etude Op. 10 No. 10 "Flowers"</span><br>
+                                <span class="date">Interpretação - Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/nirvana1.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Nirvana - Where Did You Sleep Last Night</span><br>
+                                <span class="date">Arranjo p/Violão + Banda</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/zombie.jpg" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">The Cranberries - Zombie</span><br>
+                                <span class="date">Arranjo p/Violão + Banda</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/op10no11.jpg" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Chopin - Etude Op. 10 No. 11 "Arpeggio"</span><br>
+                                <span class="date">Interpretação - Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/op10no12.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Chopin - Etude Op. 10 No. 12 "Revolutionary"</span><br>
+                                <span class="date">Interpretação - Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/noc20.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Chopin - Nocturne in C-sharp minor, No. 20 (Incompleto)</span><br>
+                                <span class="date">Interpretação - Piano</span><br>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
+                                <div class="image-container">
+                                    <img src="images/timoris.webp" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Enigma do Medo - Memoria Timoris (Partitura da Mansão
+                                    Strach)</span><br>
+                                <span class="date">Transcrição - Piano & Violino</span><br>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="pagination d-flex justify-content-center">
+                    <button id="prevButton">←</button>
+                    <button class="pageButton">1</button>
+                    <button class="pageButton">2</button>
+                    <button class="pageButton">3</button>
+                    <button id="nextButton">→</button>
+                </div>
+                <br>
+                <h1 id="1">Sobre os Covers</h1>
+                <hr>
+                <p>Considero como covers todas as obras que não foram 100% produzidas originalmente por mim. Isso inclui
+                    tanto interpretações fiéis de partituras publicadas pelos compositores, quanto versões que envolvem
+                    algum nível de contribuição da minha parte, seja por meio de adaptações, modificações ou até mesmo
+                    pela transcrição fiel de uma obra que não possui partitura oficialmente publicada.</p>
+                <br id="2">
+                <h1 id="3"><strong>Interpretações</strong></h1>
+                <hr>
+                <p>
+                    Nesta categoria, apresento apenas minha maneira de tocar a música, seguindo fielmente a notação
+                    indicada pelo
+                    compositor. A execução pode ser feita ao piano por mim ou ser inteiramente produzida digitalmente,
+                    mantendo a estrutura e intenção original da obra.
+                </p>
+                <br>
+
+                <h1 id="4"><strong>Transcrições</strong></h1>
+                <hr>
+                <p>
+                    Aqui, busco recriar a partitura da maneira mais fiel possível, baseando-me exclusivamente na audição
+                    da obra original. Essa categoria é voltada para músicas que não possuem partituras oficialmente
+                    publicadas ou que precisam de uma versão acessível para estudo e performance.
+                </p>
+
+                <h1 id="5"><strong>Arranjos</strong></h1>
+                <hr>
+                <p>
+                    O arranjo consiste em uma modificação da música original, mantendo suas melodias e conceito, mas com
+                    minhas próprias adições e variações. O objetivo é fazer a obra soar de maneira diferente,
+                    adaptando-a para um novo estilo, instrumento ou interpretação pessoal.
+                </p>
+
+                </p>
+            </div>
+            <!-- Seção de Índice de Conteúdo -->
+            <div class="col-xl-2 table-of-contents order-xl-3 order-2">
+                <h1>Índice</h1>
+                <div class="indice-card">
+                    <ul>
+                        <li class="scale-transform11"><a href="#0">Covers</a></li>
+                        <li class="scale-transform11"><a href="#1">Sobre os Covers</a></li>
+                        <li class="scale-transform11"><a href="#2">Categorias</a></li>
+                        <ul>
+                            <li class="scale-transform11"><a href="#3">Interpretação</a></li>
+                            <li class="scale-transform11"><a href="#4">Arranjo</a></li>
+                            <li class="scale-transform11"><a href="#5">Transcrição</a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer text-white mt-2 py-4 ">
+        <div class="container">
+            <div class="row">
+                <div class="footer-top">
+                    <p>&copy; 2024 Henrique H. Hyonemoto.</p>
+                    <hr>
+                </div>
+                <div class="col-xl-4 col-12 col-md-6 footer-left order-2 order-xl-1">
+                    <h3 id="contact">Contato</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="mailto:ifhenriquehyonemoto@gmail.com"><i class="fa-solid fa-envelope"></i>
+                                ifhenriquehyonemoto@gmail.com</a></li>
+                        <li><a href="https://linkedin.com/in/henrique-hyonemoto-689002221" target="_blank"><i
+                                    class="fa-brands fa-linkedin"></i> linkedin.com/in/henrique-hyonemoto-689002221</a>
+                        </li>
+                        <li><a href="https://github.com/HenriqueHyonemoto" target="_blank"><i
+                                    class="fa-brands fa-github"></i> https://github.com/HenriqueHyonemoto</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-4 col-12 footer-center order-1 order-xl-2 align-items-center">
+                    <div class="row align-items-center m-2">
+                        <div class="col-6 col-xl-12 mb-2">
+                            <img src="../images/logo-h.png" alt="Logo HHH" class="img-fluid" width="200px">
+                        </div>
+                        <div class="col-6 col-xl-12">
+                            <img src="../images/logo-if.png" alt="Logo do IFSP" class="img-fluid" width="200px">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-12 col-md-6  footer-right order-3 order-xl-3">
+                    <h3>Outros Projetos</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="https://github.com/HenriqueHyonemoto/PianoLeds" target="_blank"><i
+                                    class="fa-solid fa-gear"></i> Piano Com Leds (Arduino)</a></li>
+                        <li><a href="https://github.com/HenriqueHyonemoto/gerenciador-de-fichas-op" target="_blank"><i
+                                    class="fa-brands fa-laravel"></i> Plataforma WEB para criação de Personagens
+                                (Laravel)</a></li>
+                        <li><a href="https://github.com/HenriqueHyonemoto/ALendaDoHeroi-UltrawideFix" target="_blank"><i
+                                    class="fa-solid fa-panorama"></i> Mod Renderização 21:9 em jogo eletrônico (C++)</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <!-- O conteúdo do modal será carregado dinamicamente aqui -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
