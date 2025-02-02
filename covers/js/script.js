@@ -377,76 +377,97 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // sistema de paginas
 
-document.addEventListener("DOMContentLoaded", function () {
-    const itemsPerPage = 6;
-    const container = document.querySelector(".container-obras");
-    const items = Array.from(container.children);
-    const totalPages = Math.ceil(items.length / itemsPerPage);
-    let currentPage = 1;
+// document.addEventListener("DOMContentLoaded", function () {
+//     const itemsPerPage = 6;
+//     const container = document.querySelector(".container-obras");
+//     const items = Array.from(container.children);
+//     const totalPages = Math.ceil(items.length / itemsPerPage);
+//     let currentPage = 1;
 
-    function showPage(page) {
-        container.innerHTML = "";
-        const start = (page - 1) * itemsPerPage;
-        const end = start + itemsPerPage;
-        const pageItems = items.slice(start, end);
+//     function showPage(page) {
+//         container.innerHTML = "";
+//         const start = (page - 1) * itemsPerPage;
+//         const end = start + itemsPerPage;
+//         const pageItems = items.slice(start, end);
 
-        pageItems.forEach(item => container.appendChild(item));
-        updatePagination();
-    }
+//         pageItems.forEach(item => container.appendChild(item));
+//         updatePagination();
+//     }
 
-    function updatePagination() {
-        const paginationContainer = document.querySelector(".pagination");
-        paginationContainer.innerHTML = "";
+//     function updatePagination() {
+//         const paginationContainer = document.querySelector(".pagination");
+//         paginationContainer.innerHTML = "";
 
-        const prevButton = document.createElement("button");
-        prevButton.textContent = "←";
-        prevButton.id = "prevButton";
-        prevButton.classList.add("btn", "mx-1");
-        prevButton.style.backgroundColor = "#912727";
-        prevButton.style.color = "white";
-        prevButton.addEventListener("click", function () {
-            if (currentPage > 1) {
-                currentPage--;
-                showPage(currentPage);
-            }
-        });
-        paginationContainer.appendChild(prevButton);
+//         const prevButton = document.createElement("button");
+//         prevButton.textContent = "←";
+//         prevButton.id = "prevButton";
+//         prevButton.classList.add("btn", "mx-1");
+//         prevButton.style.backgroundColor = "#912727";
+//         prevButton.style.color = "white";
+//         prevButton.addEventListener("click", function () {
+//             if (currentPage > 1) {
+//                 currentPage--;
+//                 showPage(currentPage);
+//             }
+//         });
+//         paginationContainer.appendChild(prevButton);
 
-        const startPage = Math.max(1, currentPage - 5);
-        const endPage = Math.min(totalPages, currentPage + 5);
+//         const startPage = Math.max(1, currentPage - 5);
+//         const endPage = Math.min(totalPages, currentPage + 5);
 
-        for (let i = startPage; i <= endPage; i++) {
-            const pageButton = document.createElement("button");
-            pageButton.textContent = i;
-            pageButton.classList.add("btn", "mx-1");
-            pageButton.style.border = "1px solid #912727";
-            pageButton.style.color = "#912727";
-            if (i === currentPage) {
-                pageButton.classList.add("active");
-                pageButton.style.backgroundColor = "#912727";
-                pageButton.style.color = "white";
-            }
-            pageButton.addEventListener("click", function () {
-                currentPage = i;
-                showPage(currentPage);
+//         for (let i = startPage; i <= endPage; i++) {
+//             const pageButton = document.createElement("button");
+//             pageButton.textContent = i;
+//             pageButton.classList.add("btn", "mx-1");
+//             pageButton.style.border = "1px solid #912727";
+//             pageButton.style.color = "#912727";
+//             if (i === currentPage) {
+//                 pageButton.classList.add("active");
+//                 pageButton.style.backgroundColor = "#912727";
+//                 pageButton.style.color = "white";
+//             }
+//             pageButton.addEventListener("click", function () {
+//                 currentPage = i;
+//                 showPage(currentPage);
+//             });
+//             paginationContainer.appendChild(pageButton);
+//         }
+
+//         const nextButton = document.createElement("button");
+//         nextButton.textContent = "→";
+//         nextButton.id = "nextButton";
+//         nextButton.classList.add("btn", "mx-1");
+//         nextButton.style.backgroundColor = "#912727";
+//         nextButton.style.color = "white";
+//         nextButton.addEventListener("click", function () {
+//             if (currentPage < totalPages) {
+//                 currentPage++;
+//                 showPage(currentPage);
+//             }
+//         });
+//         paginationContainer.appendChild(nextButton);
+//     }
+
+//     showPage(currentPage);
+// });
+
+///Categorias
+document.addEventListener('DOMContentLoaded', function() {
+    const filterItems = document.querySelectorAll('.filter-item[data-category]');
+    const cardContainers = document.querySelectorAll('.card-obras-total');
+
+    filterItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+
+            cardContainers.forEach(container => {
+                const cardCategories = container.getAttribute('categoria').split(' ');
+                if (cardCategories.includes(category)) {
+                    container.style.display = 'block';
+                } else {
+                    container.style.display = 'none';
+                }
             });
-            paginationContainer.appendChild(pageButton);
-        }
-
-        const nextButton = document.createElement("button");
-        nextButton.textContent = "→";
-        nextButton.id = "nextButton";
-        nextButton.classList.add("btn", "mx-1");
-        nextButton.style.backgroundColor = "#912727";
-        nextButton.style.color = "white";
-        nextButton.addEventListener("click", function () {
-            if (currentPage < totalPages) {
-                currentPage++;
-                showPage(currentPage);
-            }
         });
-        paginationContainer.appendChild(nextButton);
-    }
-
-    showPage(currentPage);
+    });
 });

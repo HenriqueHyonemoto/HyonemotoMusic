@@ -124,14 +124,16 @@
                 <div class="filter-item" data-submenu="submenu-instrumentos"><span class="filter-arrow"><i
                             class="fa-solid fa-caret-right"></i></span> Por Instrumento</div>
                 <div id="submenu-instrumentos" class="filter-submenu">
-                    <div class="filter-item filter-category" ><span class="filter-arrow"><i
+                    <div class="filter-item filter-category" data-category="piano"><span class="filter-arrow"><i
                                 class="fa-solid fa-caret-right"></i></span> Piano</div>
-                    <div class="filter-item filter-category"><span class="filter-arrow"><i
-                                class="fa-solid fa-caret-right"></i></span> Duetos</div>
-                    <div class="filter-item filter-category"><span class="filter-arrow"><i
+                    <div class="filter-item filter-category" data-category="dueto"><span class="filter-arrow"><i
+                                class="fa-solid fa-caret-right" ></i></span> Duetos</div>
+                    <div class="filter-item filter-category" data-category="violao"><span class="filter-arrow"><i
                                 class="fa-solid fa-caret-right"></i></span> Violão</div>
-                    <div class="filter-item filter-category"><span class="filter-arrow"><i
+                    <div class="filter-item filter-category" data-category="violino"><span class="filter-arrow"><i
                                 class="fa-solid fa-caret-right"></i></span> Violino</div>
+                                <div class="filter-item filter-category" data-category="violoncelo"><span class="filter-arrow"><i
+                                    class="fa-solid fa-caret-right"></i></span> Violoncelo</div>
 
                 </div>
                 
@@ -139,35 +141,31 @@
                 <div class="filter-item" data-submenu="submenu-categorias"><span class="filter-arrow"><i
                             class="fa-solid fa-caret-right"></i></span> Por Categoria</div>
                 <div id="submenu-categorias" class="filter-submenu">
-                    <div class="filter-item filter-category"><span class="filter-arrow"><i
-                                class="fa-solid fa-caret-right"></i></span> Interpretações</div>
-                    <div class="filter-item filter-category"><span class="filter-arrow"><i
+                    <div class="filter-item filter-category" data-category="interpretacao"><span class="filter-arrow"><i
+                                class="fa-solid fa-caret-right" ></i></span> Interpretações</div>
+                    <div class="filter-item filter-category" data-category="transcricao"><span class="filter-arrow"><i
                                 class="fa-solid fa-caret-right"></i></span> Transcrições</div>
-                    <div class="filter-item filter-category"><span class="filter-arrow"><i
+                    <div class="filter-item filter-category" data-category="arranjo"><span class="filter-arrow"><i
                                 class="fa-solid fa-caret-right"></i></span> Arranjos</div>
                 </div>
 
                 <div class="filter-item" data-submenu="submenu-temas"><span class="filter-arrow"><i
                             class="fa-solid fa-caret-right"></i></span> Por Tema</div>
                 <div id="submenu-temas" class="filter-submenu">
-                    <div class="filter-item filter-category" data-submenu="submenu-classicas"><span class="filter-arrow"><i
+                    <div class="filter-item filter-category" data-submenu="submenu-classicas" data-category="classica"><span class="filter-arrow"><i
                                 class="fa-solid fa-caret-right"></i></span> Classicas</div>
                                 <div id="submenu-classicas" class="filter-submenu submenu-neto">
-                                    <div class="filter-item filter-category"><span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Chopin</div>
-                                    <div class="filter-item filter-category"><span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Mozart</div>
-                                    <div class="filter-item filter-category"><span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Vivaldi</div>
+                                    <div class="filter-item filter-category" data-category="chopin"><span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Chopin</div>
+                                    <div class="filter-item filter-category" data-category="mozart"><span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Mozart</div>
+                                    <div class="filter-item filter-category" data-category="vivaldi"><span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Vivaldi</div>
                                 </div>
-                    <div class="filter-item filter-category" data-submenu="submenu-rock"><span class="filter-arrow"><i
+                    <div class="filter-item filter-category" data-submenu="submenu-rock" data-category="rock"><span class="filter-arrow"><i
                                 class="fa-solid fa-caret-right"></i></span> Rock</div>
-                                <div id="submenu-rock" class="filter-submenu submenu-neto">
-                                    <div class="filter-item filter-category"><span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Queen</div>
-                                    <div class="filter-item filter-category"><span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Nirvana</div>
-                                </div>
-                    <div class="filter-item filter-category"><span class="filter-arrow"><i
-                                class="fa-solid fa-caret-right"></i></span> Series</div>
-                    <div class="filter-item filter-category"><span class="filter-arrow"><i
+                    <div class="filter-item filter-category" data-category="serie"><span class="filter-arrow"><i
+                                class="fa-solid fa-caret-right" data-category="serie"></i></span> Series</div>
+                    <div class="filter-item filter-category" data-category="game"><span class="filter-arrow"><i
                                 class="fa-solid fa-caret-right"></i></span> Games</div>
-                    <div class="filter-item filter-category"><span class="filter-arrow"><i
+                    <div class="filter-item filter-category" data-category="animacao"><span class="filter-arrow"><i
                                 class="fa-solid fa-caret-right"></i></span> Animações</div>
                 </div>
             </div>
@@ -176,10 +174,9 @@
             <div class="col-xl-8 main-content order-xl-2 order-3">
                 <h1>Covers</h1>
                 <div class="container-obras row">
-                    <div class="col-lg-4 col-md-4 col-12">
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="rock piano arranjo queen">
                         <a href="prelude1.html" style="text-decoration: none;">
-                            <div class="card-obras white" data-page="white" card-obras-color="white"
-                                categoria="rock piano">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
                                     <img src="images/bohemian.webp" alt="Foto de um Abajur" class="img-fluid">
                                     <div class="card-icon">
@@ -191,11 +188,10 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="animacao piano arranjo">
                         <a href="prelude1.html" style="text-decoration: none;">
-                            <div class="card-obras white" data-page="white" card-obras-color="white"
-                                categoria="animacao piano">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
                                     <img src="images/mywar.webp" alt="Foto de um Abajur" class="img-fluid">
                                     <div class="card-icon">
@@ -207,11 +203,10 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="animacao classica dueto piano violino transcricao">
                         <a href="prelude1.html" style="text-decoration: none;">
-                            <div class="card-obras white" data-page="white" card-obras-color="white"
-                                categoria="animacao classica dueto piano violino">
+                            <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
                                     <img src="images/ballade1violin.webp" alt="Foto de um Abajur" class="img-fluid">
                                     <div class="card-icon">
@@ -223,8 +218,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="serie piano ordem arranjo">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -238,8 +233,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="serie piano ordem arranjo">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -253,8 +248,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="serie piano ordem arranjo">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -268,8 +263,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="serie piano ordem transcricao">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -283,8 +278,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="serie piano ordem arranjo">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -298,8 +293,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="serie piano ordem arranjo">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -313,8 +308,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="game piano">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -328,8 +323,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="vivaldi piano classica arranjo">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -343,8 +338,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="vivaldi piano classica arranjo">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -358,8 +353,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="vivaldi piano classica arranjo">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -373,8 +368,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="vivaldi piano classica arranjo">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -388,8 +383,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="ordem piano arranjo serie">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -403,8 +398,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="ordem piano arranjo serie">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -418,8 +413,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="game piano violino dueto omori transcricao">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -433,13 +428,12 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="piano interpretacao classica chopin">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
-                                    <img src="images/fantaisie-impromptu.webp" alt="Foto de um Abajur"
-                                        class="img-fluid">
+                                    <img src="images/fantaisie-impromptu.webp" alt="Foto de um Abajur" class="img-fluid">
                                     <div class="card-icon">
                                         <img src="images/search.png" width="5px !important;">
                                     </div>
@@ -449,8 +443,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="piano arranjo jojo animacao">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -464,8 +458,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="piano violoncelo transcricao hollow game dueto">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -479,8 +473,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="piano transcricao jojo animacao">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -494,8 +488,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="piano arranjo outer game">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -509,8 +503,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="piano arranjo undertale game">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -524,8 +518,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="piano arranjo sdv game">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -539,8 +533,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="piano classica mozart interpretacao">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -554,8 +548,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="piano interpretacao chopin chopin-etude classica">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -569,8 +563,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="piano interpretacao chopin chopin-etude classica">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -584,8 +578,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="piano interpretacao chopin chopin-etude classica">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -599,8 +593,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="piano interpretacao chopin chopin-etude classica">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -614,8 +608,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="piano interpretacao chopin chopin-etude classica">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -629,8 +623,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="piano interpretacao chopin chopin-etude classica">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -644,8 +638,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="piano interpretacao chopin chopin-etude classica">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -659,8 +653,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="piano interpretacao chopin chopin-etude classica">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -674,8 +668,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="piano interpretacao chopin chopin-etude classica">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -689,8 +683,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="piano interpretacao chopin chopin-etude classica">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -705,7 +699,7 @@
                         </a>
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-12">
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="violao rock nirvana arranjo">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -719,8 +713,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="violao rock cranberries arranjo">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -734,8 +728,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="piano interpretacao chopin chopin-etude classica">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -749,8 +743,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="piano interpretacao chopin chopin-etude classica">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -764,8 +758,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="piano interpretacao chopin chopin-etude classica">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -779,8 +773,8 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
+                
+                    <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="piano violino dueto game arranjo ordem">
                         <a href="prelude1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="white" card-obras-color="white">
                                 <div class="image-container">
@@ -789,20 +783,22 @@
                                         <img src="images/search.png" width="5px !important;">
                                     </div>
                                 </div>
-                                <span class="title">Enigma do Medo - Memoria Timoris (Partitura da Mansão
-                                    Strach)</span><br>
+                                <span class="title">Enigma do Medo - Memoria Timoris (Partitura da Mansão Strach)</span><br>
                                 <span class="date">Transcrição - Piano & Violino</span><br>
                             </div>
                         </a>
                     </div>
+                
+                    
                 </div>
-                <div class="pagination d-flex justify-content-center">
+                
+                <!-- <div class="pagination d-flex justify-content-center">
                     <button id="prevButton">←</button>
                     <button class="pageButton">1</button>
                     <button class="pageButton">2</button>
                     <button class="pageButton">3</button>
                     <button id="nextButton">→</button>
-                </div>
+                </div> -->
                 <br>
                 <h1 id="1">Sobre os Covers</h1>
                 <hr>
