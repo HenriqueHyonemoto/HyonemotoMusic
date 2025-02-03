@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Filtro de Obras
+// Filtro de Obras --------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', function() {
     const filterItems = document.querySelectorAll('.filter-item[data-submenu]');
     const cardContainers = document.querySelectorAll('.card-obras-total');
@@ -228,11 +228,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Aplicar filtro automaticamente nos cards
             cardContainers.forEach(container => {
-                const cardCategories = container.getAttribute('categoria').split(' ');
-                if (cardCategories.includes(hash)) {
-                    container.style.display = 'block';
-                } else {
-                    container.style.display = 'none';
+                const cardCategories = container.getAttribute('categoria');
+                if (cardCategories) {
+                    const categoriesArray = cardCategories.split(' ');
+                    if (categoriesArray.includes(hash)) {
+                        container.style.display = 'block';
+                    } else {
+                        container.style.display = 'none';
+                    }
                 }
             });
         });
@@ -281,13 +284,18 @@ document.addEventListener('DOMContentLoaded', function() {
     filterItems.forEach(item => {
         item.addEventListener('click', function() {
             const category = this.getAttribute('data-category');
+            
+            if (!category) return; // Ignora se não tiver data-category
 
             cardContainers.forEach(container => {
-                const cardCategories = container.getAttribute('categoria').split(' ');
-                if (cardCategories.includes(category)) {
-                    container.style.display = 'block';
-                } else {
-                    container.style.display = 'none';
+                const cardCategories = container.getAttribute('categoria');
+                if (cardCategories) {
+                    const categoriesArray = cardCategories.split(' ');
+                    if (categoriesArray.includes(category)) {
+                        container.style.display = 'block';
+                    } else {
+                        container.style.display = 'none';
+                    }
                 }
             });
         });
@@ -300,7 +308,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-//selecionar conteudo central e indice da navbar
+
+//selecionar conteudo central e indice da navbar - ----------------------------------------------
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-links a, .filter-item, .card-obras');
 
