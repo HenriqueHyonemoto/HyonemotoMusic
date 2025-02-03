@@ -1,0 +1,3 @@
+Arrumar:
+Colocar frase pra quando nao encontrar resultados,
+filtro dos compositores nao esta funcionando
