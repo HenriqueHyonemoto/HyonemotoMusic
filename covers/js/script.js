@@ -208,7 +208,37 @@ document.addEventListener('DOMContentLoaded', function () {
 // Filtro de Obras
 document.addEventListener('DOMContentLoaded', function() {
     const filterItems = document.querySelectorAll('.filter-item[data-submenu]');
+    const cardContainers = document.querySelectorAll('.card-obras-total');
 
+    // Verificar se a URL contém hashes (#)
+    if (window.location.hash) {
+        const hashes = window.location.hash.substring(1).split('-'); // Separar os valores por '-'
+
+        hashes.forEach(hash => {
+            // Abrir os submenus correspondentes
+            const submenu = document.getElementById(`submenu-${hash}`);
+            const arrow = document.querySelector(`.filter-item[data-submenu="submenu-${hash}"] .filter-arrow`);
+
+            if (submenu) {
+                submenu.classList.add('open');
+            }
+            if (arrow) {
+                arrow.classList.add('open');
+            }
+
+            // Aplicar filtro automaticamente nos cards
+            cardContainers.forEach(container => {
+                const cardCategories = container.getAttribute('categoria').split(' ');
+                if (cardCategories.includes(hash)) {
+                    container.style.display = 'block';
+                } else {
+                    container.style.display = 'none';
+                }
+            });
+        });
+    }
+
+    // Evento de clique nos filtros
     filterItems.forEach(item => {
         item.addEventListener('click', function() {
             const submenuId = this.getAttribute('data-submenu');
@@ -232,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             otherArrow.classList.remove('open');
                         }
                     } else {
-                        // Se o submenu clicado não é um submenu-neto, fechar todos os outros submenus
+                        // Se não for um submenu-neto, fechar todos os outros submenus
                         otherSubmenu.classList.remove('open');
                         otherArrow.classList.remove('open');
                     }
@@ -246,7 +276,28 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Evento de clique para filtrar os cards
+    filterItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+
+            cardContainers.forEach(container => {
+                const cardCategories = container.getAttribute('categoria').split(' ');
+                if (cardCategories.includes(category)) {
+                    container.style.display = 'block';
+                } else {
+                    container.style.display = 'none';
+                }
+            });
+        });
+    });
 });
+
+
+
+
+
 
 
 //selecionar conteudo central e indice da navbar
@@ -257,10 +308,13 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(event) {
             event.preventDefault();
             const page = this.getAttribute('data-page');
-
+            const pageid = this.getAttribute('data-id');
             // Redireciona para a página correspondente
             if (page) {
                 window.location.href = `${page}.html`;
+            }
+            if (pageid) {
+                window.location.href = `#${pageid}`;
             }
         });
     });
@@ -465,22 +519,4 @@ document.addEventListener('DOMContentLoaded', function() {
 // });
 
 ///Categorias
-document.addEventListener('DOMContentLoaded', function() {
-    const filterItems = document.querySelectorAll('.filter-item[data-category]');
-    const cardContainers = document.querySelectorAll('.card-obras-total');
 
-    filterItems.forEach(item => {
-        item.addEventListener('click', function() {
-            const category = this.getAttribute('data-category');
-
-            cardContainers.forEach(container => {
-                const cardCategories = container.getAttribute('categoria').split(' ');
-                if (cardCategories.includes(category)) {
-                    container.style.display = 'block';
-                } else {
-                    container.style.display = 'none';
-                }
-            });
-        });
-    });
-});
