@@ -33,12 +33,13 @@
                         </a>
                     </div>
                     <div class="col-8 justify-content-center">
-                        <ul class="navbar-nav nav-links ">
-                            <li class="nav-item"><a class="nav-link" href="#" data-page="informacoes">Informações</a>
-                            </li>
+                        <ul class="navbar-nav nav-links w-100">
+                            <li class="nav-item"><a class="nav-link" href="#" data-page="informacoes">Informações</a></li>
                             <li class="nav-item"><a class="nav-link" href="#" data-page="covers">Covers</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#" data-page="historia">Minha História com
-                                    Covers</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" data-page="historia">Minha História com Covers</a></li>
+                            <li class="nav-item ms-auto d-flex align-items-center">
+                                <input type="text" id="searchInput" class="form-control" placeholder="Pesquisar...">
+                            </li>
                         </ul>
 
                     </div>
@@ -122,75 +123,84 @@
             <div class="col-xl-2 filter-menu  order-xl-1 order-1">
                 <h1>Filtrar</h1>
                 <div class="filter-item" data-submenu="submenu-instrumentos"><span class="filter-arrow"><i
-                            class="fa-solid fa-caret-right" ></i></span> Por Instrumento</div>                        
+                            class="fa-solid fa-caret-right"></i></span> Por Instrumento</div>
                 <div id="submenu-instrumentos" class="filter-submenu">
-                    <div class="filter-item filter-category" data-category="piano" data-submenu="submenu-piano" data-id="instrumentos-piano"><span class="filter-arrow"><i
+                    <div class="filter-item filter-category" data-category="piano" data-submenu="submenu-piano"
+                        data-id="instrumentos-piano"><span class="filter-arrow"><i
                                 class="fa-solid fa-caret-right"></i></span> Piano</div>
                     <div id="submenu-piano" class="filter-submenu submenu-neto">
                         <!-- <div class="filter-item filter-category" data-category="teste"><span class="filter-arrow"><i
                                     class="fa-solid fa-caret-right"></i></span> teste</div> -->
                     </div>
-                    <div class="filter-item filter-category" data-category="dueto" data-submenu="submenu-dueto" data-id="instrumentos-dueto"><span class="filter-arrow"><i
+                    <div class="filter-item filter-category" data-category="dueto" data-submenu="submenu-dueto"
+                        data-id="instrumentos-dueto"><span class="filter-arrow"><i
                                 class="fa-solid fa-caret-right"></i></span> Duetos</div>
-                                <div id="submenu-dueto" class="filter-submenu submenu-neto">
-                                    <!-- <div class="filter-item filter-category" data-category="teste"><span class="filter-arrow"><i
+                    <div id="submenu-dueto" class="filter-submenu submenu-neto">
+                        <!-- <div class="filter-item filter-category" data-category="teste"><span class="filter-arrow"><i
                                                 class="fa-solid fa-caret-right"></i></span> teste</div> -->
-                                </div>
-                    <div class="filter-item filter-category" data-category="violao" data-submenu="submenu-violao" data-id="instrumentos-violao"><span class="filter-arrow"><i
+                    </div>
+                    <div class="filter-item filter-category" data-category="violao" data-submenu="submenu-violao"
+                        data-id="instrumentos-violao"><span class="filter-arrow"><i
                                 class="fa-solid fa-caret-right"></i></span> Violão</div>
-                                <div id="submenu-violao" class="filter-submenu submenu-neto">
-                                    <!-- <div class="filter-item filter-category" data-category="teste"><span class="filter-arrow"><i
+                    <div id="submenu-violao" class="filter-submenu submenu-neto">
+                        <!-- <div class="filter-item filter-category" data-category="teste"><span class="filter-arrow"><i
                                                 class="fa-solid fa-caret-right"></i></span> teste</div> -->
-                                </div>
-                    <div class="filter-item filter-category" data-category="violino" data-submenu="submenu-violino" data-id="instrumentos-violino"><span class="filter-arrow"><i
+                    </div>
+                    <div class="filter-item filter-category" data-category="violino" data-submenu="submenu-violino"
+                        data-id="instrumentos-violino"><span class="filter-arrow"><i
                                 class="fa-solid fa-caret-right"></i></span> Violino</div>
-                                <div id="submenu-violino" class="filter-submenu submenu-neto">
-                                    <!-- <div class="filter-item filter-category" data-category="teste"><span class="filter-arrow"><i
+                    <div id="submenu-violino" class="filter-submenu submenu-neto">
+                        <!-- <div class="filter-item filter-category" data-category="teste"><span class="filter-arrow"><i
                                                 class="fa-solid fa-caret-right"></i></span> teste</div> -->
-                                </div>
-                    <div class="filter-item filter-category" data-category="violoncelo" data-submenu="submenu-violoncelo" data-id="instrumentos-violoncelo"><span class="filter-arrow"><i
-                                class="fa-solid fa-caret-right"></i></span> Violoncelo</div>
-                                <div id="submenu-violoncelo" class="filter-submenu submenu-neto">
-                                    <!-- <div class="filter-item filter-category" data-category="teste"><span class="filter-arrow"><i
+                    </div>
+                    <div class="filter-item filter-category" data-category="violoncelo"
+                        data-submenu="submenu-violoncelo" data-id="instrumentos-violoncelo"><span
+                            class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Violoncelo</div>
+                    <div id="submenu-violoncelo" class="filter-submenu submenu-neto">
+                        <!-- <div class="filter-item filter-category" data-category="teste"><span class="filter-arrow"><i
                                                 class="fa-solid fa-caret-right"></i></span> teste</div> -->
-                                </div>
+                    </div>
 
                 </div>
 
 
-                <div class="filter-item" data-submenu="submenu-categorias" ><span class="filter-arrow"><i
+                <div class="filter-item" data-submenu="submenu-categorias"><span class="filter-arrow"><i
                             class="fa-solid fa-caret-right"></i></span> Por Categoria</div>
                 <div id="submenu-categorias" class="filter-submenu">
                     <div class="filter-item filter-category" data-category="interpretacao"
-                        data-submenu="submenu-interpretacao" data-id="categorias-interpretacao"><span class="filter-arrow"><i
-                                class="fa-solid fa-caret-right"></i></span> Interpretações</div>
+                        data-submenu="submenu-interpretacao" data-id="categorias-interpretacao"><span
+                            class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Interpretações</div>
                     <div id="submenu-interpretacao" class="filter-submenu submenu-neto">
                         <!-- <div class="filter-item filter-category" data-category="teste"><span class="filter-arrow"><i
                                         class="fa-solid fa-caret-right"></i></span> teste</div> -->
                     </div>
                     <div class="filter-item filter-category" data-category="transcricao"
-                        data-submenu="submenu-transcricao" data-id="categorias-transcricao"><span class="filter-arrow"><i
-                                class="fa-solid fa-caret-right"></i></span> Transcrições</div>
+                        data-submenu="submenu-transcricao" data-id="categorias-transcricao"><span
+                            class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Transcrições</div>
                     <div id="submenu-transcricao" class="filter-submenu submenu-neto">
                         <!-- <div class="filter-item filter-category" data-category="teste"><span class="filter-arrow"><i
                                         class="fa-solid fa-caret-right"></i></span> teste</div> -->
                     </div>
-                    <div class="filter-item filter-category" data-category="arranjo" data-submenu="submenu-arranjo" data-id="categorias-arranjo">
-                        <span class="filter-arrow"><i class="fa-solid fa-caret-right" ></i></span> Arranjos</div>
+                    <div class="filter-item filter-category" data-category="arranjo" data-submenu="submenu-arranjo"
+                        data-id="categorias-arranjo">
+                        <span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Arranjos
+                    </div>
                     <div id="submenu-arranjo" class="filter-submenu submenu-neto">
                         <!-- <div class="filter-item filter-category" data-category="teste"><span class="filter-arrow"><i
                                         class="fa-solid fa-caret-right"></i></span> teste</div> -->
                     </div>
                 </div>
 
-                <div class="filter-item" data-submenu="submenu-temas" ><span class="filter-arrow"><i
+                <div class="filter-item" data-submenu="submenu-temas"><span class="filter-arrow"><i
                             class="fa-solid fa-caret-right" data-id="instrumentos"></i></span> Por Genero</div>
                 <div id="submenu-temas" class="filter-submenu">
-                    <div class="filter-item filter-category" data-category="animacao" data-submenu="submenu-animacao" data-id="temas-animacao">
+                    <div class="filter-item filter-category" data-category="animacao" data-submenu="submenu-animacao"
+                        data-id="temas-animacao">
                         <span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Animações
                     </div>
                     <div id="submenu-animacao" class="filter-submenu submenu-neto"></div>
-                    <div class="filter-item filter-category" data-submenu="submenu-classicas" data-category="classica" data-id="temas-classicas">
+                    <div class="filter-item filter-category" data-submenu="submenu-classicas" data-category="classica"
+                        data-id="temas-classicas">
                         <span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Classicas
                     </div>
                     <div id="submenu-classicas" class="filter-submenu submenu-neto">
@@ -201,8 +211,9 @@
                         <div class="filter-item filter-category" data-category="vivaldi"><span class="filter-arrow"><i
                                     class="fa-solid fa-caret-right"></i></span> Vivaldi</div>
                     </div>
-                    <div class="filter-item filter-category" data-category="game" data-submenu="submenu-game" data-id="temas-game"><span
-                            class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Games</div>
+                    <div class="filter-item filter-category" data-category="game" data-submenu="submenu-game"
+                        data-id="temas-game"><span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span>
+                        Games</div>
                     <div id="submenu-game" class="filter-submenu submenu-neto">
                         <!-- Vazio para poder fechar os outros submenus -->
                         <!-- <div class="filter-item filter-category" data-category="hollow-knight"><span class="filter-arrow"><i
@@ -214,8 +225,8 @@
                                         <div class="filter-item filter-category" data-category="ddtank"><span class="filter-arrow"><i
                                             class="fa-solid fa-caret-right"></i></span> DDTank</div> -->
                     </div>
-                    <div class="filter-item filter-category" data-submenu="submenu-rock" data-category="rock" data-id="temas-rock"><span
-                            class="filter-arrow"><i class="fa-solid fa-caret-right"
+                    <div class="filter-item filter-category" data-submenu="submenu-rock" data-category="rock"
+                        data-id="temas-rock"><span class="filter-arrow"><i class="fa-solid fa-caret-right"
                                 data-submenu="submenu-rock"></i></span> Rock</div>
                     <div id="submenu-rock" class="filter-submenu submenu-neto">
                         <!-- <div class="filter-item filter-category" data-category="chopin"><span class="filter-arrow"><i
@@ -223,8 +234,9 @@
                         <div class="filter-item filter-category" data-category="mozart"><span class="filter-arrow"><i
                                     class="fa-solid fa-caret-right"></i></span> Ther Cranberries</div> -->
                     </div>
-                    <div class="filter-item filter-category" data-category="serie" data-submenu="submenu-serie" data-id="temas-serie"><span
-                            class="filter-arrow"><i class="fa-solid fa-caret-right" data-category="serie"></i></span>
+                    <div class="filter-item filter-category" data-category="serie" data-submenu="submenu-serie"
+                        data-id="temas-serie"><span class="filter-arrow"><i class="fa-solid fa-caret-right"
+                                data-category="serie"></i></span>
                         Series</div>
                     <div id="submenu-serie" class="filter-submenu submenu-neto">
                         <!-- <div class="filter-item filter-category" data-category="ordem"><span class="filter-arrow"><i
@@ -238,8 +250,17 @@
 
             <!-- Seção de Conteúdo Principal -->
             <div class="col-xl-8 main-content order-xl-2 order-3">
-                <h1>Covers</h1>
+                <div class="row d-flex align-items-center">
+
+                    <div class="">
+                        <h1>Covers </h1>
+                    </div>
+
+
+                </div>
+
                 <div class="container-obras row">
+
                     <div class="col-lg-4 col-md-4 col-12 card-obras-total" categoria="rock piano arranjo queen">
                         <a href="bohemianrhapsody.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="bohemianrhapsody" card-obras-color="white">
@@ -284,6 +305,8 @@
                                 </div>
                                 <span class="title">Your Lie in April // Chopin - Ballade No.1</span><br>
                                 <span class="date">Transcrição - Piano & Violino</span><br>
+                                <span class="keywords" hidden>Shigatsu Wa Kimi No Uso kaori violino
+                                </span>
                             </div>
                         </a>
                     </div>
@@ -299,6 +322,8 @@
                                 </div>
                                 <span class="title">Ordem Paranormal: Calamidade - O Anfitrião</span><br>
                                 <span class="date">Arranjo p/Piano</span><br>
+                                <span class="keywords" hidden>Energia, Arnaldo Fritz
+                                </span>
                             </div>
                         </a>
                     </div>
@@ -314,6 +339,8 @@
                                 </div>
                                 <span class="title">O Segredo Na Ilha - Abertura</span><br>
                                 <span class="date">Arranjo p/Piano</span><br>
+                                <span class="keywords" hidden>Ordem Paranormal
+                                </span>
                             </div>
                         </a>
                     </div>
@@ -329,6 +356,8 @@
                                 </div>
                                 <span class="title">O Segredo Na Ilha - Intervalo</span><br>
                                 <span class="date">Arranjo p/Piano</span><br>
+                                <span class="keywords" hidden>Ordem Paranormal
+                                </span>
                             </div>
                         </a>
                     </div>
@@ -344,6 +373,8 @@
                                 </div>
                                 <span class="title">O Segredo Na Floresta - Equipe E</span><br>
                                 <span class="date">Arranjo p/Piano</span><br>
+                                <span class="keywords" hidden>Ordem Paranormal, acustico, acústico
+                                </span>
                             </div>
                         </a>
                     </div>
@@ -359,6 +390,8 @@
                                 </div>
                                 <span class="title">O Segredo Na Floresta - Musica Perditionem</span><br>
                                 <span class="date">Transcrição (Piano)</span><br>
+                                <span class="keywords" hidden>Ordem Paranormal 
+                                </span>                               
                             </div>
                         </a>
                     </div>
@@ -374,6 +407,8 @@
                                 </div>
                                 <span class="title">Sinais do Outro Lado - Abertura</span><br>
                                 <span class="date">Arranjo p/Piano</span><br>
+                                <span class="keywords" hidden>Ordem Paranormal
+                                </span>
                             </div>
                         </a>
                     </div>
@@ -404,6 +439,8 @@
                                 </div>
                                 <span class="title">Vivaldi - Primavera, 1º Mvt.</span><br>
                                 <span class="date">Arranjo p/Piano</span><br>
+                                <span class="keywords" hidden>Spring,the four seasons, estações
+                                </span>      
                             </div>
                         </a>
                     </div>
@@ -419,6 +456,8 @@
                                 </div>
                                 <span class="title">Vivaldi - Verão, 3º Mvt.</span><br>
                                 <span class="date">Arranjo p/Piano</span><br>
+                                <span class="keywords" hidden>Summer,the four seasons, estações
+                                </span>      
                             </div>
                         </a>
                     </div>
@@ -434,6 +473,8 @@
                                 </div>
                                 <span class="title">Vivaldi - Outono, 3º Mvt.</span><br>
                                 <span class="date">Arranjo p/Piano</span><br>
+                                <span class="keywords" hidden>Autumn,Fall,the four seasons, estações
+                                </span> 
                             </div>
                         </a>
                     </div>
@@ -449,6 +490,8 @@
                                 </div>
                                 <span class="title">Vivaldi - Inverno, 3º Mvt.</span><br>
                                 <span class="date">Arranjo p/Piano</span><br>
+                                <span class="keywords" hidden>winter,the four seasons, estações
+                                </span> 
                             </div>
                         </a>
                     </div>
@@ -464,6 +507,8 @@
                                 </div>
                                 <span class="title">Desconjuração - Veríssimo</span><br>
                                 <span class="date">Arranjo p/Piano</span><br>
+                                <span class="keywords" hidden>Ordem Paranormal
+                                </span> 
                             </div>
                         </a>
                     </div>
@@ -479,6 +524,8 @@
                                 </div>
                                 <span class="title">O Segredo Na Floresta - Abertura</span><br>
                                 <span class="date">Arranjo p/Piano</span><br>
+                                <span class="keywords" hidden>Ordem Paranormal
+                                </span> 
                             </div>
                         </a>
                     </div>
@@ -495,6 +542,8 @@
                                 </div>
                                 <span class="title">Omori - 172 Duet</span><br>
                                 <span class="date">Transcrição - Piano & Violino</span><br>
+                                <span class="keywords" hidden>Final Duet
+                                </span> 
                             </div>
                         </a>
                     </div>
@@ -512,6 +561,8 @@
                                 </div>
                                 <span class="title">Chopin - Fantaisie Impromptu</span><br>
                                 <span class="date">Interpretação - Piano</span><br>
+                                <span class="keywords" hidden>op. op 66  op.66 fantasy impromptu fantasy-impromptu c# minor
+                                </span> 
                             </div>
                         </a>
                     </div>
@@ -527,6 +578,8 @@
                                 </div>
                                 <span class="title">Jojo's - Yoshikage Kira's Theme</span><br>
                                 <span class="date">Arranjo p/Piano</span><br>
+                                <span class="keywords" hidden>part 4, diamond is unbreakable
+                                </span> 
                             </div>
                         </a>
                     </div>
@@ -543,6 +596,8 @@
                                 </div>
                                 <span class="title">Hollow Knight - Tema Principal</span><br>
                                 <span class="date">Transcrição - Piano & Violoncelo</span><br>
+                                <span class="keywords" hidden>Main Theme, Menu
+                                </span> 
                             </div>
                         </a>
                     </div>
@@ -556,8 +611,10 @@
                                         <img src="images/search.png" width="5px !important;">
                                     </div>
                                 </div>
-                                <span class="title">Jojo's - Wather Report's Prelude</span><br>
+                                <span class="title">Jojo's - Weather Report's Prelude</span><br>
                                 <span class="date">Transcrição - Piano</span><br>
+                                <span class="keywords" hidden>part 6 part6 stone ocean
+                                </span> 
                             </div>
                         </a>
                     </div>
@@ -573,6 +630,8 @@
                                 </div>
                                 <span class="title">Outer Wilds - Tema</span><br>
                                 <span class="date">Arranjo p/Piano</span><br>
+                                <span class="keywords" hidden>Menu, Main theme
+                                </span> 
                             </div>
                         </a>
                     </div>
@@ -588,6 +647,8 @@
                                 </div>
                                 <span class="title">Undertale - Once Upon a Time</span><br>
                                 <span class="date">Arranjo p/Piano</span><br>
+                                <span class="keywords" hidden>Menu, Main Theme, Toriel, Flowey, Chara, Deltarune
+                                </span> 
                             </div>
                         </a>
                     </div>
@@ -603,6 +664,8 @@
                                 </div>
                                 <span class="title">Stardew Valley - Overture</span><br>
                                 <span class="date">Arranjo p/Piano</span><br>
+                                <span class="keywords" hidden>Menu, Main Theme
+                                </span> 
                             </div>
                         </a>
                     </div>
@@ -619,6 +682,8 @@
                                 </div>
                                 <span class="title">Mozart - Rondo Alla Turca</span><br>
                                 <span class="date">Interpretação - Piano</span><br>
+                                <span class="keywords" hidden>Turkish March, K331, Sonata in A
+                                </span> 
                             </div>
                         </a>
                     </div>
@@ -635,6 +700,8 @@
                                 </div>
                                 <span class="title">Chopin - Etude Op. 10 No. 1 "Waterfall"</span><br>
                                 <span class="date">Interpretação - Piano</span><br>
+                                <span class="keywords" hidden>Cascade, Cascata,
+                                </span> 
                             </div>
                         </a>
                     </div>
@@ -667,6 +734,8 @@
                                 </div>
                                 <span class="title">Chopin - Etude Op. 10 No. 3 "Tristesse"</span><br>
                                 <span class="date">Interpretação - Piano</span><br>
+                                <span class="keywords" hidden>Farewell, Chanson de L'Adieu
+                                </span> 
                             </div>
                         </a>
                     </div>
@@ -683,6 +752,8 @@
                                 </div>
                                 <span class="title">Chopin - Etude Op. 10 No. 4 "Torrent"</span><br>
                                 <span class="date">Interpretação - Piano</span><br>
+                                <span class="keywords" hidden>shigatsu
+                                </span> 
                             </div>
                         </a>
                     </div>
@@ -699,6 +770,7 @@
                                 </div>
                                 <span class="title">Chopin - Etude Op. 10 No. 5 "Black Keys"</span><br>
                                 <span class="date">Interpretação - Piano</span><br>
+                             
                             </div>
                         </a>
                     </div>
@@ -715,6 +787,7 @@
                                 </div>
                                 <span class="title">Chopin - Etude Op. 10 No. 6 "Lament"</span><br>
                                 <span class="date">Interpretação - Piano</span><br>
+                                
                             </div>
                         </a>
                     </div>
@@ -731,6 +804,7 @@
                                 </div>
                                 <span class="title">Chopin - Etude Op. 10 No. 7 "Toccata"</span><br>
                                 <span class="date">Interpretação - Piano</span><br>
+                               
                             </div>
                         </a>
                     </div>
@@ -747,6 +821,7 @@
                                 </div>
                                 <span class="title">Chopin - Etude Op. 10 No. 8 "Sunshine"</span><br>
                                 <span class="date">Interpretação - Piano</span><br>
+                                
                             </div>
                         </a>
                     </div>
@@ -763,6 +838,7 @@
                                 </div>
                                 <span class="title">Chopin - Etude Op. 10 No. 9 "Torment"</span><br>
                                 <span class="date">Interpretação - Piano</span><br>
+                                 
                             </div>
                         </a>
                     </div>
@@ -779,6 +855,7 @@
                                 </div>
                                 <span class="title">Chopin - Etude Op. 10 No. 10 "Flowers"</span><br>
                                 <span class="date">Interpretação - Piano</span><br>
+                                 
                             </div>
                         </a>
                     </div>
@@ -794,6 +871,8 @@
                                 </div>
                                 <span class="title">Nirvana - Where Did You Sleep Last Night</span><br>
                                 <span class="date">Arranjo p/Violão + Banda</span><br>
+                                <span class="keywords" hidden>Kurt Cobain, MTV Unplugged, acoustic, acustico, grunge
+                                </span> 
                             </div>
                         </a>
                     </div>
@@ -809,6 +888,8 @@
                                 </div>
                                 <span class="title">The Cranberries - Zombie</span><br>
                                 <span class="date">Arranjo p/Violão + Banda</span><br>
+                                <span class="keywords" hidden>show, live
+                                </span> 
                             </div>
                         </a>
                     </div>
@@ -841,6 +922,8 @@
                                 </div>
                                 <span class="title">Chopin - Etude Op. 10 No. 12 "Revolutionary"</span><br>
                                 <span class="date">Interpretação - Piano</span><br>
+                                <span class="keywords" hidden>Shigatsu
+                                </span> 
                             </div>
                         </a>
                     </div>
@@ -857,6 +940,8 @@
                                 </div>
                                 <span class="title">Chopin - Nocturne in C-sharp minor, No. 20 (Incompleto)</span><br>
                                 <span class="date">Interpretação - Piano</span><br>
+                                <span class="keywords" hidden>The Pianist, C# Minor c#minor minor, karate kid
+                                </span> 
                             </div>
                         </a>
                     </div>
@@ -874,6 +959,8 @@
                                 <span class="title">Enigma do Medo - Memoria Timoris (Partitura da Mansão
                                     Strach)</span><br>
                                 <span class="date">Transcrição - Piano & Violino</span><br>
+                                <span class="keywords" hidden>Ordem Paranormal, edm, enigma do medo, enigma of fear, enigma del miedo, mia, lupi, thiana
+                                </span> 
                             </div>
                         </a>
                     </div>
@@ -881,7 +968,7 @@
 
                 </div>
 
-                 <!-- <div class="pagination d-flex justify-content-center">
+                <!-- <div class="pagination d-flex justify-content-center">
                     <button id="prevButton">←</button>
                     <button class="pageButton">1</button>
                     <button class="pageButton">2</button>

@@ -528,4 +528,24 @@ document.addEventListener('DOMContentLoaded', function() {
 // });
 
 
+//Filtro de pesquisa
+document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("searchInput");
+    const cards = document.querySelectorAll(".card-obras-total");
+
+    searchInput.addEventListener("input", function () {
+        const searchText = searchInput.value.toLowerCase();
+
+        cards.forEach(card => {
+            const title = card.querySelector(".title").innerText.toLowerCase();
+            const keywords = card.querySelector(".keywords")?.innerText.toLowerCase() || "";
+            
+            if (title.includes(searchText) || keywords.includes(searchText)) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+});
 
