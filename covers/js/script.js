@@ -1,6 +1,16 @@
 // https://lucide.dev/icons/
 //lucide.createIcons();
 
+function voltarPagina() {
+    const previousPage = document.referrer; // Obtém a URL da página anterior
+    const currentPage = window.location.href.split("#")[0]; // Obtém a URL sem o hash
+
+    if (!previousPage.startsWith(currentPage)) {
+        window.history.back();
+    }
+}
+
+
 //Trocar Lingua
 document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('.language-button');
@@ -621,6 +631,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
 
 
 

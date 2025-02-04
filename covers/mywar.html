@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obras Autorais</title>
+    <title>My War (Piano Arr.)</title>
     <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <!-- Bootstrap CSS -->
@@ -21,7 +21,7 @@
 
 <body>
     <header class="text-center py-5 ">
-        <h1 class="hfont"><strong>Obras Autorais</strong></h1>
+        <h1 class="hfont"><strong>Covers</strong></h1>
     </header>
     <nav class="navbar navbar-expand-lg ">
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -36,9 +36,8 @@
                         <ul class="navbar-nav nav-links ">
                             <li class="nav-item"><a class="nav-link" href="#" data-page="informacoes">Informações</a>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="#" data-page="obras">Obras</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#" data-page="historia">Minha História no
-                                    Piano</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" data-page="Covers">Covers</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" data-page="historia">História</a></li>
                         </ul>
 
                     </div>
@@ -91,8 +90,8 @@
             </div>
             <div id="navbarSubmenu" class="navbar-submenu">
                 <div class="navbar-item" data-page="informacoes"> Informações</div>
-                <div class="navbar-item" data-page="obras">Obras</div>
-                <div class="navbar-item" data-page="historia"> Minha História no Piano</div>
+                <div class="navbar-item" data-page="covers">Covers</div>
+                <div class="navbar-item" data-page="historia"> História</div>
                 <div class="d-flex align-items-center" style="margin-left:20px">
                     <div id="language-flag" class="language-flag">
                         <img src="../images/fg-br.png" width="32">
@@ -120,103 +119,115 @@
         <div class="row ">
             <!-- Seção de Menu de Pesquisa -->
             <div class="col-xl-2 filter-menu  order-xl-1 order-1">
-                <h1>Filtrar</h1>
-                <div class="filter-item" data-submenu="submenu-piano" data-page="piano"><span class="filter-arrow"><i
-                            class="fa-solid fa-caret-right"></i></span> Piano</div>
-                <div id="submenu-piano" class="filter-submenu open">
-                    <div class="filter-item filter-category" data-page="preludes"><span class="filter-arrow"><i
-                                class="fa-solid fa-caret-right"></i></span> Prelúdios</div>
-                    <div class="filter-item filter-category" data-page="waltzes"><span class="filter-arrow"><i
-                                class="fa-solid fa-caret-right"></i></span> Valsas</div>
-                </div>
-                <div class="filter-item" data-submenu="submenu-soundtracks" data-page="orquestracoes"><span
-                        class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Orquestrações</div>
-                <div id="submenu-soundtracks" class="filter-submenu">
-                    <div class="filter-item filter-category" data-page="soundtracks"><span class="filter-arrow"><i
-                                class="fa-solid fa-caret-right"></i></span> Soundtracks</div>
-                </div>
-                <div class="filter-item" data-submenu="submenu-violao" data-page="violao"><span class="filter-arrow"><i
-                            class="fa-solid fa-caret-right"></i></span> Violão</div>
-                <div id="submenu-violao" class="filter-submenu">
-                    <div class="filter-item filter-category" data-page="obrasviolao"><span class="filter-arrow"><i
-                                class="fa-solid fa-caret-right"></i></span> Ainda não fiz =(</div>
+                <h1>Opções</h1>
+                <a onclick="voltarPagina()">
+                    <div class="filter-item">
+                        <span class="filter-arrow">
+                            <i class="fa-solid fa-circle-arrow-left"></i>
+                        </span> 
+                        Voltar
+                    </div>
+                </a>
+
+
+        </div>
+            <!-- Seção de Conteúdo Principal -->
+            <div class="col-xl-8 main-content order-xl-2 order-3">
+                <div class="js-require" page="">
+                    <div class="row">
+                        <div class="col-md-12 obra-image-container p-0">
+                            <h1 id="0">My War (Piano Arr.)</h1>
+                            <div class="outer-container">                 
+                                <div class="video-container">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/KXieTkF9ZXw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="caption"><a href="https://www.youtube.com/KXieTkF9ZXw" target="blank">My War (Boku no Sensou)</a></div>
+                            </div>
+                        </div>                  
+
+                    </div>
+                    
+                    <h1 id="1">Sobre o Arranjo </h1>
+                    <hr>
+                    <div class="col-md-12">
+                        <p>Este arranjo foi feito durante o periodo de exibição da Primeira parte da Quarta temporada de  Attack on Titan.</p>
+                        <p><strong>Publicada:</strong> Não</p>
+                        <p><strong>Início do Arranjo:</strong> Março de 2021</p>
+                        <p><strong>Fim do Arranjo:</strong> Março de 2021</p>
+                        <br>      
+                    </div>
+                    
+                
+                    <h1 id="4">Outros Videos do Arranjo</h1>
+                    <hr>
+                    <h2 style="text-align: center;">Piano Tutorial</h2>
+                    <div class="outer-container">                 
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/qDRhzqYY_6s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="caption"><a href="https://www.youtube.com/qDRhzqYY_6s" target="_blank">Piano Tutorial (Midi)</a></div>
+                        <p>Esta versão foi postada no meu outro canal <a href="https://www.youtube.com/@thepianist4208" target="_blank">The Pianist</a>, Meu canal de Tutoriais (Midi) de piano que eu administrava na epoca.</p>
+                    </div>
+                    <br>
+                    <div class="col-md-12">
+                        <h1 id="2">Sobre a Obra Original</h1>
+                        <hr>
+                        <div class="obras-info-container">
+
+                            <p>"My War" é a abertura da quarta temporada de Attack on Titan, interpretada por Shinsei Kamattechan. Com uma sonoridade intensa e caótica, a música reflete o tom sombrio da temporada final.
+
+                                Sua letra aborda opressão, destruição e resistência, alinhando-se à narrativa do anime, que explora as diferentes perspectivas do conflito entre as nações da obra.</p>                            
+                            <p><strong>Compositor:</strong> Shinsei Kamattechan</p>
+                            <p><strong>Album:</strong> Seinaru Kousaten</p>
+                            <P><strong>Data de Publicação:</strong> 07/12/2020</P>
+
+                            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3KhwEuqLNjHfsKaBDo1yVh?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                    <br>
+                    <h1 id="3">Partitura</h1>
+                    <hr>    
+                    
+                    <div class="card-container-plataformas">
+                        <a href="sheets/My War SNK.pdf" class="card-plataforma"
+                            style="background-color: rgb(0, 102, 255); color:white" target="_blank">
+                            <img src="images/pdf-file.png" alt="Spotify">
+                            <p>Visualizar</p>
+                        </a>
+                        <a href="sheets/My War SNK.pdf" class="card-plataforma"
+                            download style="background-color: blueviolet; color:white">
+                            <img src="images/download.png" alt="Spotify">
+                            <p>Download</p>
+                        </a>
+                    </div>
+                    <div class="col-md-12">
+                        
+                        <iframe src="sheets/My War SNK.pdf" width="100%"
+                            height="1200px"></iframe>
+
+                    </div> 
+                    
+                    
+                  
+                    
                 </div>
             </div>
 
-            <!-- Seção de Conteúdo Principal -->
-            <div class="col-xl-8 main-content order-xl-2 order-3">
-                <style>
-                    .container-obras {
-                        display: flex;
-                        justify-content: center;
-                        flex-wrap: wrap;
-                    }
-                </style>
-                <div class="container pt-0">
-                    <h1 id="1">Minhas Valsas</h1>
-                    <hr>
-                    <div class="container-obras row">
-                        <div class="col-lg-3 col-md-4 col-6">
-                            <a href="waltz1.html" style="text-decoration: none;">
-                                <div class="card-obras waltz1" data-page="waltz1" card-obras-color="brown">
-                                    <div class="image-container">
-                                        <img src="images/waltz1.png" alt="Foto de uma janela escura" class="img-fluid">
-                                        <div class="card-icon">
-                                            <img src="images/search.png" width="5px !important;">
-                                        </div>
-                                    </div>
-                                    <span class="title">Waltz Op.3 No.1 </span><br>
-                                    <span class="date">2022 • Single</span><br>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6">
-                            <a href="waltz2.html" style="text-decoration: none;">
-                                <div class="card-obras waltz2" data-page="waltz2" card-obras-color="var(--main-purple)">
-                                    <div class="image-container">
-                                        <img src="images/waltz2.jpg" alt="Foto de Nuvens Amarelas e Roxas" class="img-fluid">
-                                        <div class="card-icon">
-                                            <img src="images/search.png" width="5px !important;">
-                                        </div>
-                                    </div>
-                                    <span class="title">Waltz Op.8 No.2</span><br>
-                                    <span class="date">2024 • Single</span><br>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                
-                    <h1 id="2" class="mt-4">O que é uma Valsa?</h1>
-                    <hr>
-                
-                    <p>Valsa é um gênero musical caracterizado por seu compasso ternário 3/4 e estrutura rítmica clara. No compasso da
-                        valsa, o primeiro tempo é marcado por uma nota grave (baixo), enquanto os dois tempos seguintes são preenchidos
-                        por acordes leves tocados em regiões médias ou agudas. Essa combinação cria um ritmo fluido e balanceado, ideal
-                        para seu movimento característico.</p>
-                
-                    <p>Em resumo, uma Valsa possui essas características:</p>
-                    <div id="3" class="content-list">
-                        <ul>
-                            <li><strong>Compasso 3/4</strong></li>
-                            <li><strong>Baixo no primeiro tempo</strong></li>
-                            <li><strong>Acordes leves nos tempos 2 e 3</strong></li>
-                            <li><strong>Ritmo fluido e balanceado</strong></li>
+            <!-- Seção de Índice de Conteúdo -->
+            <div class="col-xl-2 table-of-contents order-xl-3 order-2">
+                <div class="js-require" page="">
+                    <h1>Índice</h1>
+                    <div class="indice-card">
+                        <ul class="align-middle">
+                            <li class="scale-transform11"><a href="#0">Video do Arranjo</a></li> 
+                            <li class="scale-transform11"><a href="#1">Sobre o Arranjo</a></li>
+                            <li class="scale-transform11"><a href="#4">Outros Videos</a></li>
+                            <li class="scale-transform11"><a href="#2">Sobre a Obra Original</a></li>                                               
+                            <li class="scale-transform11"><a href="#3">Partitura</a></li>
+                            
                         </ul>
                     </div>
                 </div>
-            </div>
-            <!-- Seção de Índice de Conteúdo -->
-            <div class="col-xl-2 table-of-contents order-xl-3 order-2">
-                <h1>Índice</h1>
-            <div class="indice-card">
-                
-                <ul>
-                    <li class="scale-transform11"><a href="#1">Minhas Valsas</a></li>
-                    <li class="scale-transform11"><a href="#2">O que é uma Valsa?</a></li>
-                    <li class="scale-transform11"><a href="#3">Caracteristicas</a></li>
-                    
-                </ul>
-            </div>
             </div>
         </div>
     </div>

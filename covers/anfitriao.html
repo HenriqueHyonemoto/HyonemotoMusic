@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Interloper</title>
+    <title>O Anfitrião</title>
     <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <!-- Bootstrap CSS -->
@@ -21,7 +21,7 @@
 
 <body>
     <header class="text-center py-5 ">
-        <h1 class="hfont"><strong>Obras Autorais</strong></h1>
+        <h1 class="hfont"><strong>Covers</strong></h1>
     </header>
     <nav class="navbar navbar-expand-lg ">
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -36,9 +36,8 @@
                         <ul class="navbar-nav nav-links ">
                             <li class="nav-item"><a class="nav-link" href="#" data-page="informacoes">Informações</a>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="#" data-page="obras">Obras</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#" data-page="historia">Minha História no
-                                    Piano</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" data-page="Covers">Covers</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" data-page="historia">História</a></li>
                         </ul>
 
                     </div>
@@ -91,8 +90,8 @@
             </div>
             <div id="navbarSubmenu" class="navbar-submenu">
                 <div class="navbar-item" data-page="informacoes"> Informações</div>
-                <div class="navbar-item" data-page="obras">Obras</div>
-                <div class="navbar-item" data-page="historia"> Minha História no Piano</div>
+                <div class="navbar-item" data-page="covers">Covers</div>
+                <div class="navbar-item" data-page="historia"> História</div>
                 <div class="d-flex align-items-center" style="margin-left:20px">
                     <div id="language-flag" class="language-flag">
                         <img src="../images/fg-br.png" width="32">
@@ -120,135 +119,130 @@
         <div class="row ">
             <!-- Seção de Menu de Pesquisa -->
             <div class="col-xl-2 filter-menu  order-xl-1 order-1">
-                <h1>Filtrar</h1>
-                <div class="filter-item" data-submenu="submenu-piano" data-page="piano"><span class="filter-arrow"><i
-                            class="fa-solid fa-caret-right"></i></span> Piano</div>
-                <div id="submenu-piano" class="filter-submenu open">
-                    <div class="filter-item filter-category" data-page="preludes"><span class="filter-arrow"><i
-                                class="fa-solid fa-caret-right"></i></span> Prelúdios</div>
-                    <div class="filter-item filter-category" data-page="waltzes"><span class="filter-arrow"><i
-                                class="fa-solid fa-caret-right"></i></span> Valsas</div>
-                </div>
-                <div class="filter-item" data-submenu="submenu-soundtracks" data-page="orquestracoes"><span
-                        class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Orquestrações</div>
-                <div id="submenu-soundtracks" class="filter-submenu">
-                    <div class="filter-item filter-category" data-page="soundtracks"><span class="filter-arrow"><i
-                                class="fa-solid fa-caret-right"></i></span> Soundtracks</div>
-                </div>
-                <div class="filter-item" data-submenu="submenu-violao" data-page="violao"><span class="filter-arrow"><i
-                            class="fa-solid fa-caret-right"></i></span> Violão</div>
-                <div id="submenu-violao" class="filter-submenu">
-                    <div class="filter-item filter-category" data-page="obrasviolao"><span class="filter-arrow"><i
-                                class="fa-solid fa-caret-right"></i></span> Ainda não fiz =(</div>
-                </div>
-            </div>
+                <h1>Opções</h1>
+                <a onclick="voltarPagina()">
+                    <div class="filter-item">
+                        <span class="filter-arrow">
+                            <i class="fa-solid fa-circle-arrow-left"></i>
+                        </span> 
+                        Voltar
+                    </div>
+                </a>
 
+
+        </div>
             <!-- Seção de Conteúdo Principal -->
             <div class="col-xl-8 main-content order-xl-2 order-3">
                 <div class="js-require" page="">
                     <div class="row">
-                        <div class="col-md-5 obra-image-container p-0">
-                            <h1 id="1">The Interloper</h1>
-                            <a href="../fotografias/theinterloper.html" style="text-decoration: none;">
-                                <div class="card-foto prelude4">
-                                    <div class="image-container">
-                                        <img src="images/TheInterloper.jpg" alt="Foto com filtro rosa de uma criança distante na neve" class="img-fluid">
-                                        <div class="card-icon">
-                                            <img src="images/search.png" width="5px !important;">
-                                        </div>
-                                    </div>
-                                    <p class="title hfont">Capa do The Interloper </p>
+                        <div class="col-md-12 obra-image-container p-0">
+                            <h1 id="0">Calamidade - O Anfitrião</h1>
+                            <div class="outer-container">                 
+                                <div class="video-container">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Fwr6LIBOcUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="col-md-7">
-                            <h1 id="1">Informações</h1>
-                            <div class="obras-info-container">
-                                <p>A composição transmite uma atmosfera de incerteza e o medo do desconhecido, como a anuncio de algo perturbador se aproximando.</p>
-                                <p><strong>Duração:</strong> 05:46</p>
-                                <!-- <p><strong>Divisão de compasso:</strong> 3/4</p>
-                                <p><strong>Tonalidade:</strong> [Tonalidade]</p> -->
-                                <p><strong>Início de composição:</strong> Setembro de 2024</p>
-                                <p><strong>Fim de composição:</strong> Setembro de 2024</p>
-                                <p><strong>Data de publicação:</strong> 20/09/2024</p>
-                                <p><strong>Distribuidora:</strong> SoundON</p>
+                                <div class="caption"><a href="https://www.youtube.com/Fwr6LIBOcUY" target="blank">Ballade No.1 + Violin</a></div>
                             </div>
-                        </div>
+                        </div>                  
 
                     </div>
+                    
+                    <h1 id="1">Sobre o Arranjo</h1>
                     <hr>
-                    <h1>Escute a Obra</h1>
-                    <div class="card-container-plataformas">
-                        <a href="https://open.spotify.com/track/6R9fyfThW8QefWy7bha7PJ?si=b4b4ab3e87b040ae"
-                            class="card-plataforma" target="_blank">
-                            <img src="images/spotify.png" alt="Spotify">
-                            <p>Spotify</p>
-                        </a>
-                        <a href="https://deezer.page.link/EBeEGgcXetoBHCpd9"
-                            class="card-plataforma" target="_blank">
-                            <img src="images/deezer.png" alt="Deezer">
-                            <p>Deezer</p>
-                        </a>
-                        <a href="https://www.youtube.com/watch?v=-IeZERyMTm4&list=OLAK5uy_kZiodXp5f-6RX_qWULyhLelgqqs_JNChU"
-                            class="card-plataforma" target="_blank">
-                            <img src="images/ytmusic.png" alt="Youtube Music">
-                            <p>Youtube</p>
-                        </a>
-                        <a href="https://music.amazon.com.br/albums/B0DGLB167G?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=BR&ref=dm_sh_P8YFJYpInsb6x5K8YzMfwhnSI"
-                            class="card-plataforma" target="_blank">
-                            <img src="images/amazonmusic.png" alt="Amazon Music">
-                            <p>Amazon</p>
-                        </a>
-                        <a href="https://music.apple.com/br/album/the-interloper-single/1768546218"
-                            class="card-plataforma" target="_blank">
-                            <img src="images/applemusic.png" alt="Apple Music">
-                            <p>Apple</p>
-                        </a>
-                        <!-- <a href="https://tidal.com" class="card-plataforma">
-                            <img src="images/tidal.png" alt="Tidal">
-                            <p>Tidal</p>
-                        </a>
-                        <a href="https://tidal.com" class="card-plataforma">
-                            <img src="images/pandora.png" alt="Tidal">
-                            <p>Pandora</p>
-                        </a> -->
-                    </div>
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6R9fyfThW8QefWy7bha7PJ?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                        <br>
-                    <hr>
-                    <br>
-                    <h1 id="2">Sobre a Obra </h1>
-                    <br>
                     <div class="col-md-12">
-                        <p>Assim como <em>Nostalgic Era</em>, essa peça foi criada enquanto eu estudava produção musical no <em>FL Studio</em>. Utilizei diversos instrumentos aleatórios de pacotes de bibliotecas gratuitas e, a partir da sonoridade desses instrumentos, surgiu esta música de terror e suspense.</p> 
-                        <p>Ela foi inspirada na temática de vídeos sobre Lost Media, Backrooms e Seres como Siren Head, com a intenção de transmitir a sensação de que algo de outro mundo invadiu nosso planeta, colocando todos em perigo, mas sem revelar exatamente do que se trata.</p> 
-                        <p>Além disso, quis evocar o sentimento de estar dentro de um submarino explorando cantos desconhecidos e incertos dos nossos oceanos. A sonoridade "afunda" progressivamente, utilizando de forma sutil o efeito da "Música da Escada Infinita" de <em>Super Mario 64</em>, que aparenta estar sempre subindo infinitamente — mas, neste caso, a melodia desce ao invés de subir.</p>
+                        <p>Este arranjo foi inspirado pelo Episódio 6 de <strong>Calamidade</strong>, momento em que a música foi exibida pela primeira vez. Após assistir ao episódio, criei e compartilhei um vídeo do meu arranjo no Twitter, utilizando a hashtag onde a comunidade de <strong>Ordem Paranormal</strong> costuma postar suas fanarts. Esse post acabou se tornando um dos maiores impulsionadores do meu canal, atraindo um público considerável de fãs da série.</p>
+
+                        <p><strong>Publicada:</strong> Não</p>
+                        <p><strong>Início do Arranjo:</strong> 23/10/2021</p>
+                        <p><strong>Fim do Arranjo:</strong> 30/10/2021</p>
+
+                        <figure>
+                            <img src="images/anfitrias-tt.jpg" class="img-fluid" style="width:50%">
+                            <figcaption>Post feito no Twitter em 30/10/2021</figcaption>
+                        </figure>
+
+                        
+                        <br>      
                     </div>
+
+                    <h1 id="4">Outros Videos do Arranjo</h1>
+                    <hr>
+                    <h2 style="text-align: center;">Primeiro Video</h2>
                     <div class="outer-container">                 
                         <div class="video-container">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/7wp3rzAdwT8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/sxsU-RhlH8I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
-                        <div class="caption">"Escadas Infinitas" Note que a melodia aparenta sempre estar "subindo", ficando mais aguda.</div>
-                    </div>
+                        <div class="caption"><a href="https://www.youtube.com/sxsU-RhlH8I" target="_blank">Video Postado no Twitter em Outubro de 2021</a></div>
+                        <p>Este vídeo foi originalmente postado no meu perfil do Twitter <a href="https://x.com/HHyonemoto" target="_blank">@HHyonemoto</a> e foi gravado no meu piano antigo. A cor original do visualizador do piano era laranja, mas editei para combinar com as cores do personagem. Adicionalmente, utilizei uma imagem em fullscreen da mesma cor no meu monitor para iluminar o cenário. Este foi o meu <strong>primeiro vídeo público</strong> tocando piano.</p>
+                        <br>
+                        <h2 style="text-align: center;">Video da Partitura</h2>
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/yTCtqbqQ7z0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                         <div class="caption"><a href="https://www.youtube.com/yTCtqbqQ7z0" target="_blank">Video da Partitura</a></div> 
+                         <br>
+                        <h2 style="text-align: center;">Piano Tutorial (Midi)</h2>
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/WpK6eaMa8To" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                         <div class="caption"><a href="https://www.youtube.com/WpK6eaMa8To" target="_blank">Piano Tutorial (Midi)</a></div> 
+                        
 
-                    
-                    <hr>
-                    
-                    <h1 id="5">Curiosidades </h1>
-                    <!-- botão download -->
-                    <p style="font-size:18px; text-align: center;">O Primeiro nome a ser pensado pra essa música foi "<em>Experimental Vessel</em>", ou Embarcação Experimental, pois a ideia era a navegação em ambientes hostis em um veiculo não adequado a exploração. </p>
+
+
+                    </div>
                     <br>
-                    <p style="font-size:18px; text-align: center;">Os instrumentos utilizados foram: </p>
-                    <ul style="font-size:18px; text-align: center; list-style-position: inside;">
-                        <li><strong>Morphine</strong></li>
-                        <li><strong>Biohazzard</strong></li>                 
-                        <li><strong>FPC Drumkit</strong></li>
-                        <li><strong>Spitfire -> Tape Orchestra: Brass LOOP</strong></li>
-                        <li><strong>Spitfire -> Granular Whalesong: Nautilus Soft</strong></li>
-                        <li><strong>Spitfire -> Organic Textures: Thunder & Rain</strong></li>
-                        <li><strong>Audio do BLOOP</strong></li>
-                        <li><strong>Som de Fundo "mus3" do <a href="http://notpron.com/notpron/"></a>Notpron</strong></li>
-                    </ul>
+                    
+                
+                
+                    <div class="col-md-12">
+                        <h1 id="2">Sobre a Obra Original</h1>
+                        <hr>
+                        <div class="obras-info-container">
+
+                            <p>No sexto episódio de Calamidade, quando o personagem "Anfitrião" faz sua aparição completa nas Ruínas de Ordo Calamitas, sentada em um trono com o Diabo ao seu lado, a trilha sonora que acompanha a cena utiliza elementos que reforçam a atmosfera de mistério e perigo iminente. Com o uso de sintetizadores e sons que lembram tecnologia, como os efeitos 8-bit, a música cria um ambiente tenso e sombrio, destacando a natureza enigmática e poderosa da personagem e o cenário apocalíptico. </p>
+
+                            <p><strong>Compositor:</strong> Júlio Victor</p>
+                            <p><strong>Album:</strong> Ordem Paranormal: Calamidade (Trilha Sonora Original)</p>
+                            <P><strong>Data de Publicação:</strong> 27/11/2021</P>
+
+                            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7FoUnl6ftWyr6IwDIYu3Ct?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                         
+                        </div>
+                    </div>
+                    <br>
+                    <h1 id="3">Partitura</h1>
+                    <hr>    
+                
+                    <!-- botão download -->
+                    <div class="card-container-plataformas">
+                        <a href="sheets/O Anfitrião.pdf" class="card-plataforma"
+                            style="background-color: rgb(0, 102, 255); color:white" target="_blank">
+                            <img src="images/pdf-file.png" alt="Spotify">
+                            <p>Visualizar</p>
+                        </a>
+                        <a href="sheets/O Anfitrião.pdf" class="card-plataforma"
+                            download style="background-color: blueviolet; color:white">
+                            <img src="images/download.png" alt="Spotify">
+                            <p>Download</p>
+                        </a>
+                    </div>
+                    <div class="col-md-12">
+                        
+                        <iframe src="sheets/O Anfitrião.pdf" width="100%"
+                            height="1200px"></iframe>
+
+                    </div> 
+                    
+                    
+                  <br>
+                    <h1 id="5">Curiosidades </h1>
+                    <hr>              
+                    <p style="text-align: center;">1. O compositor reagiu ao meu post, o que me deixou muito feliz =) </p> 
+                    <figure>
+                        <img src="images/juvi-tt.png" class="img-fluid" style="width:50%">
+                        <figcaption></figcaption>
+                    </figure>
                 </div>
             </div>
 
@@ -258,9 +252,13 @@
                     <h1>Índice</h1>
                     <div class="indice-card">
                         <ul class="align-middle">
-                            <li class="scale-transform11"><a href="#1">Informações</a></li>
-                            <li class="scale-transform11"><a href="#2">Sobre a Obra</a></li>                           
-                            <li class="scale-transform11"><a href="#5">Curiosidades</a></li>
+                            <li class="scale-transform11"><a href="#0">Video do Arranjo</a></li> 
+                            <li class="scale-transform11"><a href="#1">Sobre o Arranjo</a></li>
+                            <li class="scale-transform11"><a href="#4">Outros Videos</a></li>
+                            <li class="scale-transform11"><a href="#2">Sobre a Obra Original</a></li>                                               
+                            <li class="scale-transform11"><a href="#3">Partitura</a></li>
+                           
+                            <li class="scale-transform11"><a href="#5">Curiosidades</a></li> 
                         </ul>
                     </div>
                 </div>
