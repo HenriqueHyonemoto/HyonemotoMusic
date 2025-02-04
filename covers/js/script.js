@@ -233,6 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     const categoriesArray = cardCategories.split(' ');
                     if (categoriesArray.includes(hash)) {
                         container.style.display = 'block';
+                        container.classList.add('fade-in');
                     } else {
                         container.style.display = 'none';
                     }
@@ -288,11 +289,24 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!category) return; // Ignora se não tiver data-category
 
             cardContainers.forEach(container => {
+                container.classList.remove('fade-in');
+            });
+
+            if (category === 'all') {
+                cardContainers.forEach(container => {
+                    container.style.display = 'block';
+                    setTimeout(() => container.classList.add('fade-in'), 10);
+                });
+                return;
+            }
+
+            cardContainers.forEach(container => {
                 const cardCategories = container.getAttribute('categoria');
                 if (cardCategories) {
                     const categoriesArray = cardCategories.split(' ');
                     if (categoriesArray.includes(category)) {
                         container.style.display = 'block';
+                        setTimeout(() => container.classList.add('fade-in'), 10);
                     } else {
                         container.style.display = 'none';
                     }
@@ -301,6 +315,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Adicionar CSS para a animação
+const style = document.createElement('style');
+style.innerHTML = `
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+`;
+document.head.appendChild(style);
+
 
 
 
