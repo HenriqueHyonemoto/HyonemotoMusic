@@ -531,10 +531,12 @@ document.addEventListener('DOMContentLoaded', function() {
 //Filtro de pesquisa
 document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("searchInput");
+    const cardsContainer = document.querySelector(".container-obras");
     const cards = document.querySelectorAll(".card-obras-total");
 
     searchInput.addEventListener("input", function () {
         const searchText = searchInput.value.toLowerCase();
+        let hasResults = false;
 
         cards.forEach(card => {
             const title = card.querySelector(".title").innerText.toLowerCase();
@@ -542,10 +544,31 @@ document.addEventListener("DOMContentLoaded", function () {
             
             if (title.includes(searchText) || keywords.includes(searchText)) {
                 card.style.display = "block";
+                hasResults = true;
             } else {
                 card.style.display = "none";
             }
         });
+
+        // Remove mensagem antiga, se houver
+        const existingMessage = document.getElementById("no-results-message");
+        if (existingMessage) {
+            existingMessage.remove();
+        }
+
+        // Se não houver resultados, adiciona a mensagem
+        if (!hasResults) {
+            const noResultsMessage = document.createElement("div");
+            noResultsMessage.id = "no-results-message";
+            noResultsMessage.innerHTML = `
+                <div class="container pt-0">
+                    <div class="container-obras row mt-40 mb-40 text-center">
+                        <h1 style="margin-top:100px;margin-bottom:100px;">Sem Resultados <br>=(</h1>
+                    </div>
+                </div>
+            `;
+            cardsContainer.appendChild(noResultsMessage);
+        }
     });
 });
 
