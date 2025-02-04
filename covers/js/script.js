@@ -534,19 +534,40 @@ document.addEventListener("DOMContentLoaded", function () {
     const cardsContainer = document.querySelector(".container-obras");
     const cards = document.querySelectorAll(".card-obras-total");
 
+    // Função para normalizar texto (remover acentos e converter ç -> c)
+    function normalizeText(text) {
+        return text
+            .normalize("NFD") // Decompõe caracteres acentuados
+            .replace(/[\u0300-\u036f]/g, "") // Remove marcas diacríticas
+            .replace(/ç/g, "c") // Substitui 'ç' por 'c'
+            .toLowerCase();
+    }
+
+    // Adiciona efeito de transição aos cards
+    cards.forEach(card => {
+        card.style.transition = "opacity 0.3s ease-in-out";
+        card.style.opacity = "1";
+    });
+
     searchInput.addEventListener("input", function () {
-        const searchText = searchInput.value.toLowerCase();
+        const searchText = normalizeText(searchInput.value);
         let hasResults = false;
 
         cards.forEach(card => {
-            const title = card.querySelector(".title").innerText.toLowerCase();
-            const keywords = card.querySelector(".keywords")?.innerText.toLowerCase() || "";
-            
+            const title = normalizeText(card.querySelector(".title").innerText);
+            const keywords = normalizeText(card.querySelector(".keywords")?.innerText || "");
+
             if (title.includes(searchText) || keywords.includes(searchText)) {
-                card.style.display = "block";
+                card.style.display = "flex"; // Ajuste caso use flexbox
+                setTimeout(() => {
+                    card.style.opacity = "1";
+                }, 50);
                 hasResults = true;
             } else {
-                card.style.display = "none";
+                card.style.opacity = "0";
+                setTimeout(() => {
+                    card.style.display = "none";
+                }, 300);
             }
         });
 
@@ -571,4 +592,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
 
