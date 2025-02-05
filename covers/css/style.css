@@ -1018,6 +1018,48 @@ figure{
     box-shadow: 0 1px 16px white;
 }
 
+.summer.card-obras:hover {
+    box-shadow: 0 1px 24px #c39f0d;
+}
+.summer.card-obras:hover .date {
+    color: #c39f0d;
+}
+.summer.card-obras:hover .title {
+    color: #c39f0d;
+}
+.summer .card-icon {
+    background-color: #c39f0d;
+    box-shadow: 0 1px 16px #c39f0d;
+}
+
+.spring.card-obras:hover {
+    box-shadow: 0 1px 24px #d8c9dc;
+}
+.spring.card-obras:hover .date {
+    color: #d8c9dc;
+}
+.spring.card-obras:hover .title {
+    color: #d8c9dc;
+}
+.spring .card-icon {
+    background-color: #d8c9dc;
+    box-shadow: 0 1px 16px #d8c9dc;
+}
+
+.purple.card-obras:hover {
+    box-shadow: 0 1px 24px #a333c2;
+}
+.purple.card-obras:hover .date {
+    color: #a333c2;
+}
+.purple.card-obras:hover .title {
+    color: #a333c2;
+}
+.purple .card-icon {
+    background-color: #a333c2;
+    box-shadow: 0 1px 16px #a333c2;
+}
+
 .prelude1.card-obras:hover {
     box-shadow: 0 1px 24px var(--main-orange);
 }
