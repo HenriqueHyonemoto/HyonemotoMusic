@@ -41,8 +41,10 @@
                             </li>
                             <li class="nav-item"><a class="nav-link" href="#" data-page="fotografias">Fotografias</a>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="#" data-page="historia">Minha História com a
-                                    Fotografia</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" data-page="historia">História</a></li>
+                                    <li class="nav-item ms-auto d-flex align-items-center">
+                                        <input type="text" id="searchInput" class="form-control" placeholder="Pesquisar...">
+                                    </li>
                         </ul>
 
                     </div>
@@ -128,6 +130,8 @@
 
                 <div class="filter-item" data-submenu="submenu-todos" data-category="all"><span class="filter-arrow"><i
                     class="fa-solid fa-caret-right"></i></span> Todos</div>
+
+
         <div class="filter-item" data-submenu="submenu-piano" data-category="piano"><span class="filter-arrow"><i
                     class="fa-solid fa-caret-right"></i></span> Piano</div>
         <div id="submenu-piano" class="filter-submenu">
@@ -154,26 +158,29 @@
                 <!-- <div class="filter-item filter-category" data-category="teste"><span class="filter-arrow"><i
                             class="fa-solid fa-caret-right"></i></span> teste</div> -->
             </div>
-            
-
         </div>
+
+        <div class="filter-item" data-submenu="submenu-orquestracoes" data-category="orquestracao"><span class="filter-arrow"><i
+            class="fa-solid fa-caret-right"></i></span> Orquestrações</div>
+<div id="submenu-orquestracoes" class="filter-submenu">
+    <div class="filter-item filter-category" data-category="soundtrack" data-submenu="submenu-soundtrack"
+        data-id="orquestracao-soundtrack"><span class="filter-arrow"><i
+                class="fa-solid fa-caret-right"></i></span> Soundtracks</div>
+    <div id="submenu-soudtrack" class="filter-submenu submenu-neto">
+        <!-- <div class="filter-item filter-category" data-category="teste"><span class="filter-arrow"><i
+                    class="fa-solid fa-caret-right"></i></span> teste</div> -->
+    </div>
+
+    
+</div>
+
 
 
  
 
             
-                <div class="filter-item" data-submenu="submenu-soundtracks" data-page="orquestracoes"><span
-                        class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Orquestrações</div>
-                <div id="submenu-soundtracks" class="filter-submenu">
-                    <div class="filter-item filter-category" data-page="soundtracks"><span class="filter-arrow"><i
-                                class="fa-solid fa-caret-right"></i></span> Soundtracks</div>
-                </div>
-                <div class="filter-item" data-submenu="submenu-violao" data-page="violao"><span class="filter-arrow"><i
-                            class="fa-solid fa-caret-right"></i></span> Violão</div>
-                <div id="submenu-violao" class="filter-submenu">
-                    <div class="filter-item filter-category" data-page="obrasviolao"><span class="filter-arrow"><i
-                                class="fa-solid fa-caret-right"></i></span> Ainda não fiz =(</div>
-                </div>
+                
+
             </div>
 
             <!-- Seção de Conteúdo Principal -->
@@ -198,7 +205,7 @@
                                 </div>
                                 <span class="title">Preludes, Vol. 1</span><br>
                                 <span class="date">2022 • EP</span><br>
-                                <span class="keywords" hidden>Prelude,Piano,2022,solo
+                                <span class="keywords" hidden>Prelude,Piano,2022,solo</span>
                             </div>
                         </a>
                     </div>
@@ -214,6 +221,7 @@
                                 </div>
                                 <span class="title">Waltz Op.3 No.1 </span><br>
                                 <span class="date">2022 • Single</span><br>
+                                <span class="keywords" hidden>Waltz,Piano,2022,solo</span>
                             </div>
                         </a>
                     </div>
@@ -229,6 +237,7 @@
                                 </div>
                                 <span class="title">Vivaldi - Spring, 1st Mvt</span><br>
                                 <span class="date">2023 • Single</span><br>
+                                <span class="keywords" hidden>Arranjo,Piano,2023,solo</span>
                             </div>
                         </a>
                     </div>
@@ -244,6 +253,7 @@
                                 </div>
                                 <span class="title">Vivaldi - Summer, 1st Mvt</span><br>
                                 <span class="date">2023 • Single</span><br>
+                                <span class="keywords" hidden>Arranjo,Piano,2023,solo</span>
                             </div>
                         </a>
                     </div>
@@ -259,6 +269,7 @@
                                 </div>
                                 <span class="title">Vivaldi - Autumn, 3rd Mvt</span><br>
                                 <span class="date">2023 • Single</span><br>
+                                <span class="keywords" hidden>Arranjo,Piano,2023,solo</span>
                             </div>
                         </a>
                     </div>
@@ -274,6 +285,7 @@
                                 </div>
                                 <span class="title">Vivaldi - Winter, 3st Mvt</span><br>
                                 <span class="date">2023 • Single</span><br>
+                                <span class="keywords" hidden>Arranjo,Piano,2023,solo</span>
                             </div>
                         </a>
                     </div>
@@ -291,6 +303,7 @@
                                 </div>
                                 <span class="title">Nostalgic Era</span><br>
                                 <span class="date">2024 • Single</span><br>
+                                <span class="keywords" hidden>Orquestação,Piano,2024,soundtrack</span>
                             </div>
                         </a>
                     </div>
@@ -307,14 +320,16 @@
                                 </div>
                                 <span class="title">The Interloper</span><br>
                                 <span class="date">2024 • Single</span><br>
+                                <span class="keywords" hidden>Orquestação,Piano,2024,soundtrack</span>
                             </div>
                         </a>
                     </div>
+
                     <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano prelude solo">
-                        <div class="card-obras prelude5" data-page="prelude5">
-                            <a href="prelude5.html" style="text-decoration: none;">
+                        <a href="prelude5.html" style="text-decoration: none;">
+                            <div class="card-obras prelude5" data-page="prelude5" card-obras-color="var(--main-color)">
                                 <div class="image-container">
-                                    <img src="images/prelude5.jpg" alt="Foto de uma flor branca com folhas verdes"
+                                    <img src="images/prelude5.jpg" alt="Foto de Nuvens Amarelas e Roxas"
                                         class="img-fluid">
                                     <div class="card-icon">
                                         <img src="images/search.png" width="5px !important;">
@@ -322,23 +337,26 @@
                                 </div>
                                 <span class="title">Prelude Op.6 No.5</span><br>
                                 <span class="date">2024 • Single</span><br>
-                            </a>
-                        </div>
-
+                                <span class="keywords" hidden>Prelude,Piano,2024</span>
+                            </div>
+                        </a>
                     </div>
+                    
                     <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano prelude solo">
-                        <div class="card-obras prelude6" data-page="prelude6">
-                            <a href="prelude6.html" style="text-decoration: none;">
+                        <a href="prelude6.html" style="text-decoration: none;">
+                            <div class="card-obras prelude6" data-page="prelude6" card-obras-color="var(--main-color)">
                                 <div class="image-container">
-                                    <img src="images/prelude6.jpg" alt="Sem Imagem" class="img-fluid">
+                                    <img src="images/prelude6.jpg" alt="Foto de Nuvens Amarelas e Roxas"
+                                        class="img-fluid">
                                     <div class="card-icon">
                                         <img src="images/search.png" width="5px !important;">
                                     </div>
                                 </div>
                                 <span class="title">Prelude Op.7 No.6</span><br>
                                 <span class="date">2024 • Single</span><br>
-                            </a>
-                        </div>
+                                <span class="keywords" hidden>Prelude,Piano,2024,soundtrack</span>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano waltz solo">
                         <a href="waltz2.html" style="text-decoration: none;">
@@ -352,22 +370,26 @@
                                 </div>
                                 <span class="title">Waltz Op.8 No.2</span><br>
                                 <span class="date">2024 • Single</span><br>
+                                <span class="keywords" hidden>Waltz,Piano,2024,soundtrack</span>
                             </div>
                         </a>
                     </div>
+
                     <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano prelude solo">
-                        <div class="card-obras prelude7" data-page="prelude7">
-                            <a href="prelude7.html" style="text-decoration: none;">
+                        <a href="prelude7.html" style="text-decoration: none;">
+                            <div class="card-obras prelude7" data-page="prelude7" card-obras-color="var(--main-color)">
                                 <div class="image-container">
-                                    <img src="images/prelude7.jpg" alt="Sem Imagem" class="img-fluid">
+                                    <img src="images/prelude7.jpg" alt="Foto de Nuvens Amarelas e Roxas"
+                                        class="img-fluid">
                                     <div class="card-icon">
                                         <img src="images/search.png" width="5px !important;">
                                     </div>
                                 </div>
                                 <span class="title">Prelude Op.9 No.7</span><br>
                                 <span class="date">2024 • Single</span><br>
-                            </a>
-                        </div>
+                                <span class="keywords" hidden>Prelude,Piano,2024,soundtrack</span>
+                            </div>
+                        </a>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano violino arranjo">
@@ -382,6 +404,7 @@
                                 </div>
                                 <span class="title">Memoria Timoris</span><br>
                                 <span class="date">2025 • Single</span><br>
+                                <span class="keywords" hidden>Ordem Paranormal, Enigma do Medo, OST</span>
                             </div>
                         </a>
                     </div>

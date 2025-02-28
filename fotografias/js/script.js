@@ -538,3 +538,68 @@ style.innerHTML = `
 `;
 document.head.appendChild(style);
 
+
+//Filtro de pesquisa
+document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("searchInput");
+    const cardsContainer = document.querySelector(".container-obras");
+    const cards = document.querySelectorAll(".card-obras-total");
+
+    // Função para normalizar texto (remover acentos e converter ç -> c)
+    function normalizeText(text) {
+        return text
+            .normalize("NFD") // Decompõe caracteres acentuados
+            .replace(/[\u0300-\u036f]/g, "") // Remove marcas diacríticas
+            .replace(/ç/g, "c") // Substitui 'ç' por 'c'
+            .toLowerCase();
+    }
+
+    // Adiciona efeito de transição aos cards
+    cards.forEach(card => {
+        card.style.transition = "opacity 0.3s ease-in-out";
+        card.style.opacity = "1";
+    });
+
+    searchInput.addEventListener("input", function () {
+        const searchText = normalizeText(searchInput.value);
+        let hasResults = false;
+
+        cards.forEach(card => {
+            const title = normalizeText(card.querySelector(".title").innerText);
+            const keywords = normalizeText(card.querySelector(".keywords")?.innerText || "");
+
+            if (title.includes(searchText) || keywords.includes(searchText)) {
+                card.style.display = "flex"; // Ajuste caso use flexbox
+                setTimeout(() => {
+                    card.style.opacity = "1";
+                }, 50);
+                hasResults = true;
+            } else {
+                card.style.opacity = "0";
+                setTimeout(() => {
+                    card.style.display = "none";
+                }, 300);
+            }
+        });
+
+        // Remove mensagem antiga, se houver
+        const existingMessage = document.getElementById("no-results-message");
+        if (existingMessage) {
+            existingMessage.remove();
+        }
+
+        // Se não houver resultados, adiciona a mensagem
+        if (!hasResults) {
+            const noResultsMessage = document.createElement("div");
+            noResultsMessage.id = "no-results-message";
+            noResultsMessage.innerHTML = `
+                <div class="container pt-0">
+                    <div class="container-obras row mt-40 mb-40 text-center">
+                        <h1 style="margin-top:100px;margin-bottom:100px;">Sem Resultados <br>=(</h1>
+                    </div>
+                </div>
+            `;
+            cardsContainer.appendChild(noResultsMessage);
+        }
+    });
+});
