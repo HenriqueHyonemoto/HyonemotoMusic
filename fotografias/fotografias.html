@@ -3,6 +3,7 @@
 <!-- w1 - Fotografia janela -->
 <!-- Nostalgic era: Cores inspiradas em undertale (ruinas) -->
 <!-- w2 Céu inspirado no ceu de banjo tooie -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -124,15 +125,43 @@
             <!-- Seção de Menu de Pesquisa -->
             <div class="col-xl-2 filter-menu  order-xl-1 order-1">
                 <h1>Filtrar</h1>
-                <div class="filter-item" data-submenu="submenu-piano" data-page="piano"><span class="filter-arrow"><i
-                            class="fa-solid fa-caret-right"></i></span> Piano</div>
-                <div id="submenu-piano" class="filter-submenu">
-                    <div class="filter-item filter-category" data-page="preludes"><span class="filter-arrow"><i
-                                class="fa-solid fa-caret-right"></i></span> Prelúdios</div>
-                    <div class="filter-item filter-category" data-page="waltzes"><span class="filter-arrow"><i
-                                class="fa-solid fa-caret-right"></i></span> Valsas</div>
-                                         
-                </div>
+
+                <div class="filter-item" data-submenu="submenu-todos" data-category="all"><span class="filter-arrow"><i
+                    class="fa-solid fa-caret-right"></i></span> Todos</div>
+        <div class="filter-item" data-submenu="submenu-piano" data-category="piano"><span class="filter-arrow"><i
+                    class="fa-solid fa-caret-right"></i></span> Piano</div>
+        <div id="submenu-piano" class="filter-submenu">
+            <div class="filter-item filter-category" data-category="prelude" data-submenu="submenu-prelude"
+                data-id="piano-prelude"><span class="filter-arrow"><i
+                        class="fa-solid fa-caret-right"></i></span> Prelúdio</div>
+            <div id="submenu-prelude" class="filter-submenu submenu-neto">
+                <!-- <div class="filter-item filter-category" data-category="teste"><span class="filter-arrow"><i
+                            class="fa-solid fa-caret-right"></i></span> teste</div> -->
+            </div>
+
+            <div class="filter-item filter-category" data-category="waltz" data-submenu="submenu-waltz"
+                data-id="piano-waltz"><span class="filter-arrow"><i
+                        class="fa-solid fa-caret-right"></i></span> Valsa</div>
+            <div id="submenu-waltz" class="filter-submenu submenu-neto">
+                <!-- <div class="filter-item filter-category" data-category="teste"><span class="filter-arrow"><i
+                            class="fa-solid fa-caret-right"></i></span> teste</div> -->
+            </div>
+
+            <div class="filter-item filter-category" data-category="arranjo" data-submenu="submenu-arranjo"
+                data-id="piano-arranjo"><span class="filter-arrow"><i
+                        class="fa-solid fa-caret-right"></i></span> Arranjo</div>
+            <div id="submenu-arranjo" class="filter-submenu submenu-neto">
+                <!-- <div class="filter-item filter-category" data-category="teste"><span class="filter-arrow"><i
+                            class="fa-solid fa-caret-right"></i></span> teste</div> -->
+            </div>
+            
+
+        </div>
+
+
+ 
+
+            
                 <div class="filter-item" data-submenu="submenu-soundtracks" data-page="orquestracoes"><span
                         class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Orquestrações</div>
                 <div id="submenu-soundtracks" class="filter-submenu">
@@ -149,24 +178,32 @@
 
             <!-- Seção de Conteúdo Principal -->
             <div class="col-xl-8 main-content order-xl-2 order-3">
-                <h1>Fotografias</h1>
-                <div class="container-obras row">
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <a href="prelude1.html" style="text-decoration: none;">
-                        <div class="card-obras prelude1" data-page="prelude1" card-obras-color="var(--main-orange)">
-                            <div class="image-container">
-                                <img src="images/preludesvol1.png" alt="Foto de um Abajur" class="img-fluid">
-                                <div class="card-icon">
-                                    <img src="images/search.png" width="5px !important;">
-                                </div>
-                            </div>
-                            <span class="title">Preludes, Vol. 1</span><br>
-                            <span class="date">2022 • EP</span><br>
-                        </div>
-                    </a>
+                <div class="row d-flex align-items-center">
+
+                    <div class="">
+                        <h1>Fotografias</h1>
+
                     </div>
-                    
-                    <div class="col-lg-3 col-md-4 col-6">
+
+                </div>
+                <div class="container-obras row">
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano prelude solo">
+                        <a href="prelude1.html" style="text-decoration: none;">
+                            <div class="card-obras prelude1" data-page="prelude1" card-obras-color="var(--main-orange)">
+                                <div class="image-container">
+                                    <img src="images/preludesvol1.png" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Preludes, Vol. 1</span><br>
+                                <span class="date">2022 • EP</span><br>
+                                <span class="keywords" hidden>Prelude,Piano,2022,solo
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano waltz solo">
                         <a href="waltz1.html" style="text-decoration: none;">
                             <div class="card-obras waltz1" data-page="waltz1" card-obras-color="brown">
                                 <div class="image-container">
@@ -181,7 +218,7 @@
                         </a>
                     </div>
 
-                    <div class="col-lg-3 col-md-4 col-6">
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano arranjo solo">
                         <a href="spring1.html" style="text-decoration: none;">
                             <div class="card-obras spring" data-page="spring1" card-obras-color="brown">
                                 <div class="image-container">
@@ -196,7 +233,7 @@
                         </a>
                     </div>
 
-                    <div class="col-lg-3 col-md-4 col-6">
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano arranjo solo">
                         <a href="summer3.html" style="text-decoration: none;">
                             <div class="card-obras summer" data-page="summer3" card-obras-color="brown">
                                 <div class="image-container">
@@ -211,7 +248,7 @@
                         </a>
                     </div>
 
-                    <div class="col-lg-3 col-md-4 col-6">
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano arranjo solo">
                         <a href="autumn3.html" style="text-decoration: none;">
                             <div class="card-obras prelude1" data-page="autumn3" card-obras-color="brown">
                                 <div class="image-container">
@@ -226,7 +263,7 @@
                         </a>
                     </div>
 
-                    <div class="col-lg-3 col-md-4 col-6">
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano arranjo solo">
                         <a href="winter1.html" style="text-decoration: none;">
                             <div class="card-obras white" data-page="winter3" card-obras-color="brown">
                                 <div class="image-container">
@@ -240,70 +277,75 @@
                             </div>
                         </a>
                     </div>
-                    
-                                    
-                    <div class="col-lg-3 col-md-4 col-6">
+
+
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="soundtrack orquestracao">
                         <a href="nostalgicera.html" style="text-decoration: none;">
-                        <div class="card-obras nostalgicera" data-page="nostalgicera" card-obras-color="brown">
-                            <div class="image-container">
-                                <img src="images/NostalgicEra.png" alt="Foto de uma janela escura" class="img-fluid">
-                                <div class="card-icon">
-                                    <img src="images/search.png" width="5px !important;">
+                            <div class="card-obras nostalgicera" data-page="nostalgicera" card-obras-color="brown">
+                                <div class="image-container">
+                                    <img src="images/NostalgicEra.png" alt="Foto de uma janela escura"
+                                        class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
                                 </div>
+                                <span class="title">Nostalgic Era</span><br>
+                                <span class="date">2024 • Single</span><br>
                             </div>
-                            <span class="title">Nostalgic Era</span><br>
-                            <span class="date">2024 • Single</span><br>
-                        </div>
-                    </a>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <a href="theinterloper.html" style="text-decoration: none;">
-                        <div class="card-obras prelude4" data-page="theinterloper" card-obras-color="var(--main-color)">
-                            <div class="image-container">
-                                <img src="images/TheInterloper.jpg" alt="Foto de Nuvens Amarelas e Roxas" class="img-fluid">
-                                <div class="card-icon">
-                                    <img src="images/search.png" width="5px !important;">
-                                </div>
-                            </div>
-                            <span class="title">The Interloper</span><br>
-                            <span class="date">2024 • Single</span><br>
-                        </div>
                         </a>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-6">
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="soundtrack orquestracao">
+                        <a href="theinterloper.html" style="text-decoration: none;">
+                            <div class="card-obras prelude4" data-page="theinterloper"
+                                card-obras-color="var(--main-color)">
+                                <div class="image-container">
+                                    <img src="images/TheInterloper.jpg" alt="Foto de Nuvens Amarelas e Roxas"
+                                        class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">The Interloper</span><br>
+                                <span class="date">2024 • Single</span><br>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano prelude solo">
                         <div class="card-obras prelude5" data-page="prelude5">
                             <a href="prelude5.html" style="text-decoration: none;">
-                            <div class="image-container">
-                                <img src="images/prelude5.jpg" alt="Foto de uma flor branca com folhas verdes" class="img-fluid">
-                                <div class="card-icon">
-                                    <img src="images/search.png" width="5px !important;">
+                                <div class="image-container">
+                                    <img src="images/prelude5.jpg" alt="Foto de uma flor branca com folhas verdes"
+                                        class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
                                 </div>
-                            </div>
-                            <span class="title">Prelude Op.6 No.5</span><br>
-                            <span class="date">2024 • Single</span><br>
-                        </a>
+                                <span class="title">Prelude Op.6 No.5</span><br>
+                                <span class="date">2024 • Single</span><br>
+                            </a>
                         </div>
-                        
+
                     </div>
-                    <div class="col-lg-3 col-md-4 col-6">
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano prelude solo">
                         <div class="card-obras prelude6" data-page="prelude6">
                             <a href="prelude6.html" style="text-decoration: none;">
-                            <div class="image-container">
-                                <img src="images/prelude6.jpg" alt="Sem Imagem" class="img-fluid">
-                                <div class="card-icon">
-                                    <img src="images/search.png" width="5px !important;">
+                                <div class="image-container">
+                                    <img src="images/prelude6.jpg" alt="Sem Imagem" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
                                 </div>
-                            </div>
-                            <span class="title">Prelude Op.7 No.6</span><br>
-                            <span class="date">2024 • Single</span><br>
+                                <span class="title">Prelude Op.7 No.6</span><br>
+                                <span class="date">2024 • Single</span><br>
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-6">
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano waltz solo">
                         <a href="waltz2.html" style="text-decoration: none;">
                             <div class="card-obras waltz2" data-page="waltz2" card-obras-color="var(--main-color)">
                                 <div class="image-container">
-                                    <img src="images/waltz2.jpg" alt="Foto de Nuvens Amarelas e Roxas" class="img-fluid">
+                                    <img src="images/waltz2.jpg" alt="Foto de Nuvens Amarelas e Roxas"
+                                        class="img-fluid">
                                     <div class="card-icon">
                                         <img src="images/search.png" width="5px !important;">
                                     </div>
@@ -313,26 +355,27 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-6">
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano prelude solo">
                         <div class="card-obras prelude7" data-page="prelude7">
                             <a href="prelude7.html" style="text-decoration: none;">
-                            <div class="image-container">
-                                <img src="images/prelude7.jpg" alt="Sem Imagem" class="img-fluid">
-                                <div class="card-icon">
-                                    <img src="images/search.png" width="5px !important;">
+                                <div class="image-container">
+                                    <img src="images/prelude7.jpg" alt="Sem Imagem" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
                                 </div>
-                            </div>
-                            <span class="title">Prelude Op.9 No.7</span><br>
-                            <span class="date">2024 • Single</span><br>
-                        </a>
+                                <span class="title">Prelude Op.9 No.7</span><br>
+                                <span class="date">2024 • Single</span><br>
+                            </a>
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-4 col-6">
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano violino arranjo">
                         <a href="memoriatimoris.html" style="text-decoration: none;">
                             <div class="card-obras purple" data-page="memoriatimoris" card-obras-color="brown">
                                 <div class="image-container">
-                                    <img src="images/memoria-timoris.jpg" alt="Foto de uma janela escura" class="img-fluid">
+                                    <img src="images/memoria-timoris.jpg" alt="Foto de uma janela escura"
+                                        class="img-fluid">
                                     <div class="card-icon">
                                         <img src="images/search.png" width="5px !important;">
                                     </div>
@@ -346,8 +389,10 @@
                 <br>
                 <hr>
                 <h1 id="1">Curiosidades</h1>
-                <p>1. Todas as fotos mostradas aqui estarão em uma proporção 1:1 (Quadrada) pois é nessa proporção que as capas de album são mostradas, porém com a minha camera, as fotos originalmente são tiradas em 4:3.</p>
-                
+                <p>1. Todas as fotos mostradas aqui estarão em uma proporção 1:1 (Quadrada) pois é nessa proporção que
+                    as capas de album são mostradas, porém com a minha camera, as fotos originalmente são tiradas em
+                    4:3.</p>
+
             </div>
             <!-- Seção de Índice de Conteúdo -->
             <div class="col-xl-2 table-of-contents order-xl-3 order-2">

@@ -206,35 +206,35 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Filtro de Obras
-document.addEventListener('DOMContentLoaded', function() {
-    const filterItems = document.querySelectorAll('.filter-item[data-submenu]');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const filterItems = document.querySelectorAll('.filter-item[data-submenu]');
 
-    filterItems.forEach(item => {
-        item.addEventListener('click', function() {
-            const submenuId = this.getAttribute('data-submenu');
-            const submenu = document.getElementById(submenuId);
-            const arrow = this.querySelector('.filter-arrow');
+//     filterItems.forEach(item => {
+//         item.addEventListener('click', function() {
+//             const submenuId = this.getAttribute('data-submenu');
+//             const submenu = document.getElementById(submenuId);
+//             const arrow = this.querySelector('.filter-arrow');
 
-            // Fechar todos os submenus e resetar os ícones
-            filterItems.forEach(otherItem => {
-                const otherSubmenuId = otherItem.getAttribute('data-submenu');
-                const otherSubmenu = document.getElementById(otherSubmenuId);
-                const otherArrow = otherItem.querySelector('.filter-arrow');
+//             // Fechar todos os submenus e resetar os ícones
+//             filterItems.forEach(otherItem => {
+//                 const otherSubmenuId = otherItem.getAttribute('data-submenu');
+//                 const otherSubmenu = document.getElementById(otherSubmenuId);
+//                 const otherArrow = otherItem.querySelector('.filter-arrow');
 
-                if (otherSubmenu && otherSubmenu !== submenu) {
-                    otherSubmenu.classList.remove('open');
-                    otherArrow.classList.remove('open');
-                }
-            });
+//                 if (otherSubmenu && otherSubmenu !== submenu) {
+//                     otherSubmenu.classList.remove('open');
+//                     otherArrow.classList.remove('open');
+//                 }
+//             });
 
-            // Abrir o submenu clicado e rotacionar o ícone
-            if (submenu) {
-                submenu.classList.toggle('open');
-                arrow.classList.toggle('open');
-            }
-        });
-    });
-});
+//             // Abrir o submenu clicado e rotacionar o ícone
+//             if (submenu) {
+//                 submenu.classList.toggle('open');
+//                 arrow.classList.toggle('open');
+//             }
+//         });
+//     });
+// });
 
 //selecionar conteudo central e indice da navbar
 document.addEventListener('DOMContentLoaded', function() {
@@ -414,5 +414,127 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const filterItems = document.querySelectorAll('.filter-item[data-submenu]');
+    const cardContainers = document.querySelectorAll('.card-obras-total');
 
+    // Verificar se a URL contém hashes (#)
+    if (window.location.hash) {
+        const hashes = window.location.hash.substring(1).split('-'); // Separar os valores por '-'
+
+        hashes.forEach(hash => {
+            // Abrir os submenus correspondentes
+            const submenu = document.getElementById(`submenu-${hash}`);
+            const arrow = document.querySelector(`.filter-item[data-submenu="submenu-${hash}"] .filter-arrow`);
+
+            if (submenu) {
+                submenu.classList.add('open');
+            }
+            if (arrow) {
+                arrow.classList.add('open');
+            }
+
+            // Aplicar filtro automaticamente nos cards
+            cardContainers.forEach(container => {
+                const cardCategories = container.getAttribute('categoria');
+                if (cardCategories) {
+                    const categoriesArray = cardCategories.split(' ');
+                    if (categoriesArray.includes(hash)) {
+                        container.style.display = 'block';
+                        container.classList.add('fade-in');
+                    } else {
+                        container.style.display = 'none';
+                    }
+                }
+            });
+        });
+    }
+
+    // Evento de clique nos filtros
+    filterItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const submenuId = this.getAttribute('data-submenu');
+            const submenu = document.getElementById(submenuId);
+            const arrow = this.querySelector('.filter-arrow');
+
+            // Verificar se o submenu clicado é um submenu-neto
+            const isSubmenuNeto = submenu.classList.contains('submenu-neto');
+
+            // Fechar todos os submenus e resetar os ícones
+            filterItems.forEach(otherItem => {
+                const otherSubmenuId = otherItem.getAttribute('data-submenu');
+                const otherSubmenu = document.getElementById(otherSubmenuId);
+                const otherArrow = otherItem.querySelector('.filter-arrow');
+
+                if (otherSubmenu && otherSubmenu !== submenu) {
+                    if (isSubmenuNeto) {
+                        // Se o submenu clicado é um submenu-neto, fechar apenas outros submenu-neto
+                        if (otherSubmenu.classList.contains('submenu-neto')) {
+                            otherSubmenu.classList.remove('open');
+                            otherArrow.classList.remove('open');
+                        }
+                    } else {
+                        // Se não for um submenu-neto, fechar todos os outros submenus
+                        otherSubmenu.classList.remove('open');
+                        otherArrow.classList.remove('open');
+                    }
+                }
+            });
+
+            // Abrir o submenu clicado e rotacionar o ícone
+            if (submenu) {
+                submenu.classList.toggle('open');
+                arrow.classList.toggle('open');
+            }
+        });
+    });
+
+    // Evento de clique para filtrar os cards
+    filterItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+            
+            if (!category) return; // Ignora se não tiver data-category
+
+            cardContainers.forEach(container => {
+                container.classList.remove('fade-in');
+            });
+
+            if (category === 'all') {
+                cardContainers.forEach(container => {
+                    container.style.display = 'block';
+                    setTimeout(() => container.classList.add('fade-in'), 10);
+                });
+                return;
+            }
+
+            cardContainers.forEach(container => {
+                const cardCategories = container.getAttribute('categoria');
+                if (cardCategories) {
+                    const categoriesArray = cardCategories.split(' ');
+                    if (categoriesArray.includes(category)) {
+                        container.style.display = 'block';
+                        setTimeout(() => container.classList.add('fade-in'), 10);
+                    } else {
+                        container.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+});
+
+// Adicionar CSS para a animação
+const style = document.createElement('style');
+style.innerHTML = `
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+`;
+document.head.appendChild(style);
 
