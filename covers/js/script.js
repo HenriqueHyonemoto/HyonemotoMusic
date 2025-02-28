@@ -1,12 +1,21 @@
 // https://lucide.dev/icons/
 //lucide.createIcons();
 
+// Store the current page URL in sessionStorage when the page loads
+window.addEventListener('load', () => {
+    sessionStorage.setItem('previousPage', document.referrer);
+});
+
 function voltarPagina() {
-    const previousPage = document.referrer; // Obtém a URL da página anterior
+    const previousPage = sessionStorage.getItem('previousPage'); // Obtém a URL da página anterior
     const currentPage = window.location.href.split("#")[0]; // Obtém a URL sem o hash
 
-    if (!previousPage.startsWith(currentPage)) {
-        window.history.back();
+    if (!previousPage || !previousPage.startsWith(currentPage)) {
+        if (previousPage) {
+            window.history.back();
+        } else {
+            window.location.href = 'Covers.html';
+        }
     }
 }
 
