@@ -1522,3 +1522,14 @@ body.no-scroll {
 
 }
 
+/* filtro mobile */
+.mobile-filter {
+    display: none;
+}
+
+/* Mostra o campo de pesquisa em telas com largura máxima de 768px */
+@media (max-width: 1000px) {
+    .mobile-filter {
+        display: block;
+    }
+}
