@@ -446,29 +446,29 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    const navbarItems = document.querySelectorAll('.navbar-item');
+    //  const navbarItems = document.querySelectorAll('.navbar-item');
 
-    navbarItems.forEach(item => {
-        item.addEventListener('click', function () {
-            const page = this.getAttribute('data-page');
-            const mainContent = document.querySelector('.main-content .js-require');
-            const tableOfContents = document.querySelector('.table-of-contents .js-require');
+    // navbarItems.forEach(item => {
+    //     item.addEventListener('click', function () {
+    //         const page = this.getAttribute('data-page');
+    //         const mainContent = document.querySelector('.main-content .js-require');
+    //         const tableOfContents = document.querySelector('.table-of-contents .js-require');
 
-            // Atualiza os conteúdos
-            mainContent.setAttribute('page', `${page}.html`);
-            tableOfContents.setAttribute('page', `${page}_indice.html`);
-            loadContent(mainContent);
-            loadContent(tableOfContents);
+    //         // Atualiza os conteúdos
+    //         mainContent.setAttribute('page', `${page}.html`);
+    //         tableOfContents.setAttribute('page', `${page}_indice.html`);
+    //         loadContent(mainContent);
+    //         loadContent(tableOfContents);
 
-            // Fecha o submenu
-            navbarSubmenu.classList.remove('show');
-            navbarSubmenu.classList.add('hide');
-            setTimeout(() => {
-                navbarSubmenu.classList.remove('hide');
-                navbarSubmenu.style.display = 'none';
-            }, 500);
-        });
-    });
+    //         // Fecha o submenu
+    //         navbarSubmenu.classList.remove('show');
+    //         navbarSubmenu.classList.add('hide');
+    //         setTimeout(() => {
+    //             navbarSubmenu.classList.remove('hide');
+    //             navbarSubmenu.style.display = 'none';
+    //         }, 500);
+    //     });
+    // });
 
     function loadContent(element) {
         const file = element.getAttribute('page');
