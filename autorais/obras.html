@@ -39,6 +39,9 @@
                             <li class="nav-item"><a class="nav-link" href="#" data-page="obras">Obras</a></li>
                             <li class="nav-item"><a class="nav-link" href="#" data-page="historia">Minha História no
                                     Piano</a></li>
+                            <li class="nav-item ms-auto d-flex align-items-center">
+                                <input type="text" id="searchInput" class="form-control" placeholder="Pesquisar...">
+                            </li>
                         </ul>
 
                     </div>
@@ -121,61 +124,95 @@
             <!-- Seção de Menu de Pesquisa -->
             <div class="col-xl-2 filter-menu  order-xl-1 order-1">
                 <h1>Filtrar</h1>
-                <div class="filter-item" data-submenu="submenu-piano" data-page="piano"><span class="filter-arrow"><i
-                            class="fa-solid fa-caret-right"></i></span> Piano</div>
+
+                <div class="filter-item" data-submenu="submenu-todos" data-category="all"><span class="filter-arrow"><i
+                            class="fa-solid fa-caret-right"></i></span> Todos</div>
+
+
+                <div class="filter-item" data-submenu="submenu-piano" data-category="piano"><span
+                        class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Piano</div>
                 <div id="submenu-piano" class="filter-submenu">
-                    <div class="filter-item filter-category" data-page="preludes"><span class="filter-arrow"><i
-                                class="fa-solid fa-caret-right"></i></span> Prelúdios</div>
-                    <div class="filter-item filter-category" data-page="waltzes"><span class="filter-arrow"><i
-                                class="fa-solid fa-caret-right"></i></span> Valsas</div>
+                    <div class="filter-item filter-category" data-category="prelude" data-submenu="submenu-prelude"
+                        data-id="piano-prelude"><span class="filter-arrow"><i
+                                class="fa-solid fa-caret-right"></i></span> Prelúdio</div>
+                    <div id="submenu-prelude" class="filter-submenu submenu-neto">
+                        <!-- <div class="filter-item filter-category" data-category="teste"><span class="filter-arrow"><i
+                            class="fa-solid fa-caret-right"></i></span> teste</div> -->
+                    </div>
+
+                    <div class="filter-item filter-category" data-category="waltz" data-submenu="submenu-waltz"
+                        data-id="piano-waltz"><span class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span>
+                        Valsa</div>
+                    <div id="submenu-waltz" class="filter-submenu submenu-neto">
+                        <!-- <div class="filter-item filter-category" data-category="teste"><span class="filter-arrow"><i
+                            class="fa-solid fa-caret-right"></i></span> teste</div> -->
+                    </div>
+
+                    <div class="filter-item filter-category" data-category="arranjo" data-submenu="submenu-arranjo"
+                        data-id="piano-arranjo"><span class="filter-arrow"><i
+                                class="fa-solid fa-caret-right"></i></span> Arranjo</div>
+                    <div id="submenu-arranjo" class="filter-submenu submenu-neto">
+                        <!-- <div class="filter-item filter-category" data-category="teste"><span class="filter-arrow"><i
+                            class="fa-solid fa-caret-right"></i></span> teste</div> -->
+                    </div>
                 </div>
-                <div class="filter-item" data-submenu="submenu-soundtracks" data-page="orquestracoes"><span
+
+                <div class="filter-item" data-submenu="submenu-orquestracoes" data-category="orquestracao"><span
                         class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Orquestrações</div>
-                <div id="submenu-soundtracks" class="filter-submenu">
-                    <div class="filter-item filter-category" data-page="soundtracks"><span class="filter-arrow"><i
-                                class="fa-solid fa-caret-right"></i></span> Soundtracks</div>
+                <div id="submenu-orquestracoes" class="filter-submenu">
+                    <div class="filter-item filter-category" data-category="soundtrack"
+                        data-submenu="submenu-soundtrack" data-id="orquestracao-soundtrack"><span
+                            class="filter-arrow"><i class="fa-solid fa-caret-right"></i></span> Soundtracks</div>
+                    <div id="submenu-soudtrack" class="filter-submenu submenu-neto">
+                        <!-- <div class="filter-item filter-category" data-category="teste"><span class="filter-arrow"><i
+                    class="fa-solid fa-caret-right"></i></span> teste</div> -->
+                    </div>
+
+
                 </div>
-                <div class="filter-item" data-submenu="submenu-violao" data-page="violao"><span class="filter-arrow"><i
-                            class="fa-solid fa-caret-right"></i></span> Violão</div>
-                <div id="submenu-violao" class="filter-submenu">
-                    <div class="filter-item filter-category" data-page="obrasviolao"><span class="filter-arrow"><i
-                                class="fa-solid fa-caret-right"></i></span> Ainda não fiz =(</div>
-                </div>
+
+
+
+
+
+
+
+
             </div>
 
             <!-- Seção de Conteúdo Principal -->
             <div class="col-xl-8 main-content order-xl-2 order-3">
                 <h1>Obras</h1>
                 <div class="container-obras row">
-                    <div class="col-lg-3 col-md-4 col-6">
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano prelude solo">
                         <a href="prelude1.html" style="text-decoration: none;">
-                        <div class="card-obras prelude1" data-page="prelude1" card-obras-color="var(--main-orange)">
-                            <div class="image-container">
-                                <img src="images/preludesvol1.png" alt="Foto de um Abajur" class="img-fluid">
-                                <div class="card-icon">
-                                    <img src="images/search.png" width="5px !important;">
+                            <div class="card-obras prelude1" data-page="prelude1" card-obras-color="var(--main-orange)">
+                                <div class="image-container">
+                                    <img src="images/preludesvol1.png" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
                                 </div>
+                                <span class="title">Prelude Op.1 No.1 </span><br>
+                                <span class="date">2022 • EP</span><br>
                             </div>
-                            <span class="title">Prelude Op.1 No.1 </span><br>
-                            <span class="date">2022 • EP</span><br>
-                        </div>
-                    </a>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <a href="prelude2.html" style="text-decoration: none;">
-                        <div class="card-obras prelude2" data-page="prelude2" card-obras-color="var(--main-purple)">
-                            <div class="image-container">
-                                <img src="images/favicon.jpg" alt="Foto de um Abajur" class="img-fluid">
-                                <div class="card-icon">
-                                    <img src="images/search.png" width="5px !important;">
-                                </div>
-                            </div>
-                            <span class="title">Prelude Op.2 No.2</span><br>
-                            <span class="date">2022 • EP</span><br>
-                        </div>
                         </a>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-6">
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano prelude solo">
+                        <a href="prelude2.html" style="text-decoration: none;">
+                            <div class="card-obras prelude2" data-page="prelude2" card-obras-color="var(--main-purple)">
+                                <div class="image-container">
+                                    <img src="images/favicon.jpg" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Prelude Op.2 No.2</span><br>
+                                <span class="date">2022 • EP</span><br>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano waltz solo">
                         <a href="waltz1.html" style="text-decoration: none;">
                             <div class="card-obras waltz1" data-page="waltz1" card-obras-color="brown">
                                 <div class="image-container">
@@ -189,97 +226,109 @@
                             </div>
                         </a>
                     </div>
-                    
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <div class="card-obras prelude3" data-page="prelude3" >
-                            <a href="prelude3.html" style="text-decoration: none;">
-                            <div class="image-container">
-                                <img src="images/preludeg.png" alt="Foto de um Abajur" class="img-fluid">
-                                <div class="card-icon">
-                                    <img src="images/search.png" width="5px !important;">
+
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano prelude solo">
+                        <a href="prelude3.html" style="text-decoration: none;">
+                            <div class="card-obras prelude3" data-page="prelude3">
+                                <div class="image-container">
+                                    <img src="images/preludeg.png" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
                                 </div>
+                                <span class="title">Prelude Op.4 No.3</span><br>
+                                <span class="date">2022 • EP</span><br>
                             </div>
-                            <span class="title">Prelude Op.4 No.3</span><br>
-                            <span class="date">2022 • EP</span><br>
-                            </a>
-                        </div>
-                    </div>                   
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <div class="card-obras prelude4" data-page="prelude4" >
+                        </a>
+
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano prelude solo">
+                       
                             <a href="prelude4.html" style="text-decoration: none;">
-                            <div class="image-container">
-                                <img src="images/preludeb.jpg" alt="Foto de um Abajur" class="img-fluid">
-                                <div class="card-icon">
-                                    <img src="images/search.png" width="5px !important;">
+                                <div class="card-obras prelude4" data-page="prelude4">
+                                <div class="image-container">
+                                    <img src="images/preludeb.jpg" alt="Foto de um Abajur" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
                                 </div>
-                            </div>
-                            <span class="title">Prelude Op.5 No.4</span><br>
-                            <span class="date">2022 • EP</span><br>
+                                <span class="title">Prelude Op.5 No.4</span><br>
+                                <span class="date">2022 • EP</span><br>
+                                </div>
                             </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <a href="nostalgicera.html" style="text-decoration: none;">
-                        <div class="card-obras nostalgicera" data-page="nostalgicera" card-obras-color="brown">
-                            <div class="image-container">
-                                <img src="images/NostalgicEra.png" alt="Foto de uma janela escura" class="img-fluid">
-                                <div class="card-icon">
-                                    <img src="images/search.png" width="5px !important;">
-                                </div>
-                            </div>
-                            <span class="title">Nostalgic Era</span><br>
-                            <span class="date">2024 • Single</span><br>
-                        </div>
-                    </a>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <a href="theinterloper.html" style="text-decoration: none;">
-                        <div class="card-obras prelude4" data-page="theinterloper" card-obras-color="var(--main-purple)">
-                            <div class="image-container">
-                                <img src="images/TheInterloper.jpg" alt="Foto de Nuvens Amarelas e Roxas" class="img-fluid">
-                                <div class="card-icon">
-                                    <img src="images/search.png" width="5px !important;">
-                                </div>
-                            </div>
-                            <span class="title">The Interloper</span><br>
-                            <span class="date">2024 • Single</span><br>
-                        </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <div class="card-obras prelude5" data-page="prelude5">
-                            <a href="prelude5.html" style="text-decoration: none;">
-                            <div class="image-container">
-                                <img src="images/prelude5.jpg" alt="Foto de uma flor branca com folhas verdes" class="img-fluid">
-                                <div class="card-icon">
-                                    <img src="images/search.png" width="5px !important;">
-                                </div>
-                            </div>
-                            <span class="title">Prelude Op.6 No.5</span><br>
-                            <span class="date">2024 • Single</span><br>
-                        </a>
-                        </div>
                         
                     </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <div class="card-obras prelude6" data-page="prelude6">
-                            <a href="prelude6.html" style="text-decoration: none;">
-                            <div class="image-container">
-                                <img src="images/prelude6.jpg" alt="Sem Imagem" class="img-fluid">
-                                <div class="card-icon">
-                                    <img src="images/search.png" width="5px !important;">
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="soundtrack orquestracao">
+                        <a href="nostalgicera.html" style="text-decoration: none;">
+                            <div class="card-obras nostalgicera" data-page="nostalgicera" card-obras-color="brown">
+                                <div class="image-container">
+                                    <img src="images/NostalgicEra.png" alt="Foto de uma janela escura"
+                                        class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
                                 </div>
+                                <span class="title">Nostalgic Era</span><br>
+                                <span class="date">2024 • Single</span><br>
                             </div>
-                            <span class="title">Prelude Op.7 No.6</span><br>
-                            <span class="date">2024 • Single</span><br>
-                            </a>
-                        </div>
+                        </a>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-6">
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="soundtrack orquestracao">
+                        <a href="theinterloper.html" style="text-decoration: none;">
+                            <div class="card-obras prelude4" data-page="theinterloper"
+                                card-obras-color="var(--main-purple)">
+                                <div class="image-container">
+                                    <img src="images/TheInterloper.jpg" alt="Foto de Nuvens Amarelas e Roxas"
+                                        class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">The Interloper</span><br>
+                                <span class="date">2024 • Single</span><br>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano prelude solo">
+                        
+                            <a href="prelude5.html" style="text-decoration: none;">
+                                <div class="card-obras prelude5" data-page="prelude5">
+                                <div class="image-container">
+                                    <img src="images/prelude5.jpg" alt="Foto de uma flor branca com folhas verdes"
+                                        class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Prelude Op.6 No.5</span><br>
+                                <span class="date">2024 • Single</span><br>
+                            </div>
+                            </a>
+                        
+
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano prelude solo">
+                        
+                            <a href="prelude6.html" style="text-decoration: none;">
+                                <div class="card-obras prelude6" data-page="prelude6">
+                                <div class="image-container">
+                                    <img src="images/prelude6.jpg" alt="Sem Imagem" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
+                                </div>
+                                <span class="title">Prelude Op.7 No.6</span><br>
+                                <span class="date">2024 • Single</span><br>
+                            </div>
+                            </a>
+                        
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano waltz solo">
                         <a href="waltz2.html" style="text-decoration: none;">
                             <div class="card-obras waltz2" data-page="waltz2" card-obras-color="var(--main-purple)">
                                 <div class="image-container">
-                                    <img src="images/waltz2.jpg" alt="Foto de Nuvens Amarelas e Roxas" class="img-fluid">
+                                    <img src="images/waltz2.jpg" alt="Foto de Nuvens Amarelas e Roxas"
+                                        class="img-fluid">
                                     <div class="card-icon">
                                         <img src="images/search.png" width="5px !important;">
                                     </div>
@@ -289,29 +338,33 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <div class="card-obras prelude7" data-page="prelude7">
+                    <div class="col-lg-3 col-md-4 col-6 card-obras-total" categoria="piano prelude solo">
+                        
                             <a href="prelude7.html" style="text-decoration: none;">
-                            <div class="image-container">
-                                <img src="images/prelude7.jpg" alt="Sem Imagem" class="img-fluid">
-                                <div class="card-icon">
-                                    <img src="images/search.png" width="5px !important;">
+                                <div class="card-obras prelude7" data-page="prelude7">
+                                <div class="image-container">
+                                    <img src="images/prelude7.jpg" alt="Sem Imagem" class="img-fluid">
+                                    <div class="card-icon">
+                                        <img src="images/search.png" width="5px !important;">
+                                    </div>
                                 </div>
+                                <span class="title">Prelude Op.9 No.7</span><br>
+                                <span class="date">2024 • Single</span><br>
                             </div>
-                            <span class="title">Prelude Op.9 No.7</span><br>
-                            <span class="date">2024 • Single</span><br>
-                        </a>
+                            </a>
+                        
                         </div>
-                    </div>
                 </div>
                 <br>
                 <h1 id="1">Sobre as Obras</h1>
                 <hr>
                 <p>Minhas obras são compostas por músicas para piano solo e trilhas sonoras criadas em DAWs (Digital
-                    Audio Workstations), como <em>FL Studio</em> ou <em>Reaper</em>. Cada tipo de composição possui suas próprias
+                    Audio Workstations), como <em>FL Studio</em> ou <em>Reaper</em>. Cada tipo de composição possui suas
+                    próprias
                     características e nomenclaturas específicas.</p>
                 <p>As músicas para piano solo seguem o método de catalogação utilizado por compositores clássicos, como
-                    Chopin. Elas são identificadas pelo gênero da composição, seguido das catalogações <strong>Op. (opus)</strong> e <strong>
+                    Chopin. Elas são identificadas pelo gênero da composição, seguido das catalogações <strong>Op.
+                        (opus)</strong> e <strong>
                         No.
                         (número)
                     </strong>, refletindo uma abordagem tradicional e estruturada.</p>
@@ -345,14 +398,16 @@
                 <h1 id="4"><strong>Op.</strong></h1>
                 <hr>
                 <p>
-                    Peças para instrumentos acústicos são separadas por <strong>Op. (Opus)</strong>, que significa a obra por ordem de
+                    Peças para instrumentos acústicos são separadas por <strong>Op. (Opus)</strong>, que significa a
+                    obra por ordem de
                     publicação. Ou seja, Op.1 é a primeira obra publicada, Op.2 a segunda, e assim por diante.
                 </p>
                 <br>
                 <h1 id="5"><strong>No.</strong></h1>
                 <hr>
                 <p>
-                    Já o<strong> No. (Número)</strong> é relativo ao número específico da peça. Por exemplo, podemos ter Prelude No.1
+                    Já o<strong> No. (Número)</strong> é relativo ao número específico da peça. Por exemplo, podemos ter
+                    Prelude No.1
                     (primeiro prelúdio publicado), Prelude No.2 (segundo prelúdio publicado), ou ainda Valsa No.1
                     (primeira valsa) e Valsa No.2 (segunda valsa).
                 </p>

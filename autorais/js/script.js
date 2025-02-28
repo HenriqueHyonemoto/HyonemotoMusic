@@ -1,6 +1,21 @@
 // https://lucide.dev/icons/
 //lucide.createIcons();
+window.addEventListener('load', () => {
+    sessionStorage.setItem('previousPage', document.referrer);
+});
 
+function voltarPagina() {
+    const previousPage = sessionStorage.getItem('previousPage'); // Obtém a URL da página anterior
+    const currentPage = window.location.href.split("#")[0]; // Obtém a URL sem o hash
+
+    if (!previousPage || !previousPage.startsWith(currentPage)) {
+        if (previousPage) {
+            window.history.back();
+        } else {
+            window.location.href = 'Covers.html';
+        }
+    }
+}
 //Trocar Lingua
 document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('.language-button');
@@ -206,35 +221,35 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Filtro de Obras
-document.addEventListener('DOMContentLoaded', function() {
-    const filterItems = document.querySelectorAll('.filter-item[data-submenu]');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const filterItems = document.querySelectorAll('.filter-item[data-submenu]');
 
-    filterItems.forEach(item => {
-        item.addEventListener('click', function() {
-            const submenuId = this.getAttribute('data-submenu');
-            const submenu = document.getElementById(submenuId);
-            const arrow = this.querySelector('.filter-arrow');
+//     filterItems.forEach(item => {
+//         item.addEventListener('click', function() {
+//             const submenuId = this.getAttribute('data-submenu');
+//             const submenu = document.getElementById(submenuId);
+//             const arrow = this.querySelector('.filter-arrow');
 
-            // Fechar todos os submenus e resetar os ícones
-            filterItems.forEach(otherItem => {
-                const otherSubmenuId = otherItem.getAttribute('data-submenu');
-                const otherSubmenu = document.getElementById(otherSubmenuId);
-                const otherArrow = otherItem.querySelector('.filter-arrow');
+//             // Fechar todos os submenus e resetar os ícones
+//             filterItems.forEach(otherItem => {
+//                 const otherSubmenuId = otherItem.getAttribute('data-submenu');
+//                 const otherSubmenu = document.getElementById(otherSubmenuId);
+//                 const otherArrow = otherItem.querySelector('.filter-arrow');
 
-                if (otherSubmenu && otherSubmenu !== submenu) {
-                    otherSubmenu.classList.remove('open');
-                    otherArrow.classList.remove('open');
-                }
-            });
+//                 if (otherSubmenu && otherSubmenu !== submenu) {
+//                     otherSubmenu.classList.remove('open');
+//                     otherArrow.classList.remove('open');
+//                 }
+//             });
 
-            // Abrir o submenu clicado e rotacionar o ícone
-            if (submenu) {
-                submenu.classList.toggle('open');
-                arrow.classList.toggle('open');
-            }
-        });
-    });
-});
+//             // Abrir o submenu clicado e rotacionar o ícone
+//             if (submenu) {
+//                 submenu.classList.toggle('open');
+//                 arrow.classList.toggle('open');
+//             }
+//         });
+//     });
+// });
 
 //selecionar conteudo central e indice da navbar
 document.addEventListener('DOMContentLoaded', function() {
@@ -373,5 +388,196 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+//pesquisa
+document.addEventListener('DOMContentLoaded', function() {
+    const filterItems = document.querySelectorAll('.filter-item[data-submenu]');
+    const cardContainers = document.querySelectorAll('.card-obras-total');
+
+    // Verificar se a URL contém hashes (#)
+    if (window.location.hash) {
+        const hashes = window.location.hash.substring(1).split('-'); // Separar os valores por '-'
+
+        hashes.forEach(hash => {
+            // Abrir os submenus correspondentes
+            const submenu = document.getElementById(`submenu-${hash}`);
+            const arrow = document.querySelector(`.filter-item[data-submenu="submenu-${hash}"] .filter-arrow`);
+
+            if (submenu) {
+                submenu.classList.add('open');
+            }
+            if (arrow) {
+                arrow.classList.add('open');
+            }
+
+            // Aplicar filtro automaticamente nos cards
+            cardContainers.forEach(container => {
+                const cardCategories = container.getAttribute('categoria');
+                if (cardCategories) {
+                    const categoriesArray = cardCategories.split(' ');
+                    if (categoriesArray.includes(hash)) {
+                        container.style.display = 'block';
+                        container.classList.add('fade-in');
+                    } else {
+                        container.style.display = 'none';
+                    }
+                }
+            });
+        });
+    }
+
+    // Evento de clique nos filtros
+    filterItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const submenuId = this.getAttribute('data-submenu');
+            const submenu = document.getElementById(submenuId);
+            const arrow = this.querySelector('.filter-arrow');
+
+            // Verificar se o submenu clicado é um submenu-neto
+            const isSubmenuNeto = submenu.classList.contains('submenu-neto');
+
+            // Fechar todos os submenus e resetar os ícones
+            filterItems.forEach(otherItem => {
+                const otherSubmenuId = otherItem.getAttribute('data-submenu');
+                const otherSubmenu = document.getElementById(otherSubmenuId);
+                const otherArrow = otherItem.querySelector('.filter-arrow');
+
+                if (otherSubmenu && otherSubmenu !== submenu) {
+                    if (isSubmenuNeto) {
+                        // Se o submenu clicado é um submenu-neto, fechar apenas outros submenu-neto
+                        if (otherSubmenu.classList.contains('submenu-neto')) {
+                            otherSubmenu.classList.remove('open');
+                            otherArrow.classList.remove('open');
+                        }
+                    } else {
+                        // Se não for um submenu-neto, fechar todos os outros submenus
+                        otherSubmenu.classList.remove('open');
+                        otherArrow.classList.remove('open');
+                    }
+                }
+            });
+
+            // Abrir o submenu clicado e rotacionar o ícone
+            if (submenu) {
+                submenu.classList.toggle('open');
+                arrow.classList.toggle('open');
+            }
+        });
+    });
+
+    // Evento de clique para filtrar os cards
+    filterItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+            
+            if (!category) return; // Ignora se não tiver data-category
+
+            cardContainers.forEach(container => {
+                container.classList.remove('fade-in');
+            });
+
+            if (category === 'all') {
+                cardContainers.forEach(container => {
+                    container.style.display = 'block';
+                    setTimeout(() => container.classList.add('fade-in'), 10);
+                });
+                return;
+            }
+
+            cardContainers.forEach(container => {
+                const cardCategories = container.getAttribute('categoria');
+                if (cardCategories) {
+                    const categoriesArray = cardCategories.split(' ');
+                    if (categoriesArray.includes(category)) {
+                        container.style.display = 'block';
+                        setTimeout(() => container.classList.add('fade-in'), 10);
+                    } else {
+                        container.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+});
+
+// Adicionar CSS para a animação
+const style = document.createElement('style');
+style.innerHTML = `
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+`;
+document.head.appendChild(style);
+
+
+//Filtro de pesquisa
+document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("searchInput");
+    const cardsContainer = document.querySelector(".container-obras");
+    const cards = document.querySelectorAll(".card-obras-total");
+
+    // Função para normalizar texto (remover acentos e converter ç -> c)
+    function normalizeText(text) {
+        return text
+            .normalize("NFD") // Decompõe caracteres acentuados
+            .replace(/[\u0300-\u036f]/g, "") // Remove marcas diacríticas
+            .replace(/ç/g, "c") // Substitui 'ç' por 'c'
+            .toLowerCase();
+    }
+
+    // Adiciona efeito de transição aos cards
+    cards.forEach(card => {
+        card.style.transition = "opacity 0.3s ease-in-out";
+        card.style.opacity = "1";
+    });
+
+    searchInput.addEventListener("input", function () {
+        const searchText = normalizeText(searchInput.value);
+        let hasResults = false;
+
+        cards.forEach(card => {
+            const title = normalizeText(card.querySelector(".title").innerText);
+            const keywords = normalizeText(card.querySelector(".keywords")?.innerText || "");
+
+            if (title.includes(searchText) || keywords.includes(searchText)) {
+                card.style.display = "flex"; // Ajuste caso use flexbox
+                setTimeout(() => {
+                    card.style.opacity = "1";
+                }, 50);
+                hasResults = true;
+            } else {
+                card.style.opacity = "0";
+                setTimeout(() => {
+                    card.style.display = "none";
+                }, 300);
+            }
+        });
+
+        // Remove mensagem antiga, se houver
+        const existingMessage = document.getElementById("no-results-message");
+        if (existingMessage) {
+            existingMessage.remove();
+        }
+
+        // Se não houver resultados, adiciona a mensagem
+        if (!hasResults) {
+            const noResultsMessage = document.createElement("div");
+            noResultsMessage.id = "no-results-message";
+            noResultsMessage.innerHTML = `
+                <div class="container pt-0">
+                    <div class="container-obras row mt-40 mb-40 text-center">
+                        <h1 style="margin-top:100px;margin-bottom:100px;">Sem Resultados <br>=(</h1>
+                    </div>
+                </div>
+            `;
+            cardsContainer.appendChild(noResultsMessage);
+        }
+    });
+});
 
 
