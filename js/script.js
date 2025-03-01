@@ -80,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const info = currentSlide.querySelector('.carousel-info');
         const textElement = info.querySelector('.carousel-info-text');
         textElement.textContent = info.getAttribute('data-info');
+        info.classList.add('visible'); // Adiciona a classe visible para mostrar a informação
     }
 
     function startAutoPlay() {
@@ -125,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
     showSlide(currentIndex);
     startAutoPlay();
 });
+
 
 //adicionar texto apra area de transferencia do usuario
 document.addEventListener('DOMContentLoaded', function () {

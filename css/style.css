@@ -684,15 +684,17 @@ text-align: left;
 
 
 
+
 /* Carrosel de imagens deslizantes */
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 700px;
+    
     margin: 20px auto;
     overflow: hidden;
     cursor: pointer; /* Muda o cursor para a aparência de clicável */
 }
+
 
 .carousel-inner {
     display: flex;
@@ -706,7 +708,7 @@ text-align: left;
 }
 
 .carousel-image {
-    width: 100%;
+    width: 100% !important;
     height: auto;
     border: rgba(0, 0, 0, 0.439) solid 1px;
 }
@@ -743,34 +745,47 @@ text-align: left;
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 20%;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo transparente */
+    background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
-    text-align: left; /* Alinha o texto à esquerda */
+    text-align: left;
     opacity: 0;
     transform: translateY(100%);
     transition: opacity 0.3s ease, transform 0.3s ease;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Alinha os itens à esquerda */
-    z-index: 1; /* Garantir que a informação apareça acima da imagem */
+    justify-content: flex-start;
+    z-index: 1;
 }
+
+.carousel-info-icon {
+    width: 10% !important;
+    height: auto;
+    border: 5px solid #fff;
+    margin: 0;
+    float: left; /* Alinha a imagem à esquerda */
+    position: relative; /* Garante que a imagem sobreponha outros estilos */
+    z-index: 10; /* Define um valor alto para garantir que a imagem fique acima de outros elementos */
+    width: 70%;
+    display: block;
+    margin-left: 0px !important;
+    margin-right:0 !important;
+}
+
+
 
 .carousel-info.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-.carousel-info-icon {
-    width: 70px;
-    height: 70px;
-    border: 2px solid #fff;
-    margin-right: 10px;
-}
+
 
 .carousel-info-text {
+    margin-left: 10px;
     font-size: 1.2rem;
-    flex: 1; /* Permite que o texto ocupe o espaço restante */
+   
     background-color: rgba(0, 0, 0, 0); /* Fundo transparente para o texto */
     color: #fff; /* Cor do texto */
 }
@@ -878,9 +893,7 @@ figure{
 }
 
 @media (max-width: 800px) {
-    .main-content img {
-        width: 95% !important;
-    }
+    
     .hcontainer {
         width: 95%;
     }
