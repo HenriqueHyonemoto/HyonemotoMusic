@@ -9,14 +9,30 @@
    
 }
 
+.main-content h1 {
+    text-align: center;
+}
 
-body, html {
-    margin: 0;
+body,
+html {
     padding: 0;
     font-family: "Poppins", sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figcaption {
+    font-family: "Poppins", sans-serif;
 }
 
 hr {
@@ -617,13 +633,14 @@ border-color: transparent !important;
 /* Paginas de Conteudo */
 
 .content-container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 60px;
+    display: flex;
+    margin: 0px auto;
+    padding: 1rem;
     background-color: #ffffffdf;
     border-radius: 8px;
     text-align: center;
-    flex: 1;
+    margin-left: 10em;
+    margin-right: 10em;
 }
 
 .content-section hr{
@@ -790,3 +807,106 @@ text-align: left;
 }
 
 /* Remover a linha abaixo do texto nos contatos */
+figcaption {
+    text-align: center;
+    margin:0;
+}
+
+figure{
+    margin:0;
+}
+
+/* Outer Container */
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 0px;
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hcontainer {
+    width: 70%;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+
+
+@media (max-width: 1700px) {
+    .hcontainer {
+        width: 80%;
+    }
+}
+@media (max-width: 1500px) {
+    .hcontainer {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .hcontainer {
+        width: 95%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .language-flag {
+        display: none;
+    }
+    .main-content p {
+        font-size: 18px !important;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 800px) {
+    .main-content img {
+        width: 95% !important;
+    }
+    .hcontainer {
+        width: 95%;
+    }
+}
+
+.main-content {
+    flex: 1;
+    width: 100%;
+}
+
+.main-content p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.main-content h1 {
+    text-align: center;
+}
+
+.main-content img {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-content a {
+    color: var(--main-color);
+}
