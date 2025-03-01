@@ -528,7 +528,7 @@ border-color: transparent !important;
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    max-width: 1200px;
+   
     gap: 2rem; /* Add space between columns */
 }
 
