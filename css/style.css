@@ -686,7 +686,7 @@ text-align: left;
 
 
 /* Carrosel de imagens deslizantes */
-.carousel {
+.carousel_no_bootstrap {
     position: relative;
     width: 100%;
     
@@ -696,24 +696,24 @@ text-align: left;
 }
 
 
-.carousel-inner {
+.carousel_no_bootstrap-inner {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
-.carousel-slide {
+.carousel_no_bootstrap-slide {
     position: relative;
     min-width: 100%;
     height: auto;
 }
 
-.carousel-image {
+.carousel_no_bootstrap-image {
     width: 100% !important;
     height: auto;
     border: rgba(0, 0, 0, 0.439) solid 1px;
 }
 
-.carousel-button {
+.carousel_no_bootstrap-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -727,20 +727,20 @@ text-align: left;
     transition: opacity 0.3s ease;
 }
 
-.carousel-button.visible {
+.carousel_no_bootstrap-button.visible {
     opacity: 1;
 }
 
-.carousel-button.prev {
+.carousel_no_bootstrap-button.prev {
     left: 10px;
 }
 
-.carousel-button.next {
+.carousel_no_bootstrap-button.next {
     right: 10px;
 }
 
-/* Carousel Info */
-.carousel-info {
+/* carousel_no_bootstrap Info */
+.carousel_no_bootstrap-info {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -759,7 +759,7 @@ text-align: left;
     z-index: 1;
 }
 
-.carousel-info-icon {
+.carousel_no_bootstrap-info-icon {
     width: 10% !important;
     height: auto;
     border: 5px solid #fff;
@@ -773,16 +773,12 @@ text-align: left;
     margin-right:0 !important;
 }
 
-
-
-.carousel-info.visible {
+.carousel_no_bootstrap-info.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-
-
-.carousel-info-text {
+.carousel_no_bootstrap-info-text {
     margin-left: 10px;
     font-size: 1.2rem;
    

@@ -54,38 +54,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //carrossel
 document.addEventListener('DOMContentLoaded', function () {
-    const carousel = document.querySelector('.carousel');
-    const carouselInner = document.querySelector('.carousel-inner');
-    const slides = document.querySelectorAll('.carousel-slide');
-    const prevButton = document.querySelector('.carousel-button.prev');
-    const nextButton = document.querySelector('.carousel-button.next');
+    const carousel_no_bootstrap = document.querySelector('.carousel_no_bootstrap');
+    const carousel_no_bootstrapInner = document.querySelector('.carousel_no_bootstrap-inner');
+    const slides = document.querySelectorAll('.carousel_no_bootstrap-slide');
+    const prevButton = document.querySelector('.carousel_no_bootstrap-button.prev');
+    const nextButton = document.querySelector('.carousel_no_bootstrap-button.next');
     let currentIndex = 0;
     let interval;
-    let isTransitioning = false;
 
     function showSlide(index) {
-        if (isTransitioning) return;
-        isTransitioning = true;
         currentIndex = index;
         const offset = -currentIndex * 100;
-        carouselInner.style.transform = `translateX(${offset}%)`;
+        carousel_no_bootstrapInner.style.transform = `translateX(${offset}%)`;
         updateInfo();
-        setTimeout(() => {
-            isTransitioning = false;
-        }, 500); // Tempo da transição
     }
 
     function updateInfo() {
         const currentSlide = slides[currentIndex];
-        const info = currentSlide.querySelector('.carousel-info');
-        const textElement = info.querySelector('.carousel-info-text');
+        const info = currentSlide.querySelector('.carousel_no_bootstrap-info');
+        const textElement = info.querySelector('.carousel_no_bootstrap-info-text');
         textElement.textContent = info.getAttribute('data-info');
-        info.classList.add('visible'); // Adiciona a classe visible para mostrar a informação
     }
 
     function startAutoPlay() {
         interval = setInterval(() => {
-            showSlide((currentIndex + 1) % slides.length);
+            if (currentIndex < slides.length - 1) {
+                showSlide(currentIndex + 1);
+            } else {
+                showSlide(0);
+            }
         }, 3000); // 3 segundos
     }
 
@@ -96,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function handleMouseOver() {
         stopAutoPlay();
         const currentSlide = slides[currentIndex];
-        const info = currentSlide.querySelector('.carousel-info');
+        const info = currentSlide.querySelector('.carousel_no_bootstrap-info');
         info.classList.add('visible');
         prevButton.classList.add('visible');
         nextButton.classList.add('visible');
@@ -105,27 +102,32 @@ document.addEventListener('DOMContentLoaded', function () {
     function handleMouseOut() {
         startAutoPlay();
         const currentSlide = slides[currentIndex];
-        const info = currentSlide.querySelector('.carousel-info');
+        const info = currentSlide.querySelector('.carousel_no_bootstrap-info');
         info.classList.remove('visible');
         prevButton.classList.remove('visible');
         nextButton.classList.remove('visible');
     }
 
     prevButton.addEventListener('click', function () {
-        showSlide((currentIndex - 1 + slides.length) % slides.length);
+        if (currentIndex > 0) {
+            showSlide(currentIndex - 1);
+        }
     });
 
     nextButton.addEventListener('click', function () {
-        showSlide((currentIndex + 1) % slides.length);
+        if (currentIndex < slides.length - 1) {
+            showSlide(currentIndex + 1);
+        }
     });
 
-    carousel.addEventListener('mouseover', handleMouseOver);
-    carousel.addEventListener('mouseout', handleMouseOut);
+    carousel_no_bootstrap.addEventListener('mouseover', handleMouseOver);
+    carousel_no_bootstrap.addEventListener('mouseout', handleMouseOut);
 
     // Inicializa o carrossel e o autoplay
     showSlide(currentIndex);
     startAutoPlay();
 });
+
 
 
 //adicionar texto apra area de transferencia do usuario
