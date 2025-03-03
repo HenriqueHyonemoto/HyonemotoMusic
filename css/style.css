@@ -685,12 +685,18 @@ text-align: left;
 
 
 
+@media (min-width: 1000px) {
+    .carousel_no_bootstrap {
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+}
+
+
 /* Carrosel de imagens deslizantes */
 .carousel_no_bootstrap {
     position: relative;
     width: 100%;
-    
-    margin: 20px auto;
     overflow: hidden;
     cursor: pointer; /* Muda o cursor para a aparência de clicável */
 }

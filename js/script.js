@@ -78,11 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function startAutoPlay() {
         interval = setInterval(() => {
-            if (currentIndex < slides.length - 1) {
-                showSlide(currentIndex + 1);
-            } else {
-                showSlide(0);
-            }
+            showSlide((currentIndex + 1) % slides.length);
         }, 3000); // 3 segundos
     }
 
@@ -109,15 +105,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     prevButton.addEventListener('click', function () {
-        if (currentIndex > 0) {
-            showSlide(currentIndex - 1);
-        }
+        showSlide((currentIndex - 1 + slides.length) % slides.length);
     });
 
     nextButton.addEventListener('click', function () {
-        if (currentIndex < slides.length - 1) {
-            showSlide(currentIndex + 1);
-        }
+        showSlide((currentIndex + 1) % slides.length);
     });
 
     carousel_no_bootstrap.addEventListener('mouseover', handleMouseOver);
@@ -127,6 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
     showSlide(currentIndex);
     startAutoPlay();
 });
+
 
 
 
