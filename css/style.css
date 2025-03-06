@@ -63,11 +63,7 @@ strong{
     color: #2f2f2f;
 }
 
-.hcontainer {
-    width: 90%;
-    margin: 0 auto;
-    padding: 1em;
-}
+
 
 
 
@@ -868,7 +864,7 @@ figure{
 }
 
 .hcontainer {
-    width: 70%;
+    width: 50%;
     margin: 0 auto;
     padding: 1em;
 }
