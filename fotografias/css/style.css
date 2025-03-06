@@ -1387,6 +1387,7 @@ body.no-scroll {
 }
 
 .card-plataforma {
+
     background-color: #ffffff;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
@@ -1396,6 +1397,8 @@ body.no-scroll {
     cursor: pointer;
     justify-content: flex-start; /* Alinha o conteúdo à esquerda dentro dos cards */
 }
+
+
 
 .card-plataforma:hover {
     transform: scale(1.05);

@@ -56,13 +56,28 @@ figcaption {
 }
 
 a{
+    text-decoration: none;
+}
+
+.card-container-plataformas a{
+    color:#000000 !important;
+}
+
+.card-container-plataformas a:hover{
     text-decoration: none !important;
 }
 
-.main-content a{
-    color: var(--main-purple) !important;
-    text-decoration: none !important;
+.card-plataforma:hover {
+    text-decoration: none !important; 
+}
 
+.card-foto a:hover{
+    text-decoration: none !important; 
+}
+
+.main-content a{
+    color: var(--main-purple);
+    text-decoration: none;
 }
 
 strong{
@@ -70,12 +85,14 @@ strong{
 }
 
 .main-content a:hover{
-    text-decoration:underline !important;
+    text-decoration:underline;
 }
 
 .container-obras a:hover{
     text-decoration: none !important;
 }
+
+
 
 .hcontainer {
     width: 70%;
@@ -1305,6 +1322,24 @@ figure{
     flex-wrap: wrap;
 }
 
+.card-container-buttons {
+    display: flex;
+    justify-content: center; /* Centraliza os cards no contêiner */
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Adicionado margem inferior */
+    flex-wrap: wrap;
+}
+
+.card-download{
+    display: flex;
+    justify-content: center; /* Centraliza os cards no contêiner */
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Adicionado margem inferior */
+    flex-wrap: wrap;
+}
+
 .card-plataforma {
     background-color: #ffffff;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
@@ -1334,9 +1369,7 @@ figure{
     white-space: nowrap; /* Impede que o texto quebre para baixo */
 }
 
-.card-container-plataformas a {
-    color: black;
-}
+
 
 .not-available {
     pointer-events: none; /* Desabilita a interação do usuário */
