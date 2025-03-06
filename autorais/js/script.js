@@ -8,13 +8,13 @@ function voltarPagina() {
     const previousPage = sessionStorage.getItem('previousPage'); // Obtém a URL da página anterior
     const currentPage = window.location.href.split("#")[0]; // Obtém a URL sem o hash
 
-    if (!previousPage || !previousPage.startsWith(currentPage)) {
+
         if (previousPage) {
             window.history.back();
         } else {
-            window.location.href = 'Covers.html';
+            window.location.href = 'obras.html';
         }
-    }
+
 }
 //Trocar Lingua
 document.addEventListener('DOMContentLoaded', function () {

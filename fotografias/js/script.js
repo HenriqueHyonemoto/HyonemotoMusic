@@ -8,14 +8,15 @@ function voltarPagina() {
     const previousPage = sessionStorage.getItem('previousPage'); // Obtém a URL da página anterior
     const currentPage = window.location.href.split("#")[0]; // Obtém a URL sem o hash
 
-    if (!previousPage || !previousPage.startsWith(currentPage)) {
+
         if (previousPage) {
             window.history.back();
         } else {
-            window.location.href = 'Covers.html';
+            window.location.href = 'fotografias.html';
         }
-    }
+
 }
+
 //Trocar Lingua
 document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('.language-button');
