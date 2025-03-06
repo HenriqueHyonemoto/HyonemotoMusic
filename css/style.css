@@ -9,6 +9,8 @@
    
 }
 
+
+
 .main-content h1 {
     text-align: center;
 }
@@ -35,6 +37,20 @@ figcaption {
     font-family: "Poppins", sans-serif;
 }
 
+.main-content a{
+        color: var(--main-red) !important;
+        text-decoration: none !important;
+
+}
+
+.main-content a:hover{
+
+        text-decoration:underline !important;
+
+}
+
+
+
 hr {
     border: 0;
     clear: both;
@@ -44,7 +60,7 @@ hr {
 }
 
 strong{
-    color: var(--main-orange);
+    color: #2f2f2f;
 }
 
 .hcontainer {
@@ -53,10 +69,7 @@ strong{
     padding: 1em;
 }
 
-.no-dec a:hover{
-text-decoration: none !important;
-border-color: transparent !important;
-}
+
 
 
 /* Alinhar sequencia de icones*/
@@ -669,12 +682,7 @@ text-align: left;
     text-align: justify;
 }
 
-.content-container a {
-    color: var(--main-orange);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.3s;
-}
+
 
 .content-container a:hover {
     border-color: var(--main-orange);
@@ -922,6 +930,3 @@ figure{
     margin-right: auto;
 }
 
-.main-content a {
-    color: var(--main-color);
-}

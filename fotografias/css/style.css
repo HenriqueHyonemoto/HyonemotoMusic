@@ -32,6 +32,23 @@
     box-sizing: border-box;
 }
 
+.main-content a{
+    color: var(--main-color) !important;
+    text-decoration: none !important;
+
+}
+
+.main-content a:hover{
+    text-decoration:underline !important;
+}
+
+.container-obras a:hover{
+    text-decoration: none !important;
+}
+
+strong{
+    color: #2f2f2f;
+}
 
 
 body,
