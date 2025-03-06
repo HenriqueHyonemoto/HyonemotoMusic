@@ -873,18 +873,18 @@ figure{
 
 @media (max-width: 1700px) {
     .hcontainer {
-        width: 80%;
+        width: 60%;
     }
 }
 @media (max-width: 1500px) {
     .hcontainer {
-        width: 90%;
+        width: 70%;
     }
 }
 
 @media (max-width: 1400px) {
     .hcontainer {
-        width: 95%;
+        width: 75%;
     }
 }
 
